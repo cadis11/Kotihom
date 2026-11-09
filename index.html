@@ -1,690 +1,1612 @@
 <!doctype html>
 <html lang="en">
 <head>
+<!--== part: src/00-head.html ==-->
+<!--== OWNER: Engineering ==-->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kutihom Mahayagya — 1 Crore Ahuti for Nepal</title>
-<meta name="description" content="A one crore (10,000,000) ahuti Kutihom Hawan for the peace and prosperity of Nepal. Join, donate, and follow every contribution transparently.">
+<title>Kotihom Mahayagya — 1 Crore Ahutis for Nepal</title>
+<meta name="description" content="A Hawan of one crore (10,000,000) ahutis for the peace and prosperity of Nepal. Contribute, and follow every verified contribution openly.">
+<meta name="theme-color" content="#3A0C0C">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='7'%20fill='%233A0C0C'/%3E%3Cg%20fill='none'%20stroke='%23F2A33A'%20stroke-width='2.7'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M6.5%2011.5C7.5%208.5%2012%208%2013.5%2010.5C15%2013%2012%2014.5%209.5%2014.500C14%2014%2017%2016.5%2016.5%2020C16%2024%2011%2025.5%207.5%2022.5'/%3E%3Cpath%20d='M16.5%2014C21%2012.5%2025%2015%2025%2019.500C25%2023%2023%2025%2020.5%2025.5'/%3E%3C/g%3E%3Cpath%20d='M16.5%208.500C19%205.8%2023%205.8%2026%208.5'%20fill='none'%20stroke='%23E3B85C'%20stroke-width='2.2'%20stroke-linecap='round'/%3E%3Ccircle%20cx='22.5'%20cy='3.8'%20r='1.7'%20fill='%23E3B85C'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="कोटिहोम महायज्ञ · Kotihom Mahayagya">
+<meta property="og:description" content="नेपालको शान्ति र समृद्धिका लागि १ करोड आहुतिको हवन · One crore ahutis for the peace and prosperity of Nepal">
+<meta property="og:locale" content="ne_NP"><meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="कोटिहोम महायज्ञ · Kotihom Mahayagya">
+<meta name="twitter:description" content="नेपालको शान्ति र समृद्धिका लागि १ करोड आहुतिको हवन · One crore ahutis for the peace and prosperity of Nepal">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Mukta:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<link rel="preconnect" href="https://magxxpvdqgpugglqekxo.supabase.co" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Mukta:wght@400;600&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Mukta:wght@400;600&amp;display=swap"></noscript>
 <style>
-:root{--maroon:#5e1616;--maroon2:#7d2020;--saffron:#e8731a;--gold:#c9a24b;--cream:#fbf4e6;--paper:#fffaf0;--ink:#2a1a14;--muted:#7a6a5f;--line:#e9dcc3;--ok:#2e7d4f;--bad:#b3261e;--r:14px}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:'Mukta',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;font-size:17px}
-h1,h2,h3{font-family:'Cormorant Garamond','Mukta',serif;line-height:1.15;margin:0 0 .5em}
-h2{font-size:2.1rem;color:var(--maroon)}
-a{color:var(--maroon2)}
-.wrap{max-width:1040px;margin:0 auto;padding:0 18px}
-section{padding:56px 0}
-header.top{position:sticky;top:0;z-index:20;background:rgba(94,22,22,.96);backdrop-filter:blur(6px);color:#fff}
-header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:58px}
-.brand{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:1.25rem;letter-spacing:.02em}
-.brand span{color:var(--gold)}
-nav a{color:#f3e6c9;text-decoration:none;margin-left:16px;font-size:.95rem}
-nav a:hover{color:#fff}
-.lang{border:1px solid var(--gold);background:transparent;color:var(--gold);border-radius:999px;padding:4px 12px;cursor:pointer;font:inherit;font-size:.9rem;margin-left:16px}
-@media(max-width:700px){nav a.hide-m{display:none}}
-.hero{background:radial-gradient(circle at 50% 0,#8a2a1f 0,var(--maroon) 55%,#3d0d0d 100%);color:#fff;text-align:center;padding:72px 0 64px;position:relative;overflow:hidden}
-.hero .om{font-size:7rem;line-height:1;color:var(--gold);opacity:.9;font-family:'Mukta',serif}
-.hero h1{font-size:clamp(2.4rem,7vw,4.2rem);margin:.1em 0 .15em}
-.hero .sub{color:#f0dcb0;max-width:640px;margin:0 auto 22px;font-size:1.1rem}
-.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:18px 0 28px}
-.chip{border:1px solid rgba(201,162,75,.6);border-radius:999px;padding:6px 16px;background:rgba(255,255,255,.06);font-size:.98rem}
-.btn{display:inline-block;background:var(--saffron);color:#fff;border:0;border-radius:999px;padding:12px 28px;font:inherit;font-weight:600;cursor:pointer;text-decoration:none}
-.btn:hover{filter:brightness(1.07)}
-.btn.alt{background:transparent;border:1px solid var(--gold);color:var(--gold)}
-.btn.sm{padding:6px 16px;font-size:.92rem}
-.btn.ok{background:var(--ok)} .btn.bad{background:var(--bad)} .btn.ghost{background:#fff;color:var(--maroon);border:1px solid var(--line)}
-.btn:disabled{opacity:.55;cursor:not-allowed}
-.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:0 2px 10px rgba(94,22,22,.05)}
-.grid{display:grid;gap:18px}
-.g3{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
-.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
-.stat .n{font-family:'Cormorant Garamond',serif;font-size:2.3rem;font-weight:700;color:var(--maroon);line-height:1.1}
-.stat .l{color:var(--muted);font-size:.95rem}
-.bar{height:16px;background:#efe3c8;border-radius:999px;overflow:hidden;margin:10px 0 4px}
-.bar>i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--saffron),var(--gold));transition:width 1s}
-.small{font-size:.9rem;color:var(--muted)}
-.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
-.tab{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 16px;cursor:pointer;font:inherit}
-.tab.on{background:var(--maroon);color:#fff;border-color:var(--maroon)}
-.pay{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start}
-.pay img{width:190px;height:190px;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:10px}
-.qrph{width:190px;height:190px;border:1px dashed var(--line);border-radius:10px;display:grid;place-items:center;color:var(--muted);text-align:center;padding:10px;font-size:.9rem}
-@media(max-width:560px){.pay{grid-template-columns:1fr}.pay img,.qrph{margin:auto}}
-dl.kv{margin:0}dl.kv dt{font-size:.82rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-top:8px}dl.kv dd{margin:0;font-weight:600;word-break:break-word}
-form .row{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-label{display:block;font-size:.92rem;font-weight:600;margin:12px 0 4px}
-input,select,textarea{width:100%;padding:10px 12px;border:1px solid #d9c9a6;border-radius:10px;font:inherit;background:#fff;color:var(--ink)}
-input:focus,select:focus,textarea:focus{outline:2px solid var(--saffron);outline-offset:1px}
-textarea{min-height:76px;resize:vertical}
+/*== part: src/10-tokens-base.css ==*/
+:root{
+--kum-deep:#3A0C0C;
+--maroon:#5E1616;
+--maroon-2:#7D2020;
+--agni:#B4400A;
+--agni-hover:#A63A08;
+--flame:#F2A33A;
+--gold:#E3B85C;
+--gold-line:#C9A24B;
+--gold-ink:#8A6414;
+--cream:#FBF4E6;
+--cream-dim:#D9C79B;
+--paper:#FFFAF0;
+--sand:#EFE3C8;
+--ink:#2B1A14;
+--muted:#6B5A4E;
+--line:#E3D4B4;
+--white:#FFFFFF;
+--ok:#1F6B3F;
+--ok-bg:#E4F3EA;
+--warn:#7A4B00;
+--warn-bg:#FDF1D6;
+--bad:#9B1C14;
+--bad-bg:#FBE6E4;
+--field-border:#8F7B63;
+--focus-light:#1B4F9C;
+--focus-dark:#F2A33A;
+--r:12px;
+--serif:'Cormorant Garamond','Mukta',Georgia,serif;
+--sans:'Mukta',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+--shadow:0 2px 12px rgba(58,12,12,.08);
+}
+*,::before,::after{box-sizing:border-box}
+html{color-scheme:light;-webkit-text-size-adjust:100%;scroll-padding-top:104px}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:1.0625rem;line-height:1.6;overflow-wrap:break-word}
+h1,h2,h3{margin:0 0 .5em;color:var(--maroon)}
+h1,h2{font-family:var(--serif);font-weight:700;line-height:1.15}
+h1{font-size:clamp(2.5rem,8vw,4.5rem)}
+h2{font-size:clamp(1.9rem,5vw,2.6rem)}
+h3{font-family:var(--sans);font-weight:600;font-size:1.25rem;line-height:1.3}
+p{margin:0 0 1em}
+a{color:var(--maroon-2);text-underline-offset:3px}
+button{font:inherit}
+img,svg{max-width:100%}
+:lang(ne) body{font-size:1.06em;line-height:1.75}
+:lang(ne) h1,:lang(ne) h2,:lang(ne) h3{font-family:var(--sans);font-weight:600;line-height:1.35}
+:lang(ne) *{letter-spacing:0!important;text-transform:none!important}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .hp{position:absolute;left:-9999px;height:0;overflow:hidden}
-.msg{padding:12px 16px;border-radius:10px;margin-top:14px}
-.msg.ok{background:#e4f3ea;color:#1d5a37}.msg.err{background:#fbe6e4;color:#8a1c15}.msg.info{background:#fdf1d6;color:#6a4b0b}
-.ledger .it{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:14px 0;border-bottom:1px solid var(--line)}
-.ledger .it:last-child{border:0}
-.ledger .nm{font-weight:600;overflow-wrap:anywhere}
-.ledger .it>*{min-width:0}
-.ledger .nm .small{display:block}
-.ledger .am{font-weight:700;color:var(--maroon);text-align:right}
-.ledger .mt{grid-column:1/-1;color:var(--muted);font-size:.93rem;overflow-wrap:anywhere}
-table{width:100%;border-collapse:collapse;font-size:.95rem}
-td{overflow-wrap:anywhere}
-th,td{padding:9px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-th{font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
-td.r,th.r{text-align:right}
+.skip{position:absolute;left:8px;top:-72px;background:var(--white);color:var(--ink);padding:12px 16px;border-radius:8px;z-index:100;font-weight:600}
+.skip:focus{top:8px}
+.small{font-size:.9rem;color:var(--muted)}
+.on-dark{color:var(--cream)}
+.on-dark h1,.on-dark h2,.on-dark h3{color:var(--cream)}
+.on-dark a{color:var(--gold)}
+.on-dark .small{color:var(--cream-dim)}
+:focus-visible{outline:3px solid var(--focus-light);outline-offset:3px}
+.on-dark :focus-visible,.top :focus-visible,#stickyBar :focus-visible{outline-color:var(--focus-dark)}
+[hidden]{display:none!important}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+@media (min-width:900px){html{scroll-padding-top:80px}}
+/*== part: src/20-components.css ==*/
+.facts,.diyas,.lrows,#feed,#myRefsList,#slipStepper,.steps,.flow{list-style:none;margin:0;padding:0}
+.card,#explainer,.payrow,.pre,#contactBox,#feedBox,#myRefs,#lkResult,#slip,#about aside{border:1px solid var(--line);border-radius:var(--r)}
+.card,#about aside,#myRefs,#contactBox[open],#explainer{background:var(--cream)}
+.card,#feedBox,#slip{box-shadow:var(--shadow)}
+section{padding:clamp(48px,9vw,96px) 0}
+main>section:not(.hero):not(.band)::before{content:"";display:block;height:14px;width:min(240px,60%);margin:0 auto clamp(28px,5vw,44px);background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 14'%3E%3Cpath d='M0 7H104M136 7H240M120 1.5l5.5 5.5-5.5 5.5-5.5-5.5z' stroke='%23C9A24B' fill='%23C9A24B'/%3E%3C/svg%3E") center/contain no-repeat}
+.ico{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.ico.fill{fill:currentColor;stroke:none}
+.cols{display:grid;gap:28px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:900px){#about .cols{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:56px}#donate .cols{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:32px;align-items:start}}
+.btn,#nav a,.pillopt span,#callLink,#mailLink,.chipbtn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;font-weight:600}
+.btn{gap:8px;background:var(--agni);color:var(--white);border:2px solid var(--agni);padding:10px 26px;min-height:48px;line-height:1.2;cursor:pointer;text-decoration:none;text-align:center}
+.btn:hover{background:var(--agni-hover);border-color:var(--agni-hover)}
+.btn:disabled{opacity:.6}
+.on-dark .btn{color:var(--white)}
+.btn.ghost{background:none;color:var(--maroon);border-color:var(--maroon)}
+.on-dark .btn.ghost{color:var(--gold);border-color:var(--gold-line)}
+.btn.ghost:hover{background:#C9A24B2E}
+.btn.sm{min-height:44px;padding:6px 16px;font-size:.95rem}
+.card{padding:clamp(18px,4vw,28px);background:var(--paper)}
+.msg,#uploadBar,#donSummary:not(:empty),#msgDetect:not([hidden]){padding:12px 16px;border-radius:var(--r);margin:0 0 1em}
+.msg.ok{background:var(--ok-bg);color:var(--ok)}
+.msg.err,#donSummary,#msgDetect{background:var(--bad-bg);color:var(--bad);font-weight:600}
+.msg.warn,#uploadBar{background:var(--warn-bg);color:var(--warn)}
+#netBanner{margin:0;border-radius:0;text-align:center}
+.top{position:sticky;top:0;z-index:20;background:var(--kum-deep);color:var(--cream);box-shadow:0 1px 0 #C9A24B59}
+.top .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:0 8px;min-height:56px}
+.brand{display:inline-flex;align-items:center;gap:8px;min-height:48px;flex:1 1 0;min-width:0;margin-right:auto;font:700 clamp(1.2rem,5vw,1.5rem)/1.1 var(--serif);color:var(--cream);text-decoration:none}
+.brand .ico{width:28px;height:28px;color:var(--flame)}
+.brand span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media (max-width:420px){.top .wrap{padding:0 14px}.langsw button{padding:0 9px}}
+@media (max-width:380px){.brand .ico{display:none}}
+.langsw{display:flex;border:1px solid var(--gold-line);border-radius:999px;overflow:hidden;flex:none}
+.langsw button{min-height:44px;min-width:44px;padding:0 11px;background:none;color:var(--cream);border:0;font-size:.92rem;font-weight:600;cursor:pointer}
+.langsw button[aria-pressed=true]{background:var(--gold);color:var(--kum-deep)}
+#nav{order:3;flex:0 0 100%;display:flex;gap:8px;overflow-x:auto;padding:0 0 8px;scrollbar-width:none}
+#nav::-webkit-scrollbar{display:none}
+#nav a,.pillopt span,#callLink,#mailLink,.chipbtn{min-height:44px;padding:0 16px}
+#nav a{flex:none;border:1px solid #C9A24B80;color:var(--cream);text-decoration:none;font-weight:400;white-space:nowrap}
+@media (min-width:900px){#nav{order:0;flex:0 1 auto;padding:0;overflow:visible;margin-right:8px}#nav a{border-color:transparent;padding:0 12px}.top .wrap{min-height:64px}.brand{flex:0 1 auto}}
+.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 50% 42%,#4E1414,var(--kum-deep) 62%);text-align:center;padding:clamp(36px,8vw,84px) 0 clamp(44px,9vw,92px)}
+.hero .wrap{display:flex;flex-direction:column;align-items:center}
+.hero .mark{width:64px;height:64px;color:var(--flame);margin-bottom:-6px}
+.hero .om{margin:0;font:2.6rem/1.1 system-ui,'Noto Sans Devanagari','Nirmala UI',sans-serif;color:var(--gold)}
+.hero .om::before{content:"\0950"}
+.eyebrow{margin:6px 0 10px;color:var(--gold);font-weight:600;font-size:.95rem;letter-spacing:.14em;text-transform:uppercase}
+.hero h1{max-width:14ch;margin-bottom:.25em}
+:lang(ne) .hero h1{max-width:none}
+.hero .sub{max-width:36rem;margin:0 auto 1.1em;font-size:1.12rem;color:var(--cream)}
+.chip{margin:0 0 20px;padding:6px 18px;border:1px solid var(--gold-line);border-radius:999px;color:var(--gold);font-weight:600}
+.facts{margin:0 0 18px;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 28px}
+.facts li{display:flex;align-items:center;gap:10px}
+.facts .ico{color:var(--gold)}
+div:empty,p:empty:not(.om),dl:empty,ol:empty{display:none}
+#countdownSlot{margin:0 0 18px;border:1px solid var(--gold-line);border-radius:var(--r);background:#0003}
+.countdown{margin:0;padding:10px 22px;font:700 1.7rem/1.2 var(--serif);color:var(--gold)}
+.hero p:has(.btn){display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;margin:8px 0 18px}
+.hero .btn:not(.ghost){min-height:54px;padding:10px 40px;font-size:1.08rem}
+.hero-note{max-width:32rem;margin:0;color:var(--cream-dim);font-size:.95rem}
+@media (prefers-reduced-motion:no-preference){.hero .mark,.diyas li.lit .f1{animation:flick 3.3s ease-in-out infinite;transform-origin:50% 80%}}
+@keyframes flick{0%,100%{transform:scale(1) skewX(0)}30%{transform:scale(1.04,1.07) skewX(-2deg)}60%{transform:scale(.98,1.02) skewX(2deg)}}
+.band{background:var(--kum-deep);padding:clamp(40px,8vw,72px) 0}
+.band h2{text-align:center}
+#meter{max-width:760px;margin:0 auto}
+.diyas{display:flex;gap:4px;justify-content:center}
+.diyas li{position:relative;flex:1 1 0;max-width:72px;aspect-ratio:1}
+.diyas svg{position:absolute;inset:0;width:100%;height:100%;fill:none;stroke-width:1.2}
+.diyas .bowl{stroke:var(--gold)}
+.diyas .f0{stroke:#E3B85C8C}
+.diyas .f1{fill:var(--flame);stroke:var(--flame);clip-path:inset(calc(4% + (1 - var(--fill,0)) * 64%) 0 0 0)}
+.diyas li.lit{--fill:1}
+@media (max-width:339px){.diyas{flex-wrap:wrap}.diyas li{flex:0 0 calc(20% - 4px)}}
+.tiles{display:grid;gap:22px 32px;margin:32px 0 0;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr))}
+.tile{display:flex;flex-direction:column;gap:2px;padding-top:14px;border-top:1px solid var(--gold-line)}
+.tile .n{order:-1;font:700 clamp(2rem,7vw,2.7rem)/1.1 var(--serif);color:var(--maroon)}
+.band .n{color:var(--gold)}
+#progAsOf{text-align:center;margin:20px 0 4px}
+#progState{text-align:center}
+.band>.wrap>p.small:last-child{text-align:center;max-width:42rem;margin:12px auto 0}
+#about,#donate,#expenses{background:var(--paper)}
+#about article{margin-bottom:24px}
+#about article p,details>p{max-width:62ch}
+#about aside{padding:22px;align-self:start}
+#details,#detExtra{margin:0}
+#details dt,#detExtra dt{margin-top:14px;font-size:.9rem;font-weight:600;color:var(--gold-ink)}
+#details dd,#detExtra dd{margin:2px 0 0;font-weight:600;font-size:1.1rem}
+.steps,.flow{--d:46px;margin-bottom:28px;display:grid;gap:26px;counter-reset:s}
+.steps>li,.flow>li{position:relative;padding-left:calc(var(--d) + 16px);min-height:var(--d);counter-increment:s}
+.steps>li::before,.flow>li::before{content:counter(s);position:absolute;left:0;top:0;width:var(--d);height:var(--d);border-radius:50%;border:2px solid var(--gold-line);background:var(--paper);color:var(--maroon);display:grid;place-items:center;font:700 1.3rem/1 var(--serif)}
+:lang(ne) .steps>li::before,:lang(ne) .flow>li::before{content:counter(s,devanagari);font-family:var(--sans)}
+.steps h3{margin:2px 0 4px}
+.steps p{margin:0;color:var(--muted)}
+#donate>.wrap>p{max-width:48rem}
+#explainer{margin:8px 0 32px;padding:22px}
+#explainer h3{margin-bottom:16px}
+.flow{--d:38px;margin-bottom:12px}
+.flow>li strong{display:block}
+.flow>li::before{background:var(--cream)}
+#explainer>p{margin:0;color:var(--muted);font-size:.95rem}
+@media (min-width:900px){#payPanel{position:sticky;top:96px}#payContinue{display:none}}
+#payPanel>h3,#formPanel>h3{padding-bottom:10px;margin-bottom:16px;border-bottom:1px solid var(--line)}
+#payTabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.pillopt{position:relative;display:block;margin:0}
+.pillopt input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.pillopt span,.chipbtn{border:1px solid var(--field-border);background:var(--white)}
+.pillopt input:checked+span{background:var(--maroon);border-color:var(--maroon);color:var(--white)}
+.pillopt input:focus-visible+span{outline:3px solid var(--focus-light);outline-offset:3px}
+#payBody{display:grid;gap:12px;margin-bottom:12px}
+#payBody>*{margin:0}
+.payrow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 12px;align-items:center;padding:10px 12px;background:var(--white)}
+.payrow .lbl{grid-column:1/-1;font-size:.88rem;font-weight:600;color:var(--muted)}
+.payrow .val{font-size:1.15rem;user-select:all}
+.pre{white-space:pre-wrap;padding:12px 14px;background:var(--white);font-weight:600}
+.qr{display:grid;justify-items:center;gap:8px;text-align:center}
+.qrbtn{display:block;width:min(100%,240px);aspect-ratio:1;padding:8px;background:var(--white);border:1px solid var(--field-border);border-radius:var(--r);cursor:zoom-in}
+.qrbtn img,#qrBig img{display:block;width:100%;height:100%;object-fit:contain}
+.qr .small{margin:0}
+#payContinue{width:100%;margin-top:8px}
+#qrDlg{border:0;border-radius:var(--r);padding:18px;width:min(92vw,440px);text-align:center}
+#qrDlg::backdrop{background:#3A0C0CB8}
+#qrBig img{height:auto}
+form fieldset{border:0;margin:0 0 26px;padding:0;min-width:0}
+legend{display:block;width:100%;padding:0 0 8px;margin:0 0 4px;font-weight:600;font-size:1.12rem;color:var(--maroon);border-bottom:1px solid var(--gold-line)}
+label{display:block;font-weight:600;margin:14px 0 4px}
+input,select,textarea{width:100%;min-height:46px;padding:10px 12px;border:1px solid var(--field-border);border-radius:var(--r);font:inherit;background:var(--white);color:var(--ink)}
+textarea{min-height:96px;resize:vertical}
+input[type=radio],input[type=checkbox]{width:auto;min-height:0}
+input[type=file]{padding:8px;background:var(--cream)}
+[aria-invalid=true]{border-color:var(--bad);box-shadow:0 0 0 1px var(--bad)}
+.err{color:var(--bad);font-size:.95rem;font-weight:600;margin:4px 0 0}
+#donSummary{border-left:5px solid var(--bad)}
+#nprEst{margin:6px 0 0}
+.presets{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 0}
+.chipbtn{min-width:56px;color:var(--maroon);cursor:pointer}
+.proofimg{max-width:180px;max-height:140px;border-radius:8px;border:1px solid var(--line)}
+#proofPreview{margin-top:10px}
+#uploadBar{margin-top:10px}
+#f_show_l{font-weight:600;margin:14px 0 6px}
+form [role=radiogroup]{display:grid;gap:2px}
+form [role=radiogroup] label{display:flex;align-items:center;gap:12px;min-height:44px;margin:0;font-weight:400;cursor:pointer}
+form [role=radiogroup] label:has(input:checked){font-weight:600}
+form [role=radiogroup] input{width:20px;height:20px;accent-color:var(--maroon);margin:0}
+#prevLine,form p.small:has(.ico),#expUnspent:not([hidden]){margin:10px 0 0;padding:8px 12px;border-left:4px solid var(--gold-line);background:var(--cream);color:var(--ink)}
+#contactBox{margin:0 0 20px;padding:0 16px;background:var(--white)}
+#contactBox[open]{padding-bottom:12px}
+#donBtn{width:100%;min-height:54px;font-size:1.1rem}
+form .small .ico{width:18px;height:18px;vertical-align:-3px}
+.row2{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:0 12px}
+#slip{margin:8px 0 0;padding:30px 20px 22px;background:var(--white);border-top:5px double var(--gold-line)}
+#slip dl{margin:0 0 16px}
+#slip dt{margin-top:12px;font-size:.88rem;font-weight:600;color:var(--muted)}
+#slip dd{margin:2px 0 0;font-weight:600}
+#slipCode{display:inline-block;margin:4px 12px 4px 0;padding:6px 12px;border:1px dashed var(--gold-ink);border-radius:8px;background:var(--cream);font:700 clamp(1rem,4.6vw,1.7rem)/1.3 ui-monospace,Menlo,Consolas,monospace;color:var(--maroon);max-width:100%}
+#slipCopy{min-height:44px;padding:6px 16px;font-size:.95rem}
+#slipStepper{margin:0 0 18px;display:grid;gap:10px}
+#slipStepper li{position:relative;padding-left:36px;min-height:28px;color:var(--muted);font-weight:600}
+#slipStepper li::before{content:"";position:absolute;left:0;top:1px;width:24px;height:24px;border-radius:50%;border:2px solid var(--field-border);background:var(--white)}
+#slipStepper li.on{color:var(--ink)}
+#slipStepper li.on::before{border:6px solid var(--warn);background:var(--warn-bg)}
+#slip p:last-child{display:flex;flex-wrap:wrap;gap:10px;margin:0}
+#myRefs{margin-top:28px;padding:18px}
+#myRefsList{margin:0 0 12px}
+#myRefsList li{display:flex;flex-wrap:wrap;gap:4px 12px;padding:8px 0}
+#lookup{margin-top:28px}
+#lkForm{display:flex;flex-wrap:wrap;gap:8px}
+#lkForm label,#lkForm input{flex:1 0 100%}
+#lkResult{margin-top:12px;padding:10px 14px;background:var(--cream)}
+#donors>.wrap>p{max-width:46rem}
+#feedBox{margin:8px 0 28px;padding:18px 20px;background:var(--paper)}
+#feedBox:has(#feed:empty),#ledHead,#expCatsBox:has(#expCats:empty){display:none}
+#feedBox h3{margin-bottom:6px}
+#feed>li{display:flex;justify-content:space-between;gap:12px;padding:10px 0}
+#feed>li:last-child,.lrow:last-child,#myRefsList li:last-child{border-bottom:0}
+#ledSearch{max-width:420px;margin-bottom:6px}
+#ledger{padding:6px 20px;margin-bottom:12px}
+.lrow{display:flex;flex-wrap:wrap;align-items:baseline;padding:14px 0}
+.lrow::after{content:"";flex:0 0 100%;order:3}
+.who{font-weight:600}
+.amt{font-weight:700;color:var(--maroon);white-space:nowrap}
+.amt,.tile .n,td.r,#expTable td:last-child,#expTable th:last-child{font-variant-numeric:tabular-nums lining-nums}
+.lrow .who{order:1;flex:1 1 0;min-width:50%}
+.lrow .amt{order:2;padding-left:12px}
+.cty,.date{order:4;font-size:.9rem;color:var(--muted)}
+.cty~.date::before{content:"\00b7";margin:0 .5em}
+.lrow .code{order:5;flex:0 0 100%;font:.85rem/1.5 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.02em;color:var(--gold-ink)}
+.msgtxt{order:6;flex:0 0 100%;margin:6px 0 0;padding:6px 0 6px 12px;border-left:3px solid var(--gold-line);font-style:italic}
+#expCatsBox{margin:32px 0}
+.cat{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;margin:0 0 14px}
+.cat .lbl{font-weight:600}
+.cat .bar{grid-column:1/-1;grid-row:2;height:10px;border-radius:99px;background:var(--agni)}
 .scroll{overflow-x:auto}
-footer{background:#2f0b0b;color:#e8d8b4;padding:36px 0;text-align:center}
-footer a{color:var(--gold)}
-/* admin */
-#admin{display:none;min-height:100vh;background:var(--cream)}
-#admin .bar2{background:var(--maroon);color:#fff;padding:12px 0}
-#admin .bar2 .wrap{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
-.pill{display:inline-block;padding:2px 10px;border-radius:999px;font-size:.8rem;font-weight:600}
-.pill.pending{background:#fdf1d6;color:#8a5a00}.pill.verified{background:#e4f3ea;color:#1d5a37}.pill.rejected{background:#fbe6e4;color:#8a1c15}
-.acard{border:1px solid var(--line);border-radius:12px;padding:16px;background:#fff;margin-bottom:12px}
-.acard .top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
-.acts{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:10px}
-.acts input{width:150px}
+table{width:100%;border-collapse:collapse}
+th,td{padding:10px 8px;text-align:left;vertical-align:top}
+th{font-size:.9rem;color:var(--muted);font-weight:600}
+#expTable th:last-child,#expTable td:last-child,td.r{text-align:right}
+#expTable tfoot th{color:var(--ink);font-size:1rem;border-bottom:0}
+@media (max-width:639px){#expTable thead{position:absolute;clip:rect(0 0 0 0)}
+#expTable tbody tr{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 12px;padding:12px 0}
+#expTable td{display:block;padding:0;border:0}
+#expTable tbody td:last-child{grid-column:2;grid-row:1/span 3;align-self:center;font-weight:700}
+#expTable tfoot tr{display:flex;justify-content:space-between;padding:12px 0}
+#expTable tfoot th{padding:0}}
+#faq .wrap{max-width:820px}
+summary{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px;padding:6px 0;font-weight:600;font-size:1.08rem;color:var(--maroon);cursor:pointer;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";flex:none;width:10px;height:10px;margin:0 6px;border:solid var(--maroon);border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
+details[open]>summary::after{transform:rotate(-135deg)}
+details>p{margin:0 0 16px}
+#foot{background:var(--kum-deep);text-align:center;padding:44px 0 36px}
+#foot>.wrap>.ico{width:36px;height:36px;color:var(--flame)}
+#foot p{margin:0 0 .8em}
+#contactLine{display:flex;flex-wrap:wrap;gap:8px 12px;justify-content:center;align-items:center}
+#callLink,#mailLink{border:1px solid var(--gold-line);text-decoration:none}
+.contact-val{color:var(--cream);font-weight:600;user-select:all}
+#shareBox{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;align-items:center;margin:18px 0 22px}
+#shareBox>p{flex:0 0 100%;margin:0;font-weight:600}
+#shareBox .btn{min-height:44px;padding:6px 18px;font-size:.95rem}
+#shareMsg{color:var(--gold);font-weight:600}
+#foot .small a{display:inline-flex;align-items:center;min-height:44px;padding:0 8px}
+#stickyBar{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:8px 16px calc(8px + env(safe-area-inset-bottom));background:var(--kum-deep);box-shadow:0 -1px 0 #C9A24B66;text-align:center}
+#stickyBar .btn{width:100%;max-width:420px}
+body.kb-open #stickyBar{display:none}
+@media (max-width:899px){body.has-sticky{padding-bottom:calc(72px + env(safe-area-inset-bottom))}body.kb-open{padding-bottom:0}}
+@media (min-width:900px){#stickyBar{display:none!important}}
+#noscript{margin:0;padding:16px;text-align:center;border-radius:0}
+.who,.cty,.date,.msgtxt,.lrow .code,.cat .lbl,th,td,.payrow .val,.pre,.contact-val,#myRefsList li,.tile .n{overflow-wrap:anywhere}
+th,td,.lrow,#feed>li,#myRefsList li,details,#expTable tbody tr{border-bottom:1px solid var(--line)}
 </style>
 </head>
 <body>
-
-<!-- ============ PUBLIC SITE ============ -->
+<!--== part: src/25-icons.html ==-->
+<!--== OWNER: Design ==-->
+<!-- One hidden sprite. Use as <svg class="ico" aria-hidden="true"><use href="#i-name"></use></svg>. Original geometry only (no stock art), about 3 KB.
+     Stroke icons inherit currentColor (see .ico in 20-components.css); add class "fill" for the solid flame/wick. Ids required by CONTRACT.md section 3:
+     i-diya i-flame i-calendar i-pin i-copy i-check i-clock i-shield i-lock i-share i-phone i-mail. Extra: i-bowl i-wick (diya meter layers), i-chev. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-diya" viewBox="0 0 32 32"><path d="M3 19h26c-.5 5.5-5.5 9-13 9S3.5 24.5 3 19z"/><path d="M16 3.5c3.2 3.8 4.8 6.6 4.8 9.3a4.8 4.8 0 0 1-9.6 0c0-2.7 1.6-5.5 4.8-9.3z"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 32 32"><path d="M16 2c5 5.6 8 9.8 8 14.4A8 8 0 0 1 8 16.4c0-2.6 1.1-4.8 2.9-6.8.3 2.3 1.4 3.4 2.7 3.6C13 9.6 14 5.8 16 2z"/></symbol>
+  <symbol id="i-wick" viewBox="0 0 32 32"><path d="M16 2c4.3 4.9 6.6 8.5 6.6 12.2a6.6 6.6 0 0 1-13.2 0c0-2.2.9-4 2.4-5.7.3 1.9 1.1 2.8 2.2 3C14 8 14.6 5.2 16 2z"/></symbol>
+  <symbol id="i-bowl" viewBox="0 0 32 32"><path d="M3 19.5h26c-.5 5.5-5.5 9-13 9s-12.5-3.5-13-9z"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 10.8l7.6-3.6M8.2 13.2l7.6 3.6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6 3h4l2 5-2.5 1.5a11 11 0 0 0 5 5L16 12l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+</svg>
+<!--== part: src/30-body-public.html ==-->
+<!--== OWNER: Design ==-->
+<!-- STRUCTURE ONLY. No typed words: every visible string is a data-i18n key (CONTRACT.md section 4); tools/build.py injects the English text at build time.
+     Rules: an element with data-i18n holds text only (no child tags). Attribute strings use data-i18n-ph / -aria / -title / -alt.
+     Keep every id, name and data- hook below (CONTRACT.md section 3). Design may change tags, classes, order of decorative wrappers and add wrappers,
+     but not remove hooks. No <img>, no inline on*= handlers, no hard-coded dates, numbers, contacts or names. -->
+<a class="skip" href="#main" data-i18n="skip">Skip to main content</a>
+<noscript>
+  <div id="noscript" class="msg warn">
+    <p data-i18n="noscript">JavaScript is turned off in your browser. You can still read this page, but the contribution form, the live figures and the lists need JavaScript. Please turn it on, or contact the organizers.</p>
+    <p lang="ne" data-i18n-lang="np" data-i18n="noscript">तपाईंको ब्राउजरमा JavaScript बन्द छ। यो पृष्ठ पढ्न सकिन्छ, तर सहयोग फारम, ताजा विवरण र सूचीहरूका लागि JavaScript चाहिन्छ। कृपया यसलाई खोल्नुहोस्, वा आयोजकहरूलाई सम्पर्क गर्नुहोस्।</p>
+  </div>
+</noscript>
 <div id="site">
-<header class="top"><div class="wrap">
-  <div class="brand">ॐ <span data-i18n="brand">Kutihom Mahayagya</span></div>
-  <div style="display:flex;align-items:center">
-    <nav><a class="hide-m" href="#about" data-i18n="nav_about">About</a><a class="hide-m" href="#donate" data-i18n="nav_donate">Donate</a><a class="hide-m" href="#donors" data-i18n="nav_donors">Donors</a><a class="hide-m" href="#expenses" data-i18n="nav_exp">Expenses</a></nav>
-    <button class="lang" id="langBtn" type="button">नेपाली</button>
+<div id="netBanner" class="msg warn" role="status" hidden></div>
+
+<header id="top" class="top"><div class="wrap">
+  <a class="brand" href="#hero"><svg class="ico" aria-hidden="true"><use href="#i-diya"></use></svg><span data-i18n="brand">Kotihom Mahayagya</span></a>
+  <nav id="nav" data-i18n-aria="nav_aria" aria-label="Main sections">
+    <a href="#about" data-i18n="nav_about">About</a>
+    <a href="#how" data-i18n="nav_how">How to take part</a>
+    <a href="#donate" data-i18n="nav_donate">Contribute</a>
+    <a href="#donors" data-i18n="nav_donors">Contributors</a>
+    <a href="#expenses" data-i18n="nav_exp">Expenses</a>
+    <a href="#faq" data-i18n="nav_faq">Questions</a>
+  </nav>
+  <div class="langsw" role="group">
+    <button id="langNp" type="button" lang="ne" aria-pressed="false" data-i18n="lang_np">नेपाली</button>
+    <button id="langEn" type="button" lang="en" aria-pressed="true" data-i18n="lang_en">English</button>
   </div>
 </div></header>
 
-<div class="hero"><div class="wrap">
-  <div class="om">ॐ</div>
-  <h1 id="heroTitle">Kutihom Mahayagya</h1>
-  <p class="sub" data-i18n="hero_sub">A one crore (10,000,000) ahuti Hawan, offered with devotion for the peace, harmony and prosperity of Nepal.</p>
-  <div class="chips">
-    <span class="chip" id="heroDate">📅 …</span>
-    <span class="chip" id="heroVenue">📍 …</span>
-    <span class="chip" data-i18n="chip_goal">🔥 1 Crore Ahutis</span>
-  </div>
-  <a class="btn" href="#donate" data-i18n="cta_donate">Contribute to the Yagya</a>
-  <a class="btn alt" href="#donors" style="margin-left:8px" data-i18n="cta_donors">See Contributions</a>
-</div></div>
+<main id="main">
 
-<section id="progress"><div class="wrap">
-  <h2 data-i18n="prog_h">Yagya Progress</h2>
-  <div class="grid g3">
-    <div class="card stat"><div class="n" id="stAhuti">0</div><div class="l" data-i18n="st_ahuti">Ahutis offered</div>
-      <div class="bar"><i id="barAhuti"></i></div><div class="small" id="ahutiOf">of 1 crore</div></div>
-    <div class="card stat"><div class="n" id="stFunds">NPR 0</div><div class="l" data-i18n="st_funds">Verified contributions</div></div>
-    <div class="card stat"><div class="n" id="stDonors">0</div><div class="l" data-i18n="st_donors">Contributors</div></div>
-  </div>
-  <div class="msg info" id="cfgWarn" style="display:none">Backend not connected yet — showing the page without live data.</div>
+<section id="hero" class="hero on-dark"><div class="wrap">
+  <svg class="ico mark fill" aria-hidden="true"><use href="#i-flame"></use></svg>
+  <p class="om" aria-hidden="true"></p>
+  <p class="eyebrow" data-i18n="hero_eyebrow">For the peace and prosperity of Nepal</p>
+  <h1 id="heroTitle" data-i18n="brand">Kotihom Mahayagya</h1>
+  <p class="sub" data-i18n="hero_sub">A Hawan of one crore (10,000,000) ahutis, offered with devotion for the peace, harmony and prosperity of Nepal.</p>
+  <p class="chip" data-i18n="chip_goal">1 crore ahutis</p>
+  <ul class="facts">
+    <li><svg class="ico" aria-hidden="true"><use href="#i-calendar"></use></svg><span id="heroDate" data-i18n="tbd_date">To be announced</span></li>
+    <li><svg class="ico" aria-hidden="true"><use href="#i-pin"></use></svg><span id="heroVenue" data-i18n="tbd_venue">To be announced</span></li>
+  </ul>
+  <div id="countdownSlot"></div>
+  <p><a class="btn" href="#donate" data-i18n="cta_donate">Contribute to the Yagya</a> <a class="btn ghost" href="#donors" data-i18n="cta_donors">See contributions</a></p>
+  <p class="hero-note" data-i18n="hero_note">Every contribution is verified by the organizers before it is listed publicly.</p>
 </div></section>
 
-<section id="about" style="background:var(--paper)"><div class="wrap">
-  <h2 data-i18n="about_h">About the Yagya</h2>
-  <div class="grid g2">
-    <div class="card"><h3 data-i18n="about1_h">What is Kutihom?</h3><p data-i18n="about1_p"></p></div>
-    <div class="card"><h3 data-i18n="about2_h">Why one crore ahutis?</h3><p data-i18n="about2_p"></p></div>
+<section id="progress" class="band on-dark" aria-labelledby="progH"><div class="wrap">
+  <h2 id="progH" data-i18n="prog_h">Progress of the Yagya</h2>
+  <div id="meter" role="progressbar" aria-valuemin="0" aria-valuemax="10000000" aria-valuenow="0" data-i18n-aria="aria_progress" aria-label="Progress of ahutis offered">
+    <ol class="diyas" aria-hidden="true">
+      <li><svg class="bowl"><use href="#i-bowl"></use></svg><svg class="f0"><use href="#i-wick"></use></svg><svg class="f1"><use href="#i-wick"></use></svg></li>
+      <li><svg class="bowl"><use href="#i-bowl"></use></svg><svg class="f0"><use href="#i-wick"></use></svg><svg class="f1"><use href="#i-wick"></use></svg></li>
+      <li><svg class="bowl"><use href="#i-bowl"></use></svg><svg class="f0"><use href="#i-wick"></use></svg><svg class="f1"><use href="#i-wick"></use></svg></li>
+      <li><svg class="bowl"><use href="#i-bowl"></use></svg><svg class="f0"><use href="#i-wick"></use></svg><svg class="f1"><use href="#i-wick"></use></svg></li>
+      <li><svg class="bowl"><use href="#i-bowl"></use></svg><svg class="f0"><use href="#i-wick"></use></svg><svg class="f1"><use href="#i-wick"></use></svg></li>
+      <li><svg class="bowl"><use href="#i-bowl"></use></svg><svg class="f0"><use href="#i-wick"></use></svg><svg class="f1"><use href="#i-wick"></use></svg></li>
+      <li><svg class="bowl"><use href="#i-bowl"></use></svg><svg class="f0"><use href="#i-wick"></use></svg><svg class="f1"><use href="#i-wick"></use></svg></li>
+      <li><svg class="bowl"><use href="#i-bowl"></use></svg><svg class="f0"><use href="#i-wick"></use></svg><svg class="f1"><use href="#i-wick"></use></svg></li>
+      <li><svg class="bowl"><use href="#i-bowl"></use></svg><svg class="f0"><use href="#i-wick"></use></svg><svg class="f1"><use href="#i-wick"></use></svg></li>
+      <li><svg class="bowl"><use href="#i-bowl"></use></svg><svg class="f0"><use href="#i-wick"></use></svg><svg class="f1"><use href="#i-wick"></use></svg></li>
+    </ol>
   </div>
-  <p class="small" style="margin-top:16px" data-i18n="about_note"></p>
+  <p id="progText" class="sr-only"></p>
+  <div class="tiles">
+    <div class="tile"><span id="stAhuti" class="n">&mdash;</span> <span data-i18n="st_ahuti">Ahutis offered</span><span id="ahutiOf" class="small"></span></div>
+    <div class="tile"><span id="stFunds" class="n">&mdash;</span> <span data-i18n="st_funds">Verified contributions</span><span id="statsZero" class="small" data-i18n="stats_zero" hidden>No verified contributions yet.</span></div>
+    <div class="tile"><span id="stDonors" class="n">&mdash;</span> <span data-i18n="st_donors">Contributors</span></div>
+  </div>
+  <p id="progAsOf" class="small"></p>
+  <div id="progState" role="status"><span id="progMsg" data-i18n="load_fail" hidden>Could not load the live figures.</span> <button id="progRetry" type="button" class="btn ghost" data-i18n="retry" hidden>Try again</button></div>
+  <p class="small" data-i18n="prog_note">The number of ahutis is updated by the organizers as the Yagya proceeds. It is not linked to the amount contributed.</p>
 </div></section>
 
-<section id="donate"><div class="wrap">
-  <h2 data-i18n="don_h">Contribute</h2>
-  <p data-i18n="don_p"></p>
-  <div class="grid g2" style="align-items:start">
-    <div class="card">
-      <h3 data-i18n="pay_h">How to pay</h3>
-      <div class="tabs" id="payTabs"></div>
+<section id="about" aria-labelledby="aboutH"><div class="wrap">
+  <h2 id="aboutH" data-i18n="about_h">About the Yagya</h2>
+  <div class="cols">
+    <div>
+      <article><h3 data-i18n="about1_h">What is Kotihom?</h3><p data-i18n="about1_p">Koti means one crore (ten million). Kotihom is a Hawan, a sacred fire offering, in which one crore ahutis are offered into the consecrated fire (Agni) with mantras, led by priests. In the Hindu tradition, Agni is regarded as the messenger who carries each offering to the gods.</p></article>
+      <article><h3 data-i18n="about2_h">Why one crore ahutis?</h3><p data-i18n="about2_p">The organizers have resolved to complete one crore (10,000,000) ahutis, praying together for the peace, harmony and lasting prosperity of Nepal and all its people.</p></article>
+      <article><h3 data-i18n="about3_h">Who will perform the Yagya?</h3><p data-i18n="about3_p">The names of the officiating priests and of the organizers will be published here once they are confirmed.</p></article>
+      <p class="small" data-i18n="about_note">Date, venue and ritual details will be announced here once they are confirmed.</p>
+    </div>
+    <aside>
+      <h3 data-i18n="det_h">Event details</h3>
+      <dl id="details">
+        <dt data-i18n="det_date">Date</dt><dd id="detDate" data-i18n="tbd_date">To be announced</dd>
+        <dt data-i18n="det_venue">Venue</dt><dd id="detVenue" data-i18n="tbd_venue">To be announced</dd>
+      </dl>
+      <dl id="detExtra"></dl>
+    </aside>
+  </div>
+</div></section>
+
+<section id="how" aria-labelledby="howH"><div class="wrap">
+  <h2 id="howH" data-i18n="how_h">How to take part</h2>
+  <ol id="howSteps" class="steps">
+    <li><h3 data-i18n="how_1_h">Choose how to pay</h3><p data-i18n="how_1_p">eSewa, Khalti, a Nepali bank account, or from abroad.</p></li>
+    <li><h3 data-i18n="how_2_h">Make your payment</h3><p data-i18n="how_2_p">Pay to the details shown here, and keep the receipt or screenshot.</p></li>
+    <li><h3 data-i18n="how_3_h">Submit your details</h3><p data-i18n="how_3_p">Fill in the form and attach your receipt. You will get a reference code.</p></li>
+    <li><h3 data-i18n="how_4_h">The organizers verify, then list it</h3><p data-i18n="how_4_p">After your payment is matched, it appears in the public list as you chose.</p></li>
+  </ol>
+  <p><a class="btn" href="#donate" data-i18n="how_cta">Contribute now</a></p>
+</div></section>
+
+<section id="donate" aria-labelledby="donH"><div class="wrap">
+  <h2 id="donH" data-i18n="don_h">Contribute to the Yagya</h2>
+  <p data-i18n="don_p">Every contribution, large or small, helps carry this offering to completion. It takes two steps: (1) send your contribution using one of the methods below; (2) fill in the form on this page so that the organizers can record and verify it.</p>
+  <p class="msg warn" data-i18n="don_warn">Please send your contribution only to the accounts and QR codes shown on this page.</p>
+  <div id="explainer">
+    <h3 data-i18n="expl_h">What happens after you contribute</h3>
+    <ol class="flow">
+      <li><strong data-i18n="st_received">Received</strong> <span data-i18n="st_received_d">We have saved your record privately.</span></li>
+      <li><strong data-i18n="st_checking">Being checked</strong> <span data-i18n="st_checking_d">An organizer matches your receipt with the account statement.</span></li>
+      <li><strong data-i18n="st_verified">Verified and listed</strong> <span data-i18n="st_verified_d">Your contribution is in the public list and counts toward the total.</span></li>
+    </ol>
+    <p data-i18n="faq_close">If a payment cannot be matched, please contact the organizers with your reference code.</p>
+  </div>
+
+  <div class="cols">
+    <div id="payPanel" class="card">
+      <h3 data-i18n="step1_h">Pay</h3>
+      <div id="payTabs" role="radiogroup" data-i18n-aria="aria_paytabs" aria-label="Payment methods">
+        <label class="pillopt"><input type="radio" name="paym" value="esewa" checked><span data-i18n="m_esewa">eSewa</span></label>
+        <label class="pillopt"><input type="radio" name="paym" value="khalti"><span data-i18n="m_khalti">Khalti</span></label>
+        <label class="pillopt"><input type="radio" name="paym" value="bank"><span data-i18n="m_bank">Nepali bank transfer</span></label>
+        <label class="pillopt"><input type="radio" name="paym" value="international"><span data-i18n="m_intl">From abroad</span></label>
+      </div>
       <div id="payBody"></div>
+      <div id="payState" role="status"></div>
+      <p><a id="payContinue" class="btn" href="#donForm" data-i18n="pay_continue">I have paid, continue</a></p>
+      <dialog id="qrDlg"><div id="qrBig"></div><button id="qrClose" type="button" class="btn ghost" data-i18n="dlg_close">Close</button></dialog>
     </div>
-    <div class="card">
-      <h3 data-i18n="form_h">Tell us about your contribution</h3>
+
+    <div id="formPanel" class="card">
+      <h3 data-i18n="step2_h">Tell us about your contribution</h3>
       <form id="donForm" novalidate>
-        <div class="hp"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
-        <label data-i18n="f_name">Full name *</label><input name="donor_name" required maxlength="120">
-        <div class="row">
-          <div><label data-i18n="f_phone">Phone</label><input name="phone" maxlength="40" inputmode="tel"></div>
-          <div><label data-i18n="f_email">Email</label><input name="email" type="email" maxlength="160"></div>
-        </div>
-        <label data-i18n="f_country">Country</label><input name="country" maxlength="80" value="Nepal">
-        <div class="row">
-          <div><label data-i18n="f_amount">Amount *</label><input name="amount" type="number" min="1" step="any" required inputmode="decimal"></div>
-          <div><label data-i18n="f_cur">Currency</label><select name="currency"><option>NPR</option><option>USD</option><option>INR</option><option>EUR</option><option>GBP</option><option>AUD</option></select></div>
-        </div>
-        <div class="small" id="npr_est"></div>
-        <label data-i18n="f_method">Paid via *</label>
-        <select name="method"><option value="esewa">eSewa</option><option value="khalti">Khalti</option><option value="bank">Bank transfer</option><option value="international">International</option></select>
-        <label data-i18n="f_txn">Transaction / reference no.</label><input name="txn_ref" maxlength="120">
-        <label data-i18n="f_proof">Payment screenshot or receipt *</label><input name="proof" type="file" accept="image/jpeg,image/png,image/webp,application/pdf">
-        <div class="small" data-i18n="f_proof_h">JPG, PNG, WebP or PDF, up to 5 MB.</div>
-        <label data-i18n="f_show">How should your name appear publicly?</label>
-        <select name="display_pref"><option value="full" data-i18n="show_full">Full name</option><option value="first" data-i18n="show_first">First name only</option><option value="anonymous" data-i18n="show_anon">Anonymous</option></select>
-        <label data-i18n="f_msg">Prayer or message (optional, shown publicly after review)</label><textarea name="message" maxlength="500"></textarea>
-        <p class="small" data-i18n="f_priv">Your phone, email and receipt stay private. Only name preference, amount, country and message are public, and only after our team verifies the payment.</p>
-        <button class="btn" type="submit" id="donBtn" data-i18n="f_submit">Submit contribution</button>
-        <div id="donMsg"></div>
+        <input id="f_website" class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div id="donSummary" role="alert"></div>
+
+        <fieldset><legend data-i18n="fs_contribution">Your contribution</legend>
+          <label for="f_name" data-i18n="f_name">Full name</label>
+          <input id="f_name" name="donor_name" required maxlength="120" autocomplete="name" aria-describedby="f_name_err">
+          <p id="f_name_err" class="err" hidden></p>
+          <label for="f_country" data-i18n="f_country">Country</label>
+          <input id="f_country" name="country" maxlength="80" autocomplete="country-name" value="Nepal">
+          <div class="row2">
+            <div><label for="f_amount" data-i18n="f_amount">Amount</label>
+            <input id="f_amount" name="amount" type="number" min="0.01" step="any" required inputmode="decimal" aria-describedby="f_amount_err nprEst">
+            <p id="f_amount_err" class="err" hidden></p></div>
+            <div><label for="f_cur" data-i18n="f_cur">Currency</label>
+            <select id="f_cur" name="currency"><option>NPR</option><option>USD</option><option>INR</option><option>EUR</option><option>GBP</option><option>AUD</option></select></div>
+          </div>
+          <div id="amountPresets" class="presets" role="group" hidden></div>
+          <p id="nprEst" class="small"></p>
+          <label for="f_method" data-i18n="f_method">Paid via</label>
+          <select id="f_method" name="method">
+            <option value="esewa" data-i18n="m_esewa">eSewa</option><option value="khalti" data-i18n="m_khalti">Khalti</option>
+            <option value="bank" data-i18n="m_bank">Nepali bank transfer</option><option value="international" data-i18n="m_intl">From abroad</option>
+          </select>
+          <label for="f_txn" data-i18n="f_txn">Transaction / reference number</label>
+          <input id="f_txn" name="txn_ref" maxlength="120" autocomplete="off">
+        </fieldset>
+
+        <fieldset><legend data-i18n="fs_proof">Payment proof</legend>
+          <label for="f_proof" data-i18n="f_proof">Payment screenshot or receipt</label>
+          <input id="f_proof" name="proof" type="file" accept="image/jpeg,image/png,image/webp,application/pdf" aria-describedby="f_proof_h f_proof_err">
+          <p id="f_proof_h" class="small" data-i18n="f_proof_h">JPG, PNG, WebP or PDF, up to 5 MB. Only the organizers can see it.</p>
+          <p id="f_proof_err" class="err" hidden></p>
+          <div id="proofPreview"></div>
+          <div id="uploadBar" role="status"></div>
+        </fieldset>
+
+        <fieldset><legend data-i18n="fs_public">How you appear in the public list</legend>
+          <p id="f_show_l" data-i18n="f_show">How should your name appear in the public list?</p>
+          <div role="radiogroup" aria-labelledby="f_show_l">
+            <label><input type="radio" name="display_pref" value="full" checked><span data-i18n="show_full">Full name</span></label>
+            <label><input type="radio" name="display_pref" value="first"><span data-i18n="show_first">First name only</span></label>
+            <label><input type="radio" name="display_pref" value="anonymous"><span data-i18n="show_anon">Anonymous</span></label>
+          </div>
+          <p id="prevLine" class="small" aria-live="polite"></p>
+          <label for="f_msg" data-i18n="f_msg">Prayer or message (optional; shown publicly after review)</label>
+          <textarea id="f_msg" name="message" maxlength="500" aria-describedby="msgWarn msgCount msgDetect"></textarea>
+          <p id="msgWarn" class="small" data-i18n="f_msg_warn">Your message becomes public after review. Please do not write phone numbers or email addresses here.</p>
+          <p id="msgCount" class="small"></p>
+          <p id="msgDetect" class="err" role="status" data-i18n="f_msg_detect" hidden>This looks like a phone number or email. Please remove it, because the message will be public.</p>
+        </fieldset>
+
+        <details id="contactBox"><summary data-i18n="fs_contact">Contact details (optional)</summary>
+          <p class="small" data-i18n="f_contact_why">Phone and email are optional. Only the organizers can see them, and they are never shown publicly.</p>
+          <label for="f_phone" data-i18n="f_phone">Phone (kept private)</label>
+          <input id="f_phone" name="phone" maxlength="40" inputmode="tel" autocomplete="tel" aria-describedby="f_phone_err">
+          <p id="f_phone_err" class="err" hidden></p>
+          <label for="f_email" data-i18n="f_email">Email (kept private)</label>
+          <input id="f_email" name="email" type="email" maxlength="160" autocomplete="email" aria-describedby="f_email_err">
+          <p id="f_email_err" class="err" hidden></p>
+        </details>
+
+        <p class="small"><svg class="ico" aria-hidden="true"><use href="#i-lock"></use></svg> <span data-i18n="f_priv">Your phone number, email, receipt and transaction number stay private and are seen only by the organizers. After the organizers verify your payment, the public list shows only: the name you chose (or none), your country, the amount and currency, the payment method, the date, your message, and a reference code. If you choose 'Anonymous', your name is hidden from the public, but the organizers can still see who you are for their records.</span></p>
+        <button id="donBtn" class="btn" type="submit" data-i18n="f_submit">Submit contribution</button>
+        <div id="donMsg" role="status" aria-live="polite"></div>
       </form>
+
+      <section id="slip" tabindex="-1" hidden aria-labelledby="slipH">
+        <h3 id="slipH" data-i18n="slip_h">Contribution received</h3>
+        <p data-i18n="ok_sent">Thank you. Your contribution has been received. It will appear in the public list once the organizers have verified your payment.</p>
+        <dl>
+          <dt data-i18n="slip_code">Reference code</dt><dd><output id="slipCode"></output> <button id="slipCopy" type="button" class="btn ghost" data-i18n="copy">Copy</button></dd>
+          <dt data-i18n="slip_shown">Will be shown as</dt><dd id="slipShown"></dd>
+        </dl>
+        <ol id="slipStepper" data-i18n-aria="aria_stepper" aria-label="Status of your contribution"></ol>
+        <p data-i18n="slip_next">Keep this code. Once your payment is verified, you will appear in the list. You can search for it below.</p>
+        <p><a id="slipMsg" class="btn ghost" href="#foot" data-i18n="slip_msg" hidden>Message the organizers about this code</a> <button id="slipAgain" type="button" class="btn" data-i18n="slip_again">Contribute again</button></p>
+      </section>
     </div>
   </div>
+
+
+
+  <section id="myRefs" hidden aria-labelledby="myH">
+    <h3 id="myH" data-i18n="my_h">Your contributions on this device</h3>
+    <p class="small" data-i18n="my_note">Only the reference code and time are kept on this device.</p>
+    <ul id="myRefsList"></ul>
+    <button id="myRefsClear" type="button" class="btn ghost" data-i18n="my_clear">Remove from this device</button>
+  </section>
 </div></section>
 
-<section id="donors" style="background:var(--paper)"><div class="wrap">
-  <h2 data-i18n="led_h">Contribution Ledger</h2>
-  <p class="small" data-i18n="led_p">Every verified contribution is listed here.</p>
-  <input id="ledSearch" type="search" data-i18n-ph="led_search" placeholder="Search by name or country" style="max-width:340px;margin-bottom:10px">
-  <div class="card ledger" id="ledger"></div>
-  <div style="text-align:center;margin-top:14px"><button class="btn ghost" id="moreBtn" type="button" style="display:none" data-i18n="more">Load more</button></div>
+<section id="donors" aria-labelledby="ledH"><div class="wrap">
+  <h2 id="ledH" data-i18n="led_h">Contribution list</h2>
+  <p data-i18n="led_p">Every verified contribution is listed here, with the name the contributor chose; a contribution appears only after the organizers verify the payment.</p>
+  <div id="feedBox"><h3 data-i18n="led_feed_h">Latest contributions</h3><ol id="feed"></ol></div>
+  <label for="ledSearch" class="sr-only" data-i18n="aria_search">Search the list by name, country or reference code</label>
+  <input id="ledSearch" type="search" maxlength="60" data-i18n-ph="led_search" autocomplete="off" placeholder="Search by name, country or reference code">
+  <p id="ledCount" class="small" role="status" aria-live="polite"></p>
+  <div id="ledHead" class="small" aria-hidden="true"><span data-i18n="led_col_code">Reference</span> <span data-i18n="x_date_ad">Date (AD)</span></div>
+  <div id="ledger" class="card"></div>
+  <div id="ledState" role="status"></div>
+  <p><button id="moreBtn" type="button" class="btn ghost" data-i18n="more" hidden>Show more</button></p>
+  <p class="small" data-i18n="led_wait">Contributed but not listed yet? Verification takes some time. If your contribution is still missing, please contact the organizers with your reference code.</p>
 </div></section>
 
-<section id="expenses"><div class="wrap">
-  <h2 data-i18n="exp_h">Where the funds go</h2>
-  <p class="small" data-i18n="exp_p">Expenses for the Yagya are published openly.</p>
-  <div class="card"><div class="scroll"><table>
-    <thead><tr><th data-i18n="x_date">Date</th><th data-i18n="x_item">Item</th><th data-i18n="x_cat">Category</th><th class="r" data-i18n="x_amt">Amount (NPR)</th></tr></thead>
+<section id="expenses" aria-labelledby="expH"><div class="wrap">
+  <h2 id="expH" data-i18n="exp_h">Where the funds go</h2>
+  <p data-i18n="exp_p">The organizers publish the expenses of the Yagya here, as they record them.</p>
+  <p id="expUnspent" hidden></p>
+  <div class="tiles">
+    <div class="tile"><span data-i18n="exp_raised">Raised (verified)</span> <span id="expRaised" class="n">&mdash;</span></div>
+    <div class="tile"><span data-i18n="exp_spent">Spent (as recorded)</span> <span id="expSpent" class="n">&mdash;</span></div>
+  </div>
+  <div id="expCatsBox"><h3 data-i18n="exp_cats_h">Spending by category</h3><div id="expCats"></div></div>
+  <div class="scroll"><table id="expTable">
+    <thead><tr><th data-i18n="x_date_ad">Date (AD)</th><th data-i18n="x_item">Item</th><th data-i18n="x_cat">Category</th><th data-i18n="x_amt">Amount (NPR)</th></tr></thead>
     <tbody id="expBody"></tbody>
-    <tfoot><tr><th colspan="3" data-i18n="x_total">Total spent</th><th class="r" id="expTotal">0</th></tr></tfoot>
-  </table></div></div>
+    <tfoot><tr><th colspan="3" data-i18n="x_total">Total spent</th><th id="expTotal">&mdash;</th></tr></tfoot>
+  </table></div>
+  <div id="expState" role="status"></div>
 </div></section>
 
-<footer><div class="wrap">
-  <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem">ॐ</div>
-  <p data-i18n="foot_p">May Nepal prosper in peace. Thank you for being part of this offering.</p>
-  <p class="small" id="contactLine" style="color:#cdb98e"></p>
-  <p class="small" style="color:#a99468"><a href="#/admin" data-i18n="admin_link">Organizer login</a></p>
-</div></footer>
-</div>
+<section id="faq" aria-labelledby="faqH"><div class="wrap">
+  <h2 id="faqH" data-i18n="faq_h">Questions donors often ask</h2>
+  <details><summary data-i18n="faq_1_q">Is my contribution recorded?</summary><p data-i18n="faq_1_a">Yes. When you submit the form, your contribution is saved as pending. An organizer then checks it against the payment and marks it verified. Only then does it appear in the public list. Contributions received offline are recorded by the organizers in the same way.</p></details>
+  <details><summary data-i18n="faq_2_q">When will my contribution show on the page? I paid, but I am not in the list.</summary><p data-i18n="faq_2_a">It shows after the organizers have matched your payment. This is done by people, not automatically, so it takes some time. If it has not appeared, please contact the organizers and quote your reference code.</p><p id="faqVerify" hidden></p>
 
-<!-- ============ ADMIN ============ -->
-<div id="admin">
-  <div class="bar2"><div class="wrap">
-    <strong>ॐ Kutihom — Organizer panel</strong>
-    <span><a href="#" style="color:#f3e6c9;margin-right:14px" id="backSite">← Public site</a><button class="btn sm alt" id="logoutBtn" style="display:none">Sign out</button></span>
-  </div></div>
-  <div class="wrap" style="padding:26px 18px">
-    <div id="aLogin" class="card" style="max-width:420px;margin:30px auto">
-      <h3>Organizer sign in</h3>
-      <form id="loginForm"><label>Email</label><input name="email" type="email" required autocomplete="username"><label>Password</label><input name="password" type="password" required autocomplete="current-password"><div style="margin-top:14px"><button class="btn" type="submit">Sign in</button></div><div id="loginMsg"></div></form>
-    </div>
-    <div id="aApp" style="display:none">
-      <div class="tabs" id="aTabs"></div>
-      <div id="aBody"></div>
-    </div>
+  </details>
+  <details><summary data-i18n="faq_3_q">Can I contribute from abroad?</summary><p data-i18n="faq_3_a">You can submit the form from any country and choose your currency (NPR, USD, INR, EUR, GBP or AUD). The ways to send from abroad are shown in the 'From abroad' tab once the organizers have published them. The value in Nepali rupees is fixed when your payment is verified, so the amount listed may differ slightly from the estimate you see.</p></details>
+  <details><summary data-i18n="faq_4_q">Can I contribute anonymously? Who sees my details?</summary><p data-i18n="faq_4_a">Yes. Choose 'Anonymous' and your name will not be shown. The public list shows only these details: the name you chose (or none), your country, the amount and currency, the payment method, the date, your message, and the reference code. Your phone, email, receipt and transaction number are never shown publicly. The organizers can still see who you are, for their records.</p></details>
+  <details><summary data-i18n="faq_5_q">Will I get a receipt? How is my contribution treated for tax?</summary><p data-i18n="faq_5_a">Please keep your own payment receipt or screenshot.</p><p id="faqPolicy" data-i18n="faq_5_a2">Whether an official receipt can be issued, and how a contribution is treated for tax, will be announced here once the organizers have confirmed it. No promise about either is made at this time.</p></details>
+  <details><summary data-i18n="faq_6_q">What is an ahuti?</summary><p data-i18n="faq_6_a">An ahuti is a single offering made into the sacred fire during a Hawan, accompanied by a mantra and the word 'Svaha'. This Yagya resolves to complete one crore (10,000,000) such offerings.</p></details>
+  <details><summary data-i18n="faq_7_q">Can I attend in person?</summary><p data-i18n="faq_7_a">The date and venue have not been announced yet. When they are confirmed, this page will say whether and how devotees can attend.</p></details>
+  <details><summary data-i18n="faq_8_q">How can I see where the money goes?</summary><p data-i18n="faq_8_a">Every verified contribution is listed in the public list, and the organizers publish their expenses in the 'Where the funds go' table, as they record them, with the total spent. Please look at both from time to time, and contact the organizers with any question.</p></details>
+</div></section>
+
+</main>
+
+<footer id="foot" class="on-dark"><div class="wrap">
+  <svg class="ico" aria-hidden="true"><use href="#i-diya"></use></svg>
+  <p data-i18n="foot_p">May Nepal live in peace and prosperity. Thank you for being part of this offering.</p>
+  <p id="footSign" data-i18n="foot_sign">ॐ शान्तिः शान्तिः शान्तिः</p>
+  <p id="contactLine"><span data-i18n="foot_contact">Contact</span> <a id="callLink" href="#foot" data-i18n="foot_call" hidden>Call</a> <a id="mailLink" href="#foot" data-i18n="foot_mail" hidden>Email</a></p>
+  <div id="shareBox">
+    <p data-i18n="share_h">Share this page with family and friends</p>
+    <button id="shareBtn" type="button" class="btn ghost" data-i18n="share_btn" hidden>Share</button>
+    <a id="shareWa" class="btn ghost" href="#foot" data-i18n="share_wa">Share on WhatsApp</a>
+    <button id="shareCopy" type="button" class="btn ghost" data-i18n="share_copy">Copy link</button>
+    <span id="shareMsg" role="status" data-i18n="share_copied" hidden>Link copied</span>
   </div>
+  <p class="small" data-i18n="foot_ack">This page is run by the organizers.</p>
+  <p class="small"><a id="adminLink" href="#/admin" data-i18n="admin_link">Organizer login</a></p>
+</div></footer>
+
+<div id="stickyBar" hidden><a id="stickyCta" class="btn" href="#donate" data-i18n="sticky_cta">Contribute</a></div>
 </div>
-
+<!--== part: src/35-body-admin.html ==-->
+<!--== OWNER: Engineering ==-->
+<!-- Mount point only. The organizer panel is built by admin.<hash>.js (src/80-admin.js) and is not part of index.html. -->
+<div id="admin" hidden></div>
 <script>
-/* ------------------------------------------------------------------
-   CONFIG — filled in when the Supabase project exists
------------------------------------------------------------------- */
-const CFG = { url: 'https://magxxpvdqgpugglqekxo.supabase.co', key: 'sb_publishable_WxrDNR_Hj_H4ZtgmlZSwUg_dKRil9pv' };
-const configured = !CFG.url.startsWith('__');
-const sb = configured ? supabase.createClient(CFG.url, CFG.key) : null;
-
-/* ------------------------------------------------------------------
-   i18n
------------------------------------------------------------------- */
-const T = {
-en:{brand:'Kutihom Mahayagya',nav_about:'About',nav_donate:'Donate',nav_donors:'Donors',nav_exp:'Expenses',
-hero_sub:'A one crore (10,000,000) ahuti Hawan, offered with devotion for the peace, harmony and prosperity of Nepal.',
-chip_goal:'🔥 1 Crore Ahutis',cta_donate:'Contribute to the Yagya',cta_donors:'See Contributions',
-prog_h:'Yagya Progress',st_ahuti:'Ahutis offered',st_funds:'Verified contributions',st_donors:'Contributors',of:'of',crore:'crore',
-about_h:'About the Yagya',about1_h:'What is Kutihom?',
-about1_p:'Kutihom is a sacred Hawan, a Vedic fire offering in which oblations are made into the consecrated fire (Agni) with mantras, carried out by learned priests.',
-about2_h:'Why one crore ahutis?',
-about2_p:'This Yagya resolves to complete one crore (10,000,000) offerings, praying together for the peace, harmony and lasting prosperity of Nepal and all its people.',
-about_note:'Date, venue and ritual details are announced here as they are confirmed.',
-don_h:'Contribute',don_p:'Every contribution, large or small, helps carry this offering to completion. Pay using any method below, then submit the form so we can record it.',
-pay_h:'How to pay',form_h:'Tell us about your contribution',f_name:'Full name *',f_phone:'Phone',f_email:'Email',f_country:'Country',f_amount:'Amount *',f_cur:'Currency',
-f_method:'Paid via *',f_txn:'Transaction / reference no.',f_proof:'Payment screenshot or receipt *',f_proof_h:'JPG, PNG, WebP or PDF, up to 5 MB.',
-f_show:'How should your name appear publicly?',show_full:'Full name',show_first:'First name only',show_anon:'Anonymous',
-f_msg:'Prayer or message (optional, shown publicly after review)',
-f_priv:'Your phone, email and receipt stay private. Only name preference, amount, country and message are public, and only after our team verifies the payment.',
-f_submit:'Submit contribution',sending:'Submitting…',
-ok_sent:'Thank you! Your contribution was received and will appear in the ledger once our team verifies it.',
-err_req:'Please fill in your name, amount and attach your payment proof.',err_size:'The file is too large (max 5 MB).',err_type:'Please attach a JPG, PNG, WebP or PDF file.',err_gen:'Something went wrong. Please try again or contact us.',
-est:'Estimated value: NPR',est_n:'(final value is set when verified)',
-led_h:'Contribution Ledger',led_p:'Every verified contribution is listed here.',led_search:'Search by name or country',more:'Load more',anon:'Anonymous',none:'No contributions listed yet.',
-exp_h:'Where the funds go',exp_p:'Expenses for the Yagya are published openly.',x_date:'Date',x_item:'Item',x_cat:'Category',x_amt:'Amount (NPR)',x_total:'Total spent',x_none:'No expenses recorded yet.',
-foot_p:'May Nepal prosper in peace. Thank you for being part of this offering.',admin_link:'Organizer login',
-m_esewa:'eSewa',m_khalti:'Khalti',m_bank:'Bank transfer',m_intl:'International',
-p_id:'ID / Number',p_name:'Account name',p_bank:'Bank',p_acc:'Account no.',p_branch:'Branch',p_soon:'Payment details will be added soon.',p_qr:'QR coming soon',tbd_date:'Date to be announced',tbd_venue:'Venue to be announced'},
-np:{brand:'कुटिहोम महायज्ञ',nav_about:'बारेमा',nav_donate:'सहयोग',nav_donors:'दाताहरू',nav_exp:'खर्च',
-hero_sub:'नेपालको शान्ति, सद्भाव र समृद्धिका लागि भक्तिपूर्वक सम्पन्न हुने एक करोड आहुतिको हवन।',
-chip_goal:'🔥 १ करोड आहुति',cta_donate:'यज्ञमा सहयोग गर्नुहोस्',cta_donors:'सहयोगहरू हेर्नुहोस्',
-prog_h:'यज्ञको प्रगति',st_ahuti:'सम्पन्न आहुति',st_funds:'पुष्टि भएको सहयोग',st_donors:'सहयोगीहरू',of:'मध्ये',crore:'करोड',
-about_h:'यज्ञको बारेमा',about1_h:'कुटिहोम भनेको के हो?',
-about1_p:'कुटिहोम एक पवित्र हवन हो, जहाँ विद्वान् पुरोहितहरूद्वारा मन्त्रोच्चारणसहित पवित्र अग्नि (अग्निदेव) मा आहुति अर्पण गरिन्छ।',
-about2_h:'किन एक करोड आहुति?',
-about2_p:'यस यज्ञमा एक करोड (१,००,००,०००) आहुति पूरा गर्ने सङ्कल्प गरिएको छ, जसमार्फत नेपाल र नेपालीको शान्ति, सद्भाव र दिगो समृद्धिको कामना गरिन्छ।',
-about_note:'मिति, स्थान र विधिसम्बन्धी विवरण निश्चित भएसँगै यहीँ जानकारी गराइनेछ।',
-don_h:'सहयोग गर्नुहोस्',don_p:'सानो वा ठूलो, हरेक सहयोगले यो अनुष्ठान पूरा गर्न मद्दत गर्छ। तलका कुनै पनि माध्यमबाट भुक्तानी गरी फारम भर्नुहोस्, ताकि हामी अभिलेख राख्न सकौँ।',
-pay_h:'भुक्तानी कसरी गर्ने',form_h:'तपाईँको सहयोगको विवरण',f_name:'पूरा नाम *',f_phone:'फोन',f_email:'इमेल',f_country:'देश',f_amount:'रकम *',f_cur:'मुद्रा',
-f_method:'भुक्तानी माध्यम *',f_txn:'कारोबार / सन्दर्भ नम्बर',f_proof:'भुक्तानीको स्क्रिनसट वा रसिद *',f_proof_h:'JPG, PNG, WebP वा PDF, ५ MB सम्म।',
-f_show:'सार्वजनिक रूपमा तपाईँको नाम कसरी देखिओस्?',show_full:'पूरा नाम',show_first:'पहिलो नाम मात्र',show_anon:'अज्ञात (नाम नदेखाउने)',
-f_msg:'प्रार्थना वा सन्देश (ऐच्छिक, समीक्षापछि सार्वजनिक हुन्छ)',
-f_priv:'तपाईँको फोन, इमेल र रसिद गोप्य रहन्छन्। नामको रोजाइ, रकम, देश र सन्देश मात्र सार्वजनिक हुन्छ, त्यो पनि हाम्रो टोलीले भुक्तानी पुष्टि गरेपछि मात्र।',
-f_submit:'सहयोग पठाउनुहोस्',sending:'पठाउँदै…',
-ok_sent:'धन्यवाद! तपाईँको सहयोग प्राप्त भयो। हाम्रो टोलीले पुष्टि गरेपछि यो सूचीमा देखिनेछ।',
-err_req:'कृपया आफ्नो नाम, रकम भर्नुहोस् र भुक्तानीको प्रमाण संलग्न गर्नुहोस्।',err_size:'फाइल धेरै ठूलो छ (अधिकतम ५ MB)।',err_type:'कृपया JPG, PNG, WebP वा PDF फाइल संलग्न गर्नुहोस्।',err_gen:'केही समस्या भयो। कृपया फेरि प्रयास गर्नुहोस् वा हामीलाई सम्पर्क गर्नुहोस्।',
-est:'अनुमानित मूल्य: रु.',est_n:'(अन्तिम मूल्य पुष्टि हुँदा तय हुन्छ)',
-led_h:'सहयोग सूची',led_p:'पुष्टि भएका सबै सहयोगहरू यहाँ देखाइएका छन्।',led_search:'नाम वा देशबाट खोज्नुहोस्',more:'थप हेर्नुहोस्',anon:'अज्ञात',none:'अहिलेसम्म कुनै सहयोग सूचीकृत छैन।',
-exp_h:'रकम कहाँ खर्च हुन्छ',exp_p:'यज्ञको खर्च खुला रूपमा प्रकाशित गरिन्छ।',x_date:'मिति',x_item:'विवरण',x_cat:'वर्ग',x_amt:'रकम (रु.)',x_total:'जम्मा खर्च',x_none:'अहिलेसम्म कुनै खर्च दर्ता भएको छैन।',
-foot_p:'नेपालमा शान्ति र समृद्धि कायम रहोस्। यस अनुष्ठानमा सहभागी हुनुभएकोमा हार्दिक धन्यवाद।',admin_link:'आयोजक लगइन',
-m_esewa:'eSewa',m_khalti:'Khalti',m_bank:'बैङ्क ट्रान्सफर',m_intl:'अन्तर्राष्ट्रिय',
-p_id:'आईडी / नम्बर',p_name:'खाताधनीको नाम',p_bank:'बैङ्क',p_acc:'खाता नम्बर',p_branch:'शाखा',p_soon:'भुक्तानी विवरण छिट्टै थपिनेछ।',p_qr:'QR छिट्टै आउँछ',tbd_date:'मिति तोकिनेछ',tbd_venue:'स्थान तोकिनेछ'}
+/*== generated prelude ==*/
+window.KH_BUILD = {"id": "635d489044", "target": "dev", "siteUrl": "", "features": {"lookup": false}, "adminUrl": "/admin.d48667d5.js"};
+window.KH_META = {"title_en": "Kotihom Mahayagya — 1 Crore Ahutis for Nepal", "title_np": "कोटिहोम महायज्ञ — नेपालका लागि १ करोड आहुति", "desc_en": "A Hawan of one crore (10,000,000) ahutis for the peace and prosperity of Nepal. Contribute, and follow every verified contribution openly.", "desc_np": "नेपालको शान्ति र समृद्धिका लागि एक करोड आहुतिको हवन। सहयोग तथा दान गर्नुहोस् र पुष्टि भएका हरेक सहयोग खुला रूपमा हेर्नुहोस्।", "og_title": "कोटिहोम महायज्ञ · Kotihom Mahayagya", "og_desc": "नेपालको शान्ति र समृद्धिका लागि १ करोड आहुतिको हवन · One crore ahutis for the peace and prosperity of Nepal"};
+/*== part: src/40-i18n.js ==*/
+window.KH_T = {"en":{"brand":"Kotihom Mahayagya","nav_about":"About","nav_how":"How to take part","nav_donate":"Contribute","nav_donors":"Contributors","nav_exp":"Expenses","nav_faq":"Questions","nav_aria":"Main sections","skip":"Skip to main content","lang_np":"नेपाली","lang_en":"English","sticky_cta":"Contribute","hero_eyebrow":"For the peace and prosperity of Nepal","hero_sub":"A Hawan of one crore (10,000,000) ahutis, offered with devotion for the peace, harmony and prosperity of Nepal.","hero_note":"Every contribution is verified by the organizers before it is listed publicly.","chip_goal":"1 crore ahutis","cta_donate":"Contribute to the Yagya","cta_donors":"See contributions","tbd_date":"To be announced","tbd_venue":"To be announced","det_h":"Event details","det_date":"Date","det_venue":"Venue","cd_days":"{n} days to go","cd_one":"1 day to go","cd_today":"Today","prog_h":"Progress of the Yagya","st_ahuti":"Ahutis offered","of":"of {goal}","st_funds":"Verified contributions","st_donors":"Contributors","prog_note":"The number of ahutis is updated by the organizers as the Yagya proceeds. It is not linked to the amount contributed.","stats_zero":"No verified contributions yet.","aria_progress":"Progress of ahutis offered","prog_text":"{done} of {goal} ahutis offered ({pct}%)","as_of":"As of {time}","loading":"Loading…","load_fail":"Could not load the live figures.","retry":"Try again","offline":"You appear to be offline. Showing the last saved figures.","ledger_fail":"Could not load the list.","exp_fail":"Could not load the expenses.","no_results":"Nothing matches your search.","about_h":"About the Yagya","about1_h":"What is Kotihom?","about1_p":"Koti means one crore (ten million). Kotihom is a Hawan, a sacred fire offering, in which one crore ahutis are offered into the consecrated fire (Agni) with mantras, led by priests. In the Hindu tradition, Agni is regarded as the messenger who carries each offering to the gods.","about2_h":"Why one crore ahutis?","about2_p":"The organizers have resolved to complete one crore (10,000,000) ahutis, praying together for the peace, harmony and lasting prosperity of Nepal and all its people.","about3_h":"Who will perform the Yagya?","about3_p":"The names of the officiating priests and of the organizers will be published here once they are confirmed.","about_note":"Date, venue and ritual details will be announced here once they are confirmed.","how_h":"How to take part","how_1_h":"Choose how to pay","how_1_p":"eSewa, Khalti, a Nepali bank account, or from abroad.","how_2_h":"Make your payment","how_2_p":"Pay to the details shown here, and keep the receipt or screenshot.","how_3_h":"Submit your details","how_3_p":"Fill in the form and attach your receipt. You will get a reference code.","how_4_h":"The organizers verify, then list it","how_4_p":"After your payment is matched, it appears in the public list as you chose.","how_cta":"Contribute now","don_h":"Contribute to the Yagya","don_p":"Every contribution, large or small, helps carry this offering to completion. It takes two steps: (1) send your contribution using one of the methods below; (2) fill in the form on this page so that the organizers can record and verify it.","don_warn":"Please send your contribution only to the accounts and QR codes shown on this page.","step1_h":"Pay","step2_h":"Tell us about your contribution","pay_h":"How to pay","pay_continue":"I have paid, continue","p_soon":"Payment details are to be announced.","p_qr":"QR code not available yet","p_verify":"Before paying, check that the account name shown is exactly {name}.","qr_alt":"QR code for {method}","qr_zoom":"Enlarge QR code","dlg_close":"Close","m_esewa":"eSewa","m_khalti":"Khalti","m_bank":"Nepali bank transfer","m_intl":"From abroad","p_id":"ID / number","p_name":"Account name","p_bank":"Bank","p_acc":"Account number","p_branch":"Branch","p_intl_note":"Details for international contributions will be added here. Whichever route you use, keep the payment receipt or screenshot to upload with the form.","aria_paytabs":"Payment methods","aria_copy_field":"Copy {label}","copy":"Copy","copied":"Copied","copy_fail":"Could not copy. Please select the text and copy it.","expl_h":"What happens after you contribute","st_received":"Received","st_checking":"Being checked","st_verified":"Verified and listed","st_nomatch":"Not matched","st_received_d":"We have saved your record privately.","st_checking_d":"An organizer matches your receipt with the account statement.","st_verified_d":"Your contribution is in the public list and counts toward the total.","st_nomatch_d":"We could not match this payment. Please contact the organizers with your reference code.","aria_stepper":"Status of your contribution","form_h":"Tell us about your contribution","fs_contribution":"Your contribution","fs_proof":"Payment proof","fs_public":"How you appear in the public list","fs_contact":"Contact details (optional)","f_name":"Full name","f_phone":"Phone (kept private)","f_email":"Email (kept private)","f_country":"Country","f_amount":"Amount","f_cur":"Currency","f_method":"Paid via","f_txn":"Transaction / reference number","f_proof":"Payment screenshot or receipt","f_proof_h":"JPG, PNG, WebP or PDF, up to 5 MB. Only the organizers can see it.","f_show":"How should your name appear in the public list?","show_full":"Full name","show_first":"First name only","show_anon":"Anonymous","f_preview":"Will be shown as: {name} · {country} · {amount}","f_msg":"Prayer or message (optional; shown publicly after review)","f_msg_warn":"Your message becomes public after review. Please do not write phone numbers or email addresses here.","f_msg_detect":"This looks like a phone number or email. Please remove it, because the message will be public.","f_msg_count":"{n} characters used","f_contact_why":"Phone and email are optional. Only the organizers can see them, and they are never shown publicly.","f_required":"required","f_priv":"Your phone number, email, receipt and transaction number stay private and are seen only by the organizers. After the organizers verify your payment, the public list shows only: the name you chose (or none), your country, the amount and currency, the payment method, the date, your message, and a reference code. If you choose 'Anonymous', your name is hidden from the public, but the organizers can still see who you are for their records.","f_submit":"Submit contribution","sending":"Submitting…","f_uploading":"Uploading your receipt…","est":"Estimated value: NPR","e_name":"Please enter your full name.","e_amount":"Please enter an amount greater than zero.","e_email":"This email address does not look right.","e_phone":"This phone number does not look right.","e_proof":"Please attach your payment receipt or screenshot.","e_submit_busy":"Your contribution is already being sent.","e_offline":"You are offline. Your details are kept; please try again when you are connected.","e_no_pay":"Payment details have not been added yet, so contributions cannot be submitted right now. Please check again later.","e_settings_fail":"Could not load the payment details.","err_gen":"Something went wrong. Please try again, or contact the organizers.","e_summary":"Please fix {n} item(s) marked below.","err_size":"This file is too large (maximum 5 MB).","err_type":"Please attach a JPG, PNG, WebP or PDF file.","err_rate":"Too many contributions were submitted with the same contact details in the last hour. Please try again a little later, or contact the organizers.","err_amount":"This amount is larger than the form can accept. Please contact the organizers about a larger contribution.","err_sniff":"This file does not appear to be the type it claims to be. Please attach a JPG, PNG, WebP or PDF file.","err_heic":"This photo format (HEIC) cannot be used here. Please attach a screenshot, or a JPG or PNG file.","ok_sent":"Thank you. Your contribution has been received. It will appear in the public list once the organizers have verified your payment.","slip_h":"Contribution received","slip_code":"Reference code","slip_shown":"Will be shown as","slip_next":"Keep this code. Once your payment is verified, you will appear in the list. You can search for it below.","slip_again":"Contribute again","slip_msg":"Message the organizers about this code","my_h":"Your contributions on this device","my_note":"Only the reference code and time are kept on this device.","my_clear":"Remove from this device","lk_h":"Check the status of your contribution","lk_label":"Reference code","lk_btn":"Check","lk_short":"Please enter the full reference code.","lk_none":"No contribution was found for this code. Please check it and try again.","lk_ph":"KH-XXXX-XXXX-XXXX","lk_found":"Status: {status}","faq_2_a_lk":"You can also check its status by entering the reference code in the status box on this page.","led_h":"Contribution list","led_p":"Every verified contribution is listed here, with the name the contributor chose; a contribution appears only after the organizers verify the payment.","led_search":"Search by name, country or reference code","more":"Show more","anon":"Anonymous","none":"No contributions have been listed yet.","led_wait":"Contributed but not listed yet? Verification takes some time. If your contribution is still missing, please contact the organizers with your reference code.","aria_search":"Search the list by name, country or reference code","led_col_code":"Reference","x_date_ad":"Date (AD)","aria_results":"{n} result(s)","led_feed_h":"Latest contributions","exp_h":"Where the funds go","exp_p":"The organizers publish the expenses of the Yagya here, as they record them.","exp_raised":"Raised (verified)","exp_spent":"Spent (as recorded)","exp_cats_h":"Spending by category","x_date":"Date","x_item":"Item","x_cat":"Category","x_amt":"Amount (NPR)","x_total":"Total spent","x_none":"No expenses have been recorded yet.","cat_materials":"Yagya materials","cat_dakshina":"Priests' dakshina","cat_venue":"Venue and arrangements","cat_food":"Food and prasad","cat_publicity":"Publicity and printing","cat_transport":"Transport","cat_other":"Other","faq_h":"Questions donors often ask","faq_1_q":"Is my contribution recorded?","faq_1_a":"Yes. When you submit the form, your contribution is saved as pending. An organizer then checks it against the payment and marks it verified. Only then does it appear in the public list. Contributions received offline are recorded by the organizers in the same way.","faq_2_q":"When will my contribution show on the page? I paid, but I am not in the list.","faq_2_a":"It shows after the organizers have matched your payment. This is done by people, not automatically, so it takes some time. If it has not appeared, please contact the organizers and quote your reference code.","faq_3_q":"Can I contribute from abroad?","faq_3_a":"You can submit the form from any country and choose your currency (NPR, USD, INR, EUR, GBP or AUD). The ways to send from abroad are shown in the 'From abroad' tab once the organizers have published them. The value in Nepali rupees is fixed when your payment is verified, so the amount listed may differ slightly from the estimate you see.","faq_4_q":"Can I contribute anonymously? Who sees my details?","faq_4_a":"Yes. Choose 'Anonymous' and your name will not be shown. The public list shows only these details: the name you chose (or none), your country, the amount and currency, the payment method, the date, your message, and the reference code. Your phone, email, receipt and transaction number are never shown publicly. The organizers can still see who you are, for their records.","faq_5_q":"Will I get a receipt? How is my contribution treated for tax?","faq_5_a":"Please keep your own payment receipt or screenshot.","faq_6_q":"What is an ahuti?","faq_6_a":"An ahuti is a single offering made into the sacred fire during a Hawan, accompanied by a mantra and the word 'Svaha'. This Yagya resolves to complete one crore (10,000,000) such offerings.","faq_7_q":"Can I attend in person?","faq_7_a":"The date and venue have not been announced yet. When they are confirmed, this page will say whether and how devotees can attend.","faq_8_q":"How can I see where the money goes?","faq_8_a":"Every verified contribution is listed in the public list, and the organizers publish their expenses in the 'Where the funds go' table, as they record them, with the total spent. Please look at both from time to time, and contact the organizers with any question.","faq_5_a2":"Whether an official receipt can be issued, and how a contribution is treated for tax, will be announced here once the organizers have confirmed it. No promise about either is made at this time.","faq_close":"If a payment cannot be matched, please contact the organizers with your reference code.","foot_p":"May Nepal live in peace and prosperity. Thank you for being part of this offering.","foot_ack":"This page is run by the organizers.","foot_contact":"Contact","foot_call":"Call","foot_mail":"Email","admin_link":"Organizer login","share_h":"Share this page with family and friends","share_btn":"Share","share_wa":"Share on WhatsApp","share_copied":"Link copied","foot_sign":"ॐ शान्तिः शान्तिः शान्तिः","share_copy":"Copy link","share_text":"🙏 Kotihom Mahayagya: one crore ahutis for the peace and prosperity of Nepal. Read more and take part: {url}","noscript":"JavaScript is turned off in your browser. You can still read this page, but the contribution form, the live figures and the lists need JavaScript. Please turn it on, or contact the organizers."},"np":{"brand":"कोटिहोम महायज्ञ","nav_about":"बारेमा","nav_how":"सहभागिताको तरिका","nav_donate":"सहयोग","nav_donors":"सहयोगीहरू","nav_exp":"खर्च","nav_faq":"सोधिने प्रश्न","nav_aria":"मुख्य खण्डहरू","skip":"मुख्य सामग्रीमा जानुहोस्","lang_np":"नेपाली","lang_en":"English","sticky_cta":"सहयोग गर्नुहोस्","hero_eyebrow":"नेपालको शान्ति र समृद्धिका लागि","hero_sub":"नेपालको शान्ति, सद्भाव र समृद्धिको कामनासहित, भक्तिपूर्वक सम्पन्न हुने एक करोड आहुतिको हवन।","hero_note":"हरेक सहयोग आयोजकहरूले पुष्टि गरेपछि मात्र सार्वजनिक सूचीमा देखिन्छ।","chip_goal":"१ करोड आहुति","cta_donate":"यज्ञमा सहयोग गर्नुहोस्","cta_donors":"सहयोगहरू हेर्नुहोस्","tbd_date":"घोषणा हुनेछ","tbd_venue":"घोषणा हुनेछ","det_h":"कार्यक्रमको विवरण","det_date":"मिति","det_venue":"स्थान","cd_days":"{n} दिन बाँकी","cd_one":"१ दिन बाँकी","cd_today":"आज","prog_h":"यज्ञको प्रगति","st_ahuti":"अर्पण भएका आहुति","of":"{goal} मध्ये","st_funds":"पुष्टि भएको सहयोग रकम","st_donors":"सहयोगीहरू","prog_note":"आहुतिको संख्या यज्ञ अगाडि बढ्दै जाँदा आयोजकहरूले अद्यावधिक गर्छन्। यो सहयोग रकमसँग जोडिएको होइन।","stats_zero":"अहिलेसम्म पुष्टि भएको कुनै सहयोग छैन।","aria_progress":"अर्पण भएका आहुतिको प्रगति","prog_text":"{goal} मध्ये {done} आहुति अर्पण भएको ({pct}%)","as_of":"{time} सम्मको विवरण","loading":"लोड हुँदैछ…","load_fail":"ताजा विवरण लोड गर्न सकिएन।","retry":"फेरि प्रयास गर्नुहोस्","offline":"तपाईं अफलाइन हुनुहुन्छ जस्तो देखिन्छ। पछिल्लो सुरक्षित विवरण देखाइँदैछ।","ledger_fail":"सूची लोड गर्न सकिएन।","exp_fail":"खर्चको विवरण लोड गर्न सकिएन।","no_results":"तपाईंको खोजीसँग मिल्ने केही भेटिएन।","about_h":"यज्ञको बारेमा","about1_h":"कोटिहोम भनेको के हो?","about1_p":"कोटि भनेको करोड। कोटिहोम भनेको एक करोड आहुति अर्पण गरिने पवित्र हवन हो। पुरोहितहरूको सान्निध्यमा मन्त्रोच्चारणसहित पवित्र अग्निमा 'स्वाहा' भन्दै आहुति दिइन्छ। हिन्दू परम्परामा अग्निदेवलाई आहुति देवतासम्म पुर्‍याउने माध्यम मानिन्छ।","about2_h":"किन एक करोड आहुति?","about2_p":"आयोजकहरूले नेपाल र नेपालीको शान्ति, सद्भाव र दिगो समृद्धिको कामनासहित एक करोड (१,००,००,०००) आहुति पूरा गर्ने संकल्प गरेका छन्।","about3_h":"यज्ञ कसले सम्पन्न गर्नुहुन्छ?","about3_p":"यज्ञ सम्पन्न गर्ने आचार्य र पुरोहितहरू तथा आयोजकहरूको नाम निश्चित भएपछि यहीँ प्रकाशित गरिनेछ।","about_note":"मिति, स्थान र विधिसम्बन्धी विवरण निश्चित भएसँगै यहीँ जानकारी गराइनेछ।","how_h":"सहभागिताको तरिका","how_1_h":"भुक्तानीको माध्यम रोज्नुहोस्","how_1_p":"eSewa, Khalti, नेपाली बैंक खाता, वा विदेशबाट।","how_2_h":"भुक्तानी गर्नुहोस्","how_2_p":"यहाँ देखाइएको विवरणमा भुक्तानी गरी रसिद वा स्क्रिनसट सुरक्षित राख्नुहोस्।","how_3_h":"विवरण पठाउनुहोस्","how_3_p":"फारम भरी रसिद संलग्न गर्नुहोस्। तपाईंले सन्दर्भ कोड पाउनुहुनेछ।","how_4_h":"आयोजकले पुष्टि गरी सूचीमा राख्छन्","how_4_p":"भुक्तानी मिलेपछि तपाईंले रोजेबमोजिम यो सार्वजनिक सूचीमा देखिन्छ।","how_cta":"अहिले सहयोग गर्नुहोस्","don_h":"यज्ञमा सहयोग गर्नुहोस्","don_p":"हरेक सहयोगले, सानो होस् वा ठूलो, यो अनुष्ठान पूरा गर्न मद्दत गर्छ। यसका दुई चरण छन्: (१) तलका कुनै एक माध्यमबाट सहयोग रकम पठाउनुहोस्; (२) यहीँ रहेको फारम भर्नुहोस्, जसले गर्दा आयोजकहरूले अभिलेख राखी पुष्टि गर्न सक्छन्।","don_warn":"कृपया सहयोग रकम यही पृष्ठमा देखाइएका खाता र QR कोडमा मात्र पठाउनुहोस्।","step1_h":"भुक्तानी गर्नुहोस्","step2_h":"आफ्नो सहयोगको विवरण दिनुहोस्","pay_h":"भुक्तानी कसरी गर्ने","pay_continue":"भुक्तानी गरिसकेँ, अगाडि बढ्नुहोस्","p_soon":"भुक्तानी विवरण घोषणा हुनेछ।","p_qr":"QR कोड अहिले उपलब्ध छैन","p_verify":"भुक्तानी गर्नुअघि देखिएको खाताधनीको नाम ठ्याक्कै {name} हो भन्ने जाँच गर्नुहोस्।","qr_alt":"{method} को QR कोड","qr_zoom":"QR कोड ठूलो बनाउनुहोस्","dlg_close":"बन्द गर्नुहोस्","m_esewa":"eSewa","m_khalti":"Khalti","m_bank":"नेपाली बैंक ट्रान्सफर","m_intl":"विदेशबाट","p_id":"आईडी / नम्बर","p_name":"खाताधनीको नाम","p_bank":"बैंक","p_acc":"खाता नम्बर","p_branch":"शाखा","p_intl_note":"विदेशबाट सहयोग गर्ने माध्यमको विवरण यहीँ थपिनेछ। जुन माध्यम प्रयोग गरे पनि भुक्तानीको रसिद वा स्क्रिनसट फारमसँगै अपलोड गर्न सुरक्षित राख्नुहोस्।","aria_paytabs":"भुक्तानीका माध्यम","aria_copy_field":"{label} प्रतिलिपि गर्नुहोस्","copy":"प्रतिलिपि","copied":"प्रतिलिपि भयो","copy_fail":"प्रतिलिपि गर्न सकिएन। कृपया पाठ चयन गरेर प्रतिलिपि गर्नुहोस्।","expl_h":"सहयोगपछि के हुन्छ?","st_received":"प्राप्त भयो","st_checking":"जाँच हुँदैछ","st_verified":"पुष्टि भई सूचीमा राखियो","st_nomatch":"भुक्तानी मिलेन","st_received_d":"तपाईंको विवरण गोप्य रूपमा सुरक्षित गरिएको छ।","st_checking_d":"आयोजकले तपाईंको रसिद खाताको विवरणसँग मिलान गर्छन्।","st_verified_d":"तपाईंको सहयोग सार्वजनिक सूचीमा छ र जम्मा रकममा गनिएको छ।","st_nomatch_d":"यो भुक्तानी मिलान गर्न सकिएन। कृपया सन्दर्भ कोडसहित आयोजकहरूलाई सम्पर्क गर्नुहोस्।","aria_stepper":"तपाईंको सहयोगको स्थिति","form_h":"तपाईंको सहयोगको विवरण","fs_contribution":"तपाईंको सहयोग","fs_proof":"भुक्तानीको प्रमाण","fs_public":"सार्वजनिक सूचीमा तपाईं कसरी देखिनुहुन्छ","fs_contact":"सम्पर्क विवरण (ऐच्छिक)","f_name":"पूरा नाम","f_phone":"फोन (गोप्य रहन्छ)","f_email":"इमेल (गोप्य रहन्छ)","f_country":"देश","f_amount":"रकम","f_cur":"मुद्रा","f_method":"भुक्तानी माध्यम","f_txn":"कारोबार / सन्दर्भ नम्बर","f_proof":"भुक्तानीको स्क्रिनसट वा रसिद","f_proof_h":"JPG, PNG, WebP वा PDF, अधिकतम ५ MB। यो आयोजकहरूले मात्र हेर्न सक्छन्।","f_show":"सार्वजनिक सूचीमा तपाईंको नाम कसरी देखिओस्?","show_full":"पूरा नाम","show_first":"पहिलो नाम मात्र","show_anon":"गुप्तदाता (नाम नदेखाउने)","f_preview":"सूचीमा यसरी देखिनेछ: {name} · {country} · {amount}","f_msg":"प्रार्थना वा सन्देश (ऐच्छिक; समीक्षापछि सार्वजनिक हुन्छ)","f_msg_warn":"तपाईंको सन्देश समीक्षापछि सार्वजनिक हुन्छ। कृपया यहाँ फोन नम्बर वा इमेल ठेगाना नलेख्नुहोस्।","f_msg_detect":"यो फोन नम्बर वा इमेल जस्तो देखिन्छ। सन्देश सार्वजनिक हुने भएकाले कृपया हटाउनुहोस्।","f_msg_count":"{n} अक्षर प्रयोग भयो","f_contact_why":"फोन र इमेल ऐच्छिक हुन्। यी आयोजकहरूले मात्र हेर्न सक्छन् र कहिल्यै सार्वजनिक गरिँदैनन्।","f_required":"आवश्यक","f_priv":"तपाईंको फोन नम्बर, इमेल, रसिद र कारोबार नम्बर गोप्य रहन्छन् र आयोजकहरूले मात्र हेर्न सक्छन्। आयोजकहरूले भुक्तानी पुष्टि गरेपछि सार्वजनिक सूचीमा यति मात्र देखिन्छ: तपाईंले रोजेको नाम (वा नाम नदेखिने), देश, रकम र मुद्रा, भुक्तानीको माध्यम, मिति, सन्देश र सन्दर्भ कोड। 'गुप्तदाता' रोज्नुभएमा सर्वसाधारणले तपाईंको नाम देख्दैनन्, तर अभिलेखका लागि आयोजकहरूले परिचय हेर्न सक्छन्।","f_submit":"सहयोग पठाउनुहोस्","sending":"पठाउँदै…","f_uploading":"रसिद अपलोड हुँदैछ…","est":"अनुमानित मूल्य: रु.","e_name":"कृपया आफ्नो पूरा नाम लेख्नुहोस्।","e_amount":"कृपया शून्यभन्दा बढी रकम लेख्नुहोस्।","e_email":"यो इमेल ठेगाना मिलेको देखिएन।","e_phone":"यो फोन नम्बर मिलेको देखिएन।","e_proof":"कृपया भुक्तानीको रसिद वा स्क्रिनसट संलग्न गर्नुहोस्।","e_submit_busy":"तपाईंको सहयोग पठाइँदैछ।","e_offline":"तपाईं अफलाइन हुनुहुन्छ। तपाईंको विवरण जोगाइएको छ; इन्टरनेट जोडिएपछि फेरि प्रयास गर्नुहोस्।","e_no_pay":"भुक्तानी विवरण अहिलेसम्म थपिएको छैन, त्यसैले अहिले सहयोग पठाउन मिल्दैन। कृपया पछि फेरि हेर्नुहोस्।","e_settings_fail":"भुक्तानी विवरण लोड गर्न सकिएन।","err_gen":"केही गडबड भयो। कृपया फेरि प्रयास गर्नुहोस्, वा आयोजकहरूलाई सम्पर्क गर्नुहोस्।","e_summary":"कृपया तल चिह्नित {n} कुरा सच्याउनुहोस्।","err_size":"यो फाइल धेरै ठूलो छ (अधिकतम ५ MB)।","err_type":"कृपया JPG, PNG, WebP वा PDF फाइल संलग्न गर्नुहोस्।","err_rate":"पछिल्लो एक घण्टामा उही सम्पर्क विवरणबाट धेरै सहयोग पठाइएको छ। कृपया केही समयपछि फेरि प्रयास गर्नुहोस्, वा आयोजकहरूलाई सम्पर्क गर्नुहोस्।","err_amount":"यो रकम फारमले स्वीकार गर्न सक्ने सीमाभन्दा ठूलो छ। ठूलो रकमको सहयोगका लागि कृपया आयोजकहरूलाई सम्पर्क गर्नुहोस्।","err_sniff":"यो फाइल आफूले भनेको प्रकारको जस्तो देखिएन। कृपया JPG, PNG, WebP वा PDF फाइल संलग्न गर्नुहोस्।","err_heic":"यो फोटो ढाँचा (HEIC) यहाँ प्रयोग गर्न मिल्दैन। कृपया स्क्रिनसट, वा JPG अथवा PNG फाइल संलग्न गर्नुहोस्।","ok_sent":"धन्यवाद। तपाईंको सहयोग प्राप्त भएको छ। आयोजकहरूले भुक्तानी पुष्टि गरेपछि यो सार्वजनिक सूचीमा देखिनेछ।","slip_h":"सहयोग प्राप्त भयो","slip_code":"सन्दर्भ कोड","slip_shown":"सूचीमा यसरी देखिनेछ","slip_next":"यो कोड सुरक्षित राख्नुहोस्। भुक्तानी पुष्टि भएपछि तपाईं सूचीमा देखिनुहुनेछ। तल यही कोडले खोज्न सकिन्छ।","slip_again":"फेरि सहयोग गर्नुहोस्","slip_msg":"यो कोडबारे आयोजकहरूलाई सन्देश पठाउनुहोस्","my_h":"यस उपकरणमा तपाईंले गरेका सहयोग","my_note":"यस उपकरणमा सन्दर्भ कोड र समय मात्र राखिन्छ।","my_clear":"यस उपकरणबाट हटाउनुहोस्","lk_h":"आफ्नो सहयोगको स्थिति हेर्नुहोस्","lk_label":"सन्दर्भ कोड","lk_btn":"हेर्नुहोस्","lk_short":"कृपया पूरा सन्दर्भ कोड लेख्नुहोस्।","lk_none":"यो कोडमा कुनै सहयोग भेटिएन। कृपया कोड जाँचेर फेरि प्रयास गर्नुहोस्।","lk_ph":"KH-XXXX-XXXX-XXXX","lk_found":"स्थिति: {status}","faq_2_a_lk":"यही पृष्ठको स्थिति जाँच्ने बाकसमा सन्दर्भ कोड राखेर पनि अवस्था हेर्न सकिन्छ।","led_h":"सहयोग सूची","led_p":"पुष्टि भएका सबै सहयोग यहाँ सहयोगीले रोजेको नामसहित सूचीकृत छन्।","led_search":"नाम, देश वा सन्दर्भ कोडबाट खोज्नुहोस्","more":"थप हेर्नुहोस्","anon":"गुप्तदाता","none":"अहिलेसम्म कुनै सहयोग सूचीमा थपिएको छैन।","led_wait":"सहयोग गर्नुभयो तर सूचीमा देखिएको छैन? पुष्टि हुन केही समय लाग्छ। तैपनि देखिएन भने सन्दर्भ कोडसहित आयोजकहरूलाई सम्पर्क गर्नुहोस्।","aria_search":"नाम, देश वा सन्दर्भ कोडबाट सूची खोज्नुहोस्","led_col_code":"सन्दर्भ कोड","x_date_ad":"मिति (ई.सं.)","aria_results":"{n} नतिजा","led_feed_h":"पछिल्ला सहयोग","exp_h":"सहयोग रकम कहाँ खर्च हुन्छ","exp_p":"यज्ञको खर्च आयोजकहरूले अभिलेख गरेबमोजिम यहाँ खुला रूपमा प्रकाशित गरिन्छ।","exp_raised":"जम्मा सहयोग (पुष्टि भएको)","exp_spent":"खर्च (अभिलेखअनुसार)","exp_cats_h":"वर्गअनुसार खर्च","x_date":"मिति","x_item":"विवरण","x_cat":"वर्ग","x_amt":"रकम (रु.)","x_total":"जम्मा खर्च","x_none":"अहिलेसम्म कुनै खर्च दर्ता भएको छैन।","cat_materials":"यज्ञ सामग्री","cat_dakshina":"पुरोहित दक्षिणा","cat_venue":"स्थल तथा व्यवस्था","cat_food":"भोजन तथा प्रसाद","cat_publicity":"प्रचारप्रसार तथा छपाइ","cat_transport":"यातायात","cat_other":"अन्य","faq_h":"दाताहरूले प्रायः सोध्ने प्रश्न","faq_1_q":"मेरो सहयोगको अभिलेख राखिन्छ?","faq_1_a":"हुन्छ। फारम पठाएपछि तपाईंको सहयोग 'पुष्टि हुन बाँकी' अवस्थामा सुरक्षित हुन्छ। आयोजकले भुक्तानीसँग मिलान गरी यसलाई पुष्टि गरेपछि मात्र यो सार्वजनिक सूचीमा देखिन्छ। प्रत्यक्ष (अफलाइन) प्राप्त सहयोग पनि आयोजकहरूले त्यसैगरी अभिलेख गर्छन्।","faq_2_q":"मेरो सहयोग पृष्ठमा कहिले देखिन्छ? मैले भुक्तानी गरेँ तर सूचीमा छैन।","faq_2_a":"आयोजकहरूले तपाईंको भुक्तानी मिलान गरेपछि यो सूचीमा देखिन्छ। यो काम व्यक्तिले गर्ने भएकाले केही समय लाग्छ। सूचीमा देखिएन भने सन्दर्भ कोडसहित आयोजकहरूलाई सम्पर्क गर्नुहोस्।","faq_3_q":"के म विदेशबाट सहयोग गर्न सक्छु?","faq_3_a":"जुनसुकै देशबाट फारम भर्न सकिन्छ र मुद्रा (NPR, USD, INR, EUR, GBP वा AUD) रोज्न सकिन्छ। विदेशबाट पठाउने माध्यम आयोजकहरूले प्रकाशित गरेपछि 'विदेशबाट' ट्याबमा देखिनेछ। नेपाली रुपैयाँको अन्तिम मूल्य भुक्तानी पुष्टि गर्दा तय हुने भएकाले सूचीमा देखिने रकम तपाईंले हेरेको अनुमानभन्दा थोरै फरक हुन सक्छ।","faq_4_q":"के म नाम नखुलाई सहयोग गर्न सक्छु? मेरो विवरण को-कसले हेर्न सक्छन्?","faq_4_a":"हुन्छ। 'गुप्तदाता' रोज्नुहोस्, तपाईंको नाम देखाइँदैन। सार्वजनिक सूचीमा यति विवरण मात्र देखिन्छ: तपाईंले रोजेको नाम (वा नाम नदेखिने), देश, रकम र मुद्रा, भुक्तानीको माध्यम, मिति, सन्देश र सन्दर्भ कोड। तपाईंको फोन, इमेल, रसिद र कारोबार नम्बर कहिल्यै सार्वजनिक गरिँदैन। अभिलेखका लागि आयोजकहरूले भने तपाईंको परिचय हेर्न सक्छन्।","faq_5_q":"के मैले रसिद पाउँछु? कर प्रयोजनका लागि मेरो सहयोगलाई कसरी हेरिन्छ?","faq_5_a":"कृपया आफ्नो भुक्तानीको रसिद वा स्क्रिनसट सुरक्षित राख्नुहोस्।","faq_6_q":"आहुति भनेको के हो?","faq_6_a":"आहुति भनेको हवनमा मन्त्र र 'स्वाहा' उच्चारणसहित पवित्र अग्निमा अर्पण गरिने एक पटकको भेटी हो। यस यज्ञमा यस्ता एक करोड (१,००,००,०००) आहुति पूरा गर्ने संकल्प गरिएको छ।","faq_7_q":"के म प्रत्यक्ष उपस्थित हुन सक्छु?","faq_7_a":"मिति र स्थान अहिलेसम्म घोषणा भएको छैन। निश्चित भएपछि भक्तजन उपस्थित हुन सक्ने/नसक्ने र कसरी हुन सकिने भन्ने जानकारी यही पृष्ठमा राखिनेछ।","faq_8_q":"रकम कहाँ खर्च हुन्छ भन्ने कसरी हेर्न सकिन्छ?","faq_8_a":"पुष्टि भएका हरेक सहयोग सार्वजनिक सूचीमा देखिन्छन्, र आयोजकहरूले आफूले अभिलेख गरेबमोजिमका खर्च 'सहयोग रकम कहाँ खर्च हुन्छ' तालिकामा जम्मा खर्चसहित प्रकाशित गर्छन्। दुवै बेलाबेला हेर्नुहोला, र कुनै जिज्ञासा भए आयोजकहरूलाई सम्पर्क गर्नुहोस्।","faq_5_a2":"आधिकारिक रसिद दिन सकिने/नसकिने र सहयोगलाई कर प्रयोजनका लागि कसरी हेरिन्छ भन्ने कुरा आयोजकहरूले निश्चित गरेपछि यहीँ जानकारी गराइनेछ। अहिले यी दुवै विषयमा कुनै आश्वासन दिइएको छैन।","faq_close":"कुनै भुक्तानी मिलान गर्न सकिएन भने कृपया सन्दर्भ कोडसहित आयोजकहरूलाई सम्पर्क गर्नुहोस्।","foot_p":"नेपालमा शान्ति र समृद्धि कायम रहोस्। यस पवित्र अनुष्ठानमा सहभागी हुनुभएकोमा हार्दिक धन्यवाद।","foot_ack":"यो पृष्ठ आयोजकहरूले सञ्चालन गर्छन्।","foot_contact":"सम्पर्क","foot_call":"फोन गर्नुहोस्","foot_mail":"इमेल पठाउनुहोस्","admin_link":"आयोजक लगइन","share_h":"यो पृष्ठ परिवार र साथीभाइसँग साझा गर्नुहोस्","share_btn":"साझा गर्नुहोस्","share_wa":"WhatsApp मा साझा गर्नुहोस्","share_copied":"लिंक प्रतिलिपि भयो","foot_sign":"ॐ शान्तिः शान्तिः शान्तिः","share_copy":"लिंक प्रतिलिपि गर्नुहोस्","share_text":"🙏 कोटिहोम महायज्ञ: नेपालको शान्ति र समृद्धिका लागि एक करोड आहुति। जानकारी र सहभागिताका लागि: {url}","noscript":"तपाईंको ब्राउजरमा JavaScript बन्द छ। यो पृष्ठ पढ्न सकिन्छ, तर सहयोग फारम, ताजा विवरण र सूचीहरूका लागि JavaScript चाहिन्छ। कृपया यसलाई खोल्नुहोस्, वा आयोजकहरूलाई सम्पर्क गर्नुहोस्।"}};
+/*== part: src/50-core.js ==*/
+(function () {
+'use strict';
+var CFG = { url: 'https://magxxpvdqgpugglqekxo.supabase.co', key: 'sb_publishable_WxrDNR_Hj_H4ZtgmlZSwUg_dKRil9pv' };
+var BUILD = window.KH_BUILD || { id: 'dev', target: 'dev', features: {}, sdk: {} };
+var KH = window.KH = { cfg: CFG, build: BUILD, features: BUILD.features || {}, state: {}, api: {}, util: {} };
+var ESC_MAP = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+function esc(v) { return String(v == null ? '' : v).replace(/[&<>"']/g, function (c) { return ESC_MAP[c]; }); }
+function lang() { return KH.state.lang === 'np' ? 'np' : 'en'; }
+function dev(x) { return String(x).replace(/\d/g, function (c) { return '०१२३४५६७८९'.charAt(+c); }); }
+function nf(n, d) {
+var r = Number(n || 0).toLocaleString('en-IN', { maximumFractionDigits: d || 0 });
+return lang() === 'np' ? dev(r) : r;
+}
+function money(amount, cur) {
+var sym = cur === 'NPR' ? (lang() === 'np' ? 'रु.' : 'NPR') : esc(cur);
+return sym + ' ' + nf(amount, 2).replace(/\.00$/, '').replace(/\.००$/, '');
+}
+function pct(n) { var v = Math.max(0, Math.min(100, Number(n) || 0)); return nf(v, v < 10 ? 1 : 0); }
+var MON_NP = ['जनवरी', 'फेब्रुअरी', 'मार्च', 'अप्रिल', 'मे', 'जुन', 'जुलाई', 'अगस्ट', 'सेप्टेम्बर', 'अक्टोबर', 'नोभेम्बर', 'डिसेम्बर'];
+function fdate(d) {
+if (!d) return '';
+var x = new Date(/^\d{4}-\d{2}-\d{2}$/.test(d) ? d + 'T00:00:00' : d);
+if (isNaN(x)) return '';
+if (lang() === 'np') return dev(x.getDate()) + ' ' + MON_NP[x.getMonth()] + ' ' + dev(x.getFullYear());
+return esc(x.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }));
+}
+function safeUrl(u) {
+var s = String(u == null ? '' : u).trim();
+if (/^(https?:\/\/|mailto:|tel:|#)/i.test(s) || /^\/(?!\/)/.test(s)) return esc(s);
+return '#';
+}
+/* ---------- i18n runtime ---------- */
+function raw(key) {
+var T = window.KH_T || { en: {}, np: {} };
+var v = (T[lang()] && T[lang()][key]) || (T.en && T.en[key]);
+return typeof v === 'string' ? v : key;
+}
+function fill(str, vars, escape) {
+return str.replace(/\{([a-zA-Z_]+)\}/g, function (m, k) { return vars && k in vars ? (escape ? esc(vars[k]) : String(vars[k])) : m; });
+}
+function t(key, vars) { return fill(raw(key), vars, true); }
+function tx(key, vars) { return fill(raw(key), vars, false); }
+KH.setLang = function (l) {
+KH.state.lang = l === 'np' ? 'np' : 'en';
+document.documentElement.lang = KH.state.lang === 'np' ? 'ne' : 'en';
+store.local.set('lang', KH.state.lang);
+Array.prototype.forEach.call(document.querySelectorAll('[data-i18n]'), function (el) { el.textContent = tx(el.getAttribute('data-i18n')); });
+[['ph', 'placeholder'], ['aria', 'aria-label'], ['title', 'title'], ['alt', 'alt']].forEach(function (p) {
+Array.prototype.forEach.call(document.querySelectorAll('[data-i18n-' + p[0] + ']'), function (el) { el.setAttribute(p[1], tx(el.getAttribute('data-i18n-' + p[0]))); });
+});
+var M = window.KH_META || {};
+document.title = M['title_' + KH.state.lang] || document.title;
+var d = document.querySelector('meta[name="description"]');
+if (d && M['desc_' + KH.state.lang]) d.setAttribute('content', M['desc_' + KH.state.lang]);
+document.dispatchEvent(new CustomEvent('kh:lang'));
 };
-let lang = 'en';
-try { const s = localStorage.getItem('lang'); lang = s || ((navigator.language||'').startsWith('ne') ? 'np' : 'en'); } catch(e){}
-const t = k => (T[lang] && T[lang][k]) || T.en[k] || k;
-
-/* ------------------------------------------------------------------
-   helpers
------------------------------------------------------------------- */
-const $ = (s, r=document) => r.querySelector(s);
-const $$ = (s, r=document) => [...r.querySelectorAll(s)];
-const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const dev = x => String(x).replace(/\d/g, c => '०१२३४५६७८९'[c]);
-const nf = (n, d=0) => { const r = Number(n||0).toLocaleString('en-IN', {maximumFractionDigits:d}); return lang==='np' ? dev(r) : r; };
-const MON_NP = ['जनवरी','फेब्रुअरी','मार्च','अप्रिल','मे','जुन','जुलाई','अगस्ट','सेप्टेम्बर','अक्टोबर','नोभेम्बर','डिसेम्बर'];
-const fdate = d => { if (!d) return ''; const x = new Date(/^\d{4}-\d{2}-\d{2}$/.test(d) ? d+'T00:00:00' : d); if (isNaN(x)) return '';
-  return lang==='np' ? `${dev(x.getDate())} ${MON_NP[x.getMonth()]} ${dev(x.getFullYear())}` : x.toLocaleDateString('en-GB', {day:'numeric',month:'short',year:'numeric'}); };
-const CUR = {NPR:'NPR',USD:'USD',INR:'INR',EUR:'EUR',GBP:'GBP',AUD:'AUD'};
-const money = (a, c) => `${c==='NPR'?(lang==='np'?'रु.':'NPR'):c} ${nf(a,2).replace(/\.00$/,'')}`;
-const S = { settings:{}, stats:{total_npr:0,donor_count:0}, led:[], ledAll:0, exp:[], payTab:'esewa' };
-const LED_PAGE = 30;
-// PostgREST returns at most 1000 rows per request; page through so admin lists / CSV are never silently truncated.
-async function fetchAll(make){
-  let all = [], from = 0;
-  for(;;){
-    const { data, error } = await make().range(from, from+999);
-    if (error) return { data:null, error };
-    all = all.concat(data); if (data.length < 1000) break; from += 1000;
-  }
-  return { data:all, error:null };
+/* i18n-dynamic: cat_*, st_*, e_*, err_*, how_*, faq_*, m_*, p_*, cd_*, lk_*, tpl_* */
+/* ---------- safe storage (never throws) ---------- */
+function mkStore(name) {
+return {
+get: function (k, d) { try { var v = window[name].getItem('kh_' + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+set: function (k, v) { try { window[name].setItem('kh_' + k, JSON.stringify(v)); return true; } catch (e) { return false; } },
+del: function (k) { try { window[name].removeItem('kh_' + k); } catch (e) { /* ignore */ } }
+};
 }
-const setting = (k, d) => (S.settings[k] !== undefined ? S.settings[k] : d);
-
-function applyLang(){
-  document.documentElement.lang = lang==='np' ? 'ne' : 'en';
-  document.title = lang==='np' ? 'कुटिहोम महायज्ञ — नेपालका लागि १ करोड आहुति' : 'Kutihom Mahayagya — 1 Crore Ahuti for Nepal';
-  $$('[data-i18n]').forEach(e => { e.textContent = t(e.dataset.i18n); });
-  $$('[data-i18n-ph]').forEach(e => { e.placeholder = t(e.dataset.i18nPh); });
-  $('#langBtn').textContent = lang==='np' ? 'English' : 'नेपाली';
-  const sel = $('#donForm [name=method]');
-  if (sel) { const v = sel.value; sel.innerHTML = ['esewa','khalti','bank','international'].map(m=>`<option value="${m}">${esc(t({esewa:'m_esewa',khalti:'m_khalti',bank:'m_bank',international:'m_intl'}[m]))}</option>`).join(''); sel.value = v||'esewa'; }
-  renderAll();
+var store = KH.store = { local: mkStore('localStorage'), session: mkStore('sessionStorage') };
+/* keys: local kh_lang, kh_refs, kh_cache ; session kh_draft  (CONTRACT.md section 6) */
+/* ---------- reference code (CONTRACT.md section 8) ---------- */
+function refCode(id) {
+var h = String(id || '').replace(/-/g, '').slice(0, 12).toUpperCase();
+if (!/^[0-9A-F]{12}$/.test(h)) return '';
+return 'KH-' + h.match(/.{4}/g).join('-');
 }
-
-/* ------------------------------------------------------------------
-   data
------------------------------------------------------------------- */
-async function loadPublic(){
-  if (!configured) { $('#cfgWarn').style.display='block'; return; }
-  const [s, st, led, ex] = await Promise.all([
-    sb.from('settings').select('key,value'),
-    sb.from('donation_stats').select('*').maybeSingle(),
-    sb.from('donations_public').select('*',{count:'exact'}).order('created_at',{ascending:false}).range(0,LED_PAGE-1),
-    fetchAll(() => sb.from('expenses').select('*').order('spent_on',{ascending:false}))
-  ]);
-  if (s.data) S.settings = Object.fromEntries(s.data.map(r=>[r.key,r.value]));
-  if (st.data) S.stats = st.data;
-  if (led.data) { S.led = led.data; S.ledAll = led.count ?? led.data.length; }
-  if (ex.data) S.exp = ex.data;
+function parseRef(s) {
+var h = String(s || '').trim().toLowerCase().replace(/^kh[\s-]*/, '').replace(/[\s-]/g, '');
+return /^[0-9a-f]{12}$/.test(h) ? h : null;
 }
-async function loadMoreLedger(){
-  const from = S.led.length;
-  const r = await sb.from('donations_public').select('*').order('created_at',{ascending:false}).range(from, from+LED_PAGE-1);
-  if (r.data) { S.led = S.led.concat(r.data); renderLedger(); }
+function refRange(hex12) {
+var a = hex12.slice(0, 8) + '-' + hex12.slice(8, 12);
+return { lo: a + '-0000-0000-000000000000', hi: a + '-ffff-ffff-ffffffffffff' };
 }
-
-/* ------------------------------------------------------------------
-   render (public)
------------------------------------------------------------------- */
-function renderAll(){ renderHero(); renderProgress(); renderPay(); renderLedger(); renderExpenses(); renderFooter(); updateEst(); }
-
-function renderHero(){
-  const ev = setting('event', {});
-  $('#heroTitle').textContent = (lang==='np' ? ev.title_np : ev.title_en) || t('brand');
-  $('#heroDate').textContent = '📅 ' + ((lang==='np' ? ev.date_np : ev.date_en) || t('tbd_date'));
-  $('#heroVenue').textContent = '📍 ' + ((lang==='np' ? ev.venue_np : ev.venue_en) || t('tbd_venue'));
+/* ---------- search term cleaning: allow-list (CONTRACT.md section 9) ---------- */
+function cleanSearch(term, admin) {
+var re = admin ? /[^\p{L}\p{M}\p{N} .'@+_#-]/gu : /[^\p{L}\p{M}\p{N} .'-]/gu;
+return String(term == null ? '' : term).normalize('NFC').replace(re, '').replace(/\s+/g, ' ').trim().slice(0, 60);
 }
-function renderProgress(){
-  const done = Number(setting('ahutis_done', 0)), goal = Number(setting('goal_ahutis', 10000000)) || 10000000;
-  $('#stAhuti').textContent = nf(done);
-  $('#barAhuti').style.width = Math.min(100, done/goal*100) + '%';
-  $('#ahutiOf').textContent = `${t('of')} ${nf(goal)} (${lang==='np'?'१':'1'} ${t('crore')})`;
-  $('#stFunds').textContent = money(S.stats.total_npr, 'NPR');
-  $('#stDonors').textContent = nf(S.stats.donor_count);
-}
-function renderPay(){
-  const P = setting('payments', {});
-  const tabs = [['esewa','m_esewa'],['khalti','m_khalti'],['bank','m_bank'],['intl','m_intl']];
-  $('#payTabs').innerHTML = tabs.map(([k,l])=>`<button type="button" class="tab ${S.payTab===k?'on':''}" data-tab="${k}">${esc(t(l))}</button>`).join('');
-  $$('#payTabs .tab').forEach(b => b.onclick = () => { S.payTab = b.dataset.tab; renderPay(); });
-  const k = S.payTab, d = P[k] || {};
-  const kv = (lbl, val) => val ? `<dt>${esc(t(lbl))}</dt><dd>${esc(val)}</dd>` : '';
-  let rows = '';
-  if (k==='esewa' || k==='khalti') rows = kv('p_id', d.id) + kv('p_name', d.name);
-  if (k==='bank') rows = kv('p_bank', d.bank) + kv('p_name', d.account_name) + kv('p_acc', d.account_no) + kv('p_branch', d.branch);
-  if (k==='intl') rows = d.text ? `<dd style="white-space:pre-wrap;font-weight:500">${esc(d.text)}</dd>` : '';
-  const qr = d.qr_url ? `<img src="${esc(d.qr_url)}" alt="QR" loading="lazy">` : (k==='intl' ? '' : `<div class="qrph">${esc(t('p_qr'))}</div>`);
-  $('#payBody').innerHTML = `<div class="pay">${qr}<dl class="kv">${rows || `<dd class="small">${esc(t('p_soon'))}</dd>`}</dl></div>`;
-}
-function renderLedger(){
-  const q = ($('#ledSearch').value||'').trim().toLowerCase();
-  const rows = S.led.filter(r => !q || (r.display_name||'').toLowerCase().includes(q) || (r.country||'').toLowerCase().includes(q));
-  $('#ledger').innerHTML = rows.length ? rows.map(r => `
-    <div class="it"><div class="nm">${esc(r.display_name || t('anon'))}<span class="small"> · ${esc(r.country||'')} · ${esc(fdate(r.created_at))}</span></div>
-    <div class="am">${esc(money(r.amount, r.currency))}</div>${r.message ? `<div class="mt">“${esc(r.message)}”</div>` : ''}</div>`).join('')
-    : `<p class="small" style="margin:0">${esc(t('none'))}</p>`;
-  $('#moreBtn').style.display = (S.led.length < S.ledAll && !q) ? '' : 'none';
-}
-function renderExpenses(){
-  $('#expBody').innerHTML = S.exp.length ? S.exp.map(e => `<tr><td>${esc(fdate(e.spent_on))}</td><td>${esc(e.item)}${e.note?`<div class="small">${esc(e.note)}</div>`:''}</td><td>${esc(e.category||'')}</td><td class="r">${esc(nf(e.amount_npr,2).replace(/\.00$/,''))}</td></tr>`).join('')
-    : `<tr><td colspan="4" class="small">${esc(t('x_none'))}</td></tr>`;
-  $('#expTotal').textContent = nf(S.exp.reduce((a,e)=>a+Number(e.amount_npr||0),0), 2).replace(/\.00$/,'');
-}
-function renderFooter(){
-  const c = setting('contact', {});
-  $('#contactLine').textContent = [c.phone, c.email].filter(Boolean).join('  ·  ');
-}
-
-/* ------------------------------------------------------------------
-   donation form
------------------------------------------------------------------- */
-function rateFor(cur){ const r = setting('rates', {NPR:1,USD:135,INR:1.6,EUR:150,GBP:175,AUD:88}); return Number(r[cur]) || (cur==='NPR'?1:0); }
-function updateEst(){
-  const f = $('#donForm'); if(!f) return;
-  const a = Number(f.amount.value), c = f.currency.value;
-  $('#npr_est').textContent = (a>0 && c!=='NPR' && rateFor(c)) ? `${t('est')} ${nf(a*rateFor(c))} ${t('est_n')}` : '';
-}
-$('#donForm').addEventListener('input', updateEst);
-$('#donForm').addEventListener('submit', async ev => {
-  ev.preventDefault();
-  const f = ev.target, box = $('#donMsg'), btn = $('#donBtn');
-  const show = (cls, txt) => { box.innerHTML = `<div class="msg ${cls}">${esc(txt)}</div>`; };
-  if (f.website.value) return;                           // honeypot
-  const name = f.donor_name.value.trim(), amount = Number(f.amount.value), file = f.proof.files[0];
-  if (!name || !(amount > 0) || !file) return show('err', t('err_req'));
-  if (file.size > 5*1024*1024) return show('err', t('err_size'));
-  const ext = ({'image/jpeg':'jpg','image/png':'png','image/webp':'webp','application/pdf':'pdf'})[file.type];
-  if (!ext) return show('err', t('err_type'));
-  if (!configured) return show('err', t('err_gen'));
-  btn.disabled = true; btn.textContent = t('sending'); box.innerHTML = '';
-  try {
-    const cur = f.currency.value, npr = cur==='NPR' ? amount : amount * rateFor(cur);
-    if (!(npr > 0)) throw new Error('rate');
-    const path = `${crypto.randomUUID()}.${ext}`;
-    const up = await sb.storage.from('proofs').upload(path, file, { contentType: file.type, upsert:false });
-    if (up.error) throw up.error;
-    const row = {
-      donor_name: name, display_pref: f.display_pref.value, phone: f.phone.value.trim()||null, email: f.email.value.trim()||null,
-      country: f.country.value.trim()||null, amount, currency: cur, amount_npr: Math.round(npr*100)/100, method: f.method.value,
-      txn_ref: f.txn_ref.value.trim()||null, message: f.message.value.trim()||null, proof_path: path, status:'pending', source:'online'
-    };
-    const ins = await sb.from('donations').insert(row);
-    if (ins.error) throw ins.error;
-    f.reset(); f.country.value = 'Nepal'; updateEst();
-    show('ok', t('ok_sent'));
-  } catch(e) { console.error(e); show('err', t('err_gen')); }
-  btn.disabled = false; btn.textContent = t('f_submit');
+/* ---------- network wrapper: never throws, always {ok,...} ---------- */
+function req(path, o) {
+o = o || {};
+var ac = new AbortController();
+var timer = setTimeout(function () { ac.abort(); }, o.timeout || 15000);
+var headers = Object.assign({ apikey: CFG.key }, o.headers || {});            /* anon: apikey only (CONTRACT.md section 7, UNVERIFIED over HTTP) */
+return fetch(CFG.url + path, { method: o.method || 'GET', headers: headers, body: o.body, signal: ac.signal })
+.then(function (r) {
+return r.text().then(function (txt) {
+var data = null;
+try { data = txt ? JSON.parse(txt) : null; } catch (e) { data = null; }
+if (!r.ok) return { ok: false, error: { kind: 'http', status: r.status, code: data && data.code || null, message: data && data.message || null, hint: data && data.hint || null } };
+return { ok: true, status: r.status, data: data, headers: r.headers };
 });
-
-let ledLoading = null;
-async function loadAllLedger(){
-  if (ledLoading || !configured) return ledLoading;
-  ledLoading = (async () => {
-    while (S.led.length < S.ledAll) {
-      const r = await sb.from('donations_public').select('*').order('created_at',{ascending:false}).range(S.led.length, S.led.length+999);
-      if (r.error || !r.data.length) break;
-      S.led = S.led.concat(r.data);
-    }
-  })().catch(console.error).finally(() => { ledLoading = null; });
-  await ledLoading; renderLedger();
+})
+.catch(function () { return { ok: false, error: { kind: ac.signal.aborted ? 'timeout' : 'network' } }; })
+.then(function (res) { clearTimeout(timer); return res; });
 }
-$('#ledSearch').addEventListener('input', () => { renderLedger(); if (($('#ledSearch').value||'').trim() && S.led.length < S.ledAll) loadAllLedger(); });
-$('#moreBtn').addEventListener('click', loadMoreLedger);
-$('#langBtn').addEventListener('click', () => { lang = lang==='np' ? 'en' : 'np'; try{localStorage.setItem('lang',lang)}catch(e){} applyLang(); if(isAdminRoute()) renderAdmin(); });
-
-/* ------------------------------------------------------------------
-   ADMIN
------------------------------------------------------------------- */
-const A = { tab:'pending', user:null, rows:[], filter:'all', settings:{} };
-const isAdminRoute = () => location.hash === '#/admin';
-let wasAdmin = false;
-function route(){
-  const admin = isAdminRoute();
-  const leaving = wasAdmin && !admin; wasAdmin = admin;
-  $('#site').style.display = admin ? 'none' : '';
-  $('#admin').style.display = admin ? 'block' : 'none';
-  if (admin) { initAdmin(); window.scrollTo(0,0); } else if (leaving) window.scrollTo(0,0);
+/* ---------- lazy admin bundle (CONTRACT.md section 12): same-origin admin.<hash>.js, only for #/admin ---------- */
+var adminPromise = null;
+KH.loadAdmin = function () {
+if (KH.adminImpl) return Promise.resolve(KH.adminImpl);
+if (adminPromise) return adminPromise;
+adminPromise = new Promise(function (resolve, reject) {
+var u = rawUrl(BUILD.adminUrl);
+if (!u) return reject(new Error('no admin bundle'));
+var s = document.createElement('script');
+s.src = rawUrl(BUILD.adminUrl); s.async = true;
+s.onload = function () { KH.adminImpl && KH.adminImpl.mount ? resolve(KH.adminImpl) : (adminPromise = null, reject(new Error('admin bundle incomplete'))); };
+s.onerror = function () { adminPromise = null; if (s.parentNode) s.parentNode.removeChild(s); reject(new Error('admin bundle failed')); };
+document.head.appendChild(s);
+});
+return adminPromise;
+};
+/* ---------- small pure helpers (unit-tested) ---------- */
+function rawUrl(u) {                                  /* a URL for DOM properties (not HTML): http(s), mailto, tel, same-origin path, else '' */
+var s = String(u == null ? '' : u).trim();
+return /^(https?:\/\/|mailto:|tel:)/i.test(s) || /^\/(?!\/)/.test(s) ? s : '';
 }
+function ktmDay(d) {
+var p = {};
+new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Kathmandu', year: 'numeric', month: '2-digit', day: '2-digit' })
+.formatToParts(d).forEach(function (x) { p[x.type] = x.value; });
+return p.year + '-' + p.month + '-' + p.day;
+}
+/* Countdown rule (CONTRACT 7): days only; null unless date_iso is a valid FUTURE date. A date without time counts until 23:59 Nepal time. */
+function countdown(iso, now) {
+if (typeof iso !== 'string' || !iso) return null;
+var s = /^\d{4}-\d{2}-\d{2}$/.test(iso) ? iso + 'T23:59:59+05:45' : iso;
+var t = new Date(s), n = now || new Date();
+if (isNaN(t.getTime()) || t.getTime() <= n.getTime()) return null;
+return { days: Math.ceil((t.getTime() - n.getTime()) / 86400000), today: ktmDay(t) === ktmDay(n) };
+}
+function newId() {
+var c = window.crypto;
+if (c && c.randomUUID) return c.randomUUID();
+var b = new Uint8Array(16); c.getRandomValues(b);
+b[6] = (b[6] & 15) | 64; b[8] = (b[8] & 63) | 128;
+var h = Array.prototype.map.call(b, function (x) { return (x + 256).toString(16).slice(1); }).join('');
+return h.slice(0, 8) + '-' + h.slice(8, 12) + '-' + h.slice(12, 16) + '-' + h.slice(16, 20) + '-' + h.slice(20);
+}
+/* Which kind of failure is this? 'dup' (already saved), 'rate' (KH001), 'amount' (KH002), 'network', 'denied', 'gen'. */
+function classify(res) {
+var e = res && res.error;
+if (!e) return 'gen';
+var blob = [e.code, e.message, e.hint].join(' ');
+if (e.status === 409 || e.code === '23505' || e.code === '409' || /already exists|duplicate/i.test(String(e.message || ''))) return 'dup';
+if (e.code === 'KH001' || /KH_RATE_LIMIT/.test(blob)) return 'rate';
+if (e.code === 'KH002' || /KH_AMOUNT_RANGE/.test(blob)) return 'amount';
+if (e.kind === 'network' || e.kind === 'timeout') return 'network';
+if (e.status === 401 || e.status === 403) return 'denied';
+return 'gen';
+}
+function timeText(d) {
+var x = d instanceof Date ? d : new Date(d);
+if (isNaN(x.getTime())) return '';
+var s = new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).format(x);
+return lang() === 'np' ? dev(s) : s;
+}
+function numOrNull(v) { var n = typeof v === 'string' && v.trim() === '' ? NaN : Number(v); return isFinite(n) ? n : null; }
+/* Ledger query (CONTRACT 9). Keyset paging on receipt_no; the search term goes through the allow-list and is double-quoted inside or=(). */
+var LEDGER_COLS = 'id,receipt_no,created_at,display_name,country,amount,currency,amount_npr,method,message';
+function ledgerPath(o) {
+o = o || {};
+var p = new URLSearchParams();
+p.set('select', LEDGER_COLS); p.set('order', 'receipt_no.desc'); p.set('limit', String(o.limit || 25));
+if (o.after != null && isFinite(Number(o.after))) p.set('receipt_no', 'lt.' + Number(o.after));
+var term = cleanSearch(o.term || '');
+if (term) {
+var hex = parseRef(term);
+if (hex) { var rg = refRange(hex); p.append('id', 'gte.' + rg.lo); p.append('id', 'lte.' + rg.hi); }
+else p.set('or', '(display_name.ilike."*' + term + '*",country.ilike."*' + term + '*")');
+}
+return '/rest/v1/donations_public?' + p.toString().replace(/\+/g, '%20');
+}
+function cursorOf(rows) { var r = rows && rows.length ? rows[rows.length - 1] : null; return r && isFinite(Number(r.receipt_no)) ? Number(r.receipt_no) : null; }   /* keyset paging cursor; the serial is never displayed */
+function totalFrom(h) {
+var m = h && h.get && /\/(\d+)\s*$/.exec(h.get('content-range') || '');
+return m ? Number(m[1]) : null;
+}
+/* ---------- DOM helpers: no HTML strings, text only. URL attributes are filtered through rawUrl. ---------- */
+function $(id) { return document.getElementById(id); }
+function clear(e) { while (e && e.firstChild) e.removeChild(e.firstChild); return e; }
+var URL_ATTRS = { href: 1, src: 1, action: 1, formaction: 1 };
+function h(tag, attrs, kids) {
+var e = document.createElement(tag);
+Object.keys(attrs || {}).forEach(function (k) {
+var v = attrs[k];
+if (v == null || v === false) return;
+if (k === 'text') e.textContent = v;
+else if (k === 'class') e.className = v;
+else if (URL_ATTRS[k]) e.setAttribute(k, rawUrl(v) || '#');
+else e.setAttribute(k, v === true ? '' : String(v));
+});
+[].concat(kids == null ? [] : kids).forEach(function (c) { if (c != null) e.appendChild(typeof c === 'string' ? document.createTextNode(c) : c); });
+return e;
+}
+/* ---------- public API layer: every call resolves to {ok:true,data,asOf} or {ok:false,error:{kind,status,code,message}} ---------- */
+function shapeErr(what) { return { ok: false, error: { kind: 'shape', message: what + ' response has an unexpected shape' } }; }
+function done(r, check) {
+if (!r.ok) return r;
+var out = check(r);
+return out.ok === false ? out : { ok: true, data: out.data, asOf: new Date(), total: totalFrom(r.headers) };
+}
+KH.api.settings = function () {
+return req('/rest/v1/settings?select=key,value').then(function (r) {
+return done(r, function (x) {
+if (!Array.isArray(x.data)) return shapeErr('settings');
+var m = {}; x.data.forEach(function (row) { if (row && typeof row.key === 'string') m[row.key] = row.value; });
+return { data: m };
+});
+});
+};
+KH.api.stats = function () {
+return req('/rest/v1/donation_stats?select=total_npr,donor_count').then(function (r) {
+return done(r, function (x) {
+var row = Array.isArray(x.data) && x.data.length === 1 ? x.data[0] : null;
+var tot = row && numOrNull(row.total_npr), cnt = row && numOrNull(row.donor_count);
+return tot === null || cnt === null ? shapeErr('stats') : { data: { total_npr: tot, donor_count: cnt } };
+});
+});
+};
+KH.api.ledger = function (o) {
+o = o || {};
+return req(ledgerPath(o), { headers: o.after == null ? { Prefer: 'count=exact' } : {} }).then(function (r) {
+return done(r, function (x) { return Array.isArray(x.data) ? { data: x.data } : shapeErr('ledger'); });
+});
+};
+KH.api.expenses = function () {
+return req('/rest/v1/expenses?select=id,spent_on,item,category,amount_npr,note&order=spent_on.desc,id.desc&limit=1000').then(function (r) {
+return done(r, function (x) { return Array.isArray(x.data) ? { data: x.data } : shapeErr('expenses'); });
+});
+};
+/* feature 'lookup' only (migration 002): POST /rest/v1/rpc/donation_status {ref}. Result rows have exactly {status, created_on}. */
+KH.api.lookup = function (hex12) {
+if (!/^[0-9a-f]{12}$/.test(String(hex12))) return Promise.resolve({ ok: false, error: { kind: 'input', message: 'bad code' } });
+return req('/rest/v1/rpc/donation_status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ref: hex12 }) }).then(function (r) {
+return done(r, function (x) { return Array.isArray(x.data) ? { data: x.data[0] || null } : shapeErr('lookup'); });
+});
+};
+/* KH.api.submit is defined in 70-donate.js (upload, then insert). */
+Object.assign(KH, { esc: esc, t: t, tx: tx, nf: nf, money: money, fdate: fdate, dev: dev, pct: pct, safeUrl: safeUrl, refCode: refCode, parseRef: parseRef, refRange: refRange });
+Object.assign(KH.util, { $: $, clear: clear, h: h, rawUrl: rawUrl, ktmDay: ktmDay, countdown: countdown, newId: newId, classify: classify, timeText: timeText, ledgerPath: ledgerPath, cursorOf: cursorOf, totalFrom: totalFrom, cleanSearch: cleanSearch, req: req, lang: lang });
+KH.state.lang = store.local.get('lang', null) || ((navigator.language || '').indexOf('ne') === 0 ? 'np' : 'en');
+}());
+/*== part: src/60-public.js ==*/
+(function () {
+'use strict';
+var KH = window.KH, U = KH.util, h = U.h, $ = U.$, clear = U.clear;
+var S = KH.state, PAGE = 25, DASH = '—', CACHE_MS = 24 * 3600 * 1000;
+S.status = { settings: 'loading', stats: 'loading', ledger: 'loading', expenses: 'loading' };
+S.data = { settings: {}, stats: null, rows: [], total: null, more: false, expenses: null };
+S.asOf = null; S.fail = 0; S.stopped = false; S.term = ''; S.seq = 0;
+var hasSettings = false;
+U.nextPollDelay = function (failures, rand) {
+if (failures >= 3) return null;
+var base = Math.min(60000 * Math.pow(2, failures), 300000);
+var jitter = ((typeof rand === 'number' ? rand : Math.random()) * 20000) - 10000;
+return Math.round(base + jitter);
+};
+function setText(id, txt) { var e = $(id); if (e) e.textContent = txt; }
+function show(id, on) { var e = $(id); if (e) e.hidden = !on; }
+function lg() { return KH.state.lang === 'np' ? 'np' : 'en'; }
+function pick(o, base) { return o && (o[base + '_' + lg()] || o[base + '_en']) || ''; }
+function num(v) { var n = typeof v === 'string' && !v.trim() ? NaN : Number(v); return isFinite(n) ? n : null; }
+function hasData(block) {
+return block === 'settings' ? hasSettings : block === 'stats' ? S.data.stats !== null : block === 'expenses' ? S.data.expenses !== null : S.data.rows.length > 0 || S.data.total === 0;
+}
+function failedAny() { return ['settings', 'stats', 'ledger', 'expenses'].some(function (b) { return S.status[b] === 'failed' || S.status[b] === 'stale'; }); }
+function stateBox(box, status, failKey, retry) {
+clear(box);
+if (status === 'loading') { box.appendChild(h('span', { text: KH.tx('loading') })); return; }
+if (status !== 'failed' && status !== 'stale') return;
+box.appendChild(h('span', { class: 'msg warn', text: KH.tx(navigator.onLine === false ? 'offline' : failKey) }));
+if (retry) {
+var b = h('button', { type: 'button', class: 'btn ghost', text: KH.tx('retry') });
+b.addEventListener('click', retry);
+box.appendChild(b);
+}
+}
+function renderSettings() {
+var se = S.data.settings, ev = se.event && typeof se.event === 'object' ? se.event : {};
+if (hasSettings) {
+var d = pick(ev, 'date') || KH.tx('tbd_date'), v = pick(ev, 'venue') || KH.tx('tbd_venue');
+setText('heroDate', d); setText('detDate', d); setText('heroVenue', v); setText('detVenue', v);
+}
+var ex = $('detExtra');
+if (ex) {
+clear(ex);
+(Array.isArray(se.about_extra) ? se.about_extra : []).slice(0, 8).forEach(function (r) {
+var l = r && pick(r, 'label'), val = r && pick(r, 'value');
+if (l && val) { ex.appendChild(h('dt', { text: l })); ex.appendChild(h('dd', { text: val })); }
+});
+}
+var vt = pick(se, 'verify_time'); setText('faqVerify', vt); show('faqVerify', !!vt);
+var rp = pick(se, 'receipt_policy'); if (rp) setText('faqPolicy', rp); else setText('faqPolicy', KH.tx('faq_5_a2'));
+var un = pick(se, 'exp_unspent'); setText('expUnspent', un); show('expUnspent', !!un);
+var fs = $('footSign');
+if (fs) {
+if (typeof se.footer_sign === 'string' && se.footer_sign.trim()) { fs.textContent = se.footer_sign.trim(); fs.hidden = false; }
+else if (se.footer_sign === '' || se.footer_sign === false) fs.hidden = true;
+else { fs.textContent = KH.tx('foot_sign'); fs.hidden = false; }
+}
+var c = se.contact && typeof se.contact === 'object' ? se.contact : {};
+contactLink('callLink', 'callNum', c.phone ? 'tel:' + String(c.phone).replace(/[^\d+]/g, '') : '', c.phone);
+contactLink('mailLink', 'mailNum', c.email ? 'mailto:' + String(c.email).trim() : '', c.email);
+renderCountdown();
+renderAmountPresets();
+}
+function contactLink(linkId, valId, href, label) {
+var a = $(linkId); if (!a) return;
+var span = $(valId);
+if (!span) { span = h('span', { id: valId, class: 'contact-val' }); a.parentNode.insertBefore(span, a.nextSibling); }
+if (href && label) { a.setAttribute('href', U.rawUrl(href) || '#'); a.hidden = false; span.textContent = ' ' + label; }
+else { a.hidden = true; span.textContent = ''; }
+}
+function renderCountdown() {
+var slot = $('countdownSlot'); if (!slot) return;
+clear(slot);
+var ev = S.data.settings.event, cd = hasSettings && ev ? U.countdown(ev.date_iso) : null;
+if (!cd) return;
+var txt = cd.today ? KH.tx('cd_today') : cd.days === 1 ? KH.tx('cd_one') : KH.tx('cd_days', { n: KH.nf(cd.days) });
+slot.appendChild(h('p', { class: 'countdown', text: txt }));
+}
+function renderAmountPresets() {
+var f = $('f_amount'); if (!f) return;
+var box = $('amountPresets');
+if (!box) { box = h('div', { id: 'amountPresets', class: 'presets', role: 'group' }); f.parentNode.insertBefore(box, f.nextSibling); }
+clear(box);
+var list = Array.isArray(S.data.settings.amount_presets) ? S.data.settings.amount_presets : [];
+list.map(num).filter(function (n) { return n !== null && n > 0; }).slice(0, 6).forEach(function (n) {
+var b = h('button', { type: 'button', class: 'chipbtn', text: KH.nf(n) });
+b.addEventListener('click', function () { f.value = String(n); f.dispatchEvent(new Event('input', { bubbles: true })); });
+box.appendChild(b);
+});
+box.hidden = !box.firstChild;
+}
+function renderStats() {
+var se = S.data.settings, st = S.data.stats;
+var done = hasSettings ? num(se.ahutis_done) : null, goal = hasSettings ? num(se.goal_ahutis) : null;
+setText('stAhuti', done === null ? DASH : KH.nf(done));
+setText('ahutiOf', goal ? ' ' + KH.tx('of', { goal: KH.nf(goal) }) : '');
+setText('stFunds', st ? KH.money(st.total_npr, 'NPR') : DASH);
+setText('stDonors', st ? KH.nf(st.donor_count) : DASH);
+show('statsZero', !!st && st.total_npr === 0 && st.donor_count === 0);
+var m = $('meter');
+if (m) {
+var pctv = done !== null && goal ? Math.max(0, Math.min(100, done / goal * 100)) : 0;
+if (done !== null && goal) { m.setAttribute('aria-valuenow', String(done)); m.setAttribute('aria-valuemax', String(goal)); }
+Array.prototype.forEach.call(m.querySelectorAll('.diyas li'), function (li, i) { li.classList.toggle('lit', done !== null && i < Math.floor(pctv / 10)); });
+setText('progText', done !== null && goal ? KH.tx('prog_text', { done: KH.nf(done), goal: KH.nf(goal), pct: KH.pct(pctv) }) : '');
+}
+var ok = ['settings', 'stats'].every(function (b) { return S.status[b] === 'ok'; });
+setText('progAsOf', S.asOf && (ok || hasData('stats')) ? KH.tx('as_of', { time: U.timeText(S.asOf) }) : '');
+var pb = $('progState');
+if (pb) {
+var bad = S.status.settings === 'failed' || S.status.stats === 'failed' || S.status.settings === 'stale' || S.status.stats === 'stale';
+var msg = $('progMsg'), btn = $('progRetry');
+if (msg) { msg.hidden = !bad; msg.textContent = bad ? KH.tx(navigator.onLine === false ? 'offline' : 'load_fail') : ''; }
+if (btn) btn.hidden = !bad;
+}
+renderExpenses();
+}
+function row(r) {
+var who = r.display_name ? String(r.display_name) : KH.tx('anon');
+return h('li', { class: 'lrow' }, [
+h('span', { class: 'code', text: KH.refCode(r.id) }),
+h('span', { class: 'who', text: who }),
+r.country ? h('span', { class: 'cty', text: String(r.country) }) : null,
+h('span', { class: 'amt', text: KH.money(r.amount, r.currency) }),
+h('time', { class: 'date', datetime: String(r.created_at || '').slice(0, 10), text: KH.fdate(r.created_at) }),
+r.message ? h('p', { class: 'msgtxt', text: String(r.message) }) : null
+]);
+}
+function renderLedger() {
+var box = $('ledger'), feed = $('feed'); if (!box) return;
+clear(box);
+var rows = S.data.rows, st = S.status.ledger;
+if (rows.length) {
+var ul = h('ul', { class: 'lrows' }); rows.forEach(function (r) { ul.appendChild(row(r)); }); box.appendChild(ul);
+} else if (st === 'ok') {
+box.appendChild(h('p', { text: KH.tx(S.term ? 'no_results' : 'none') }));
+}
+if (feed) {
+clear(feed);
+if (!S.term) rows.slice(0, 5).forEach(function (r) {
+feed.appendChild(h('li', {}, [h('span', { class: 'who', text: r.display_name ? String(r.display_name) : KH.tx('anon') }), ' ', h('span', { class: 'amt', text: KH.money(r.amount, r.currency) })]));
+});
+show('feedBox', !S.term && rows.length > 0);
+}
+setText('ledCount', st === 'ok' && S.data.total !== null ? KH.tx('aria_results', { n: KH.nf(S.data.total) }) : '');
+stateBox($('ledState'), st, 'ledger_fail', function () { loadLedger(true).then(renderLedger); });
+var more = $('moreBtn'); if (more) { more.hidden = !S.data.more; more.disabled = false; }
+}
+function loadLedger(reset) {
+var seq = ++S.seq, after = reset ? null : U.cursorOf(S.data.rows);
+if (reset && !S.data.rows.length) S.status.ledger = 'loading';
+return KH.api.ledger({ after: after, term: S.term, limit: PAGE }).then(function (r) {
+if (seq !== S.seq) return true;
+if (!r.ok) { S.status.ledger = S.data.rows.length ? 'stale' : 'failed'; return false; }
+S.data.rows = reset ? r.data : S.data.rows.concat(r.data);
+if (reset) S.data.total = r.total;
+S.data.more = r.data.length === PAGE && (S.data.total === null || S.data.rows.length < S.data.total);
+S.status.ledger = 'ok';
+return true;
+});
+}
+function wireLedger() {
+var inp = $('ledSearch'), timer = null;
+if (inp) inp.addEventListener('input', function () {
+clearTimeout(timer);
+timer = setTimeout(function () {
+var term = U.cleanSearch(inp.value);
+if (term === S.term) return;
+S.term = term; S.data.rows = []; S.data.total = null; S.data.more = false; S.status.ledger = 'loading';
+renderLedger();
+loadLedger(true).then(renderLedger);
+}, 350);
+});
+var more = $('moreBtn');
+if (more) more.addEventListener('click', function () { more.disabled = true; loadLedger(false).then(renderLedger); });
+}
+function catLabel(c) {
+var T = window.KH_T && window.KH_T.en || {}, low = String(c || '').trim().toLowerCase(), out = c;
+Object.keys(T).forEach(function (k) { if (k.indexOf('cat_') === 0 && String(T[k]).trim().toLowerCase() === low) out = KH.tx(k); });
+return out || '';
+}
+function renderExpenses() {
+var body = $('expBody'); if (!body) return;
+var ex = S.data.expenses, st = S.status.expenses, stats = S.data.stats;
+clear(body); clear($('expCats'));
+var spent = null;
+if (ex) {
+spent = ex.reduce(function (a, e) { return a + (num(e.amount_npr) || 0); }, 0);
+if (!ex.length) body.appendChild(h('tr', {}, [h('td', { colspan: '4', text: KH.tx('x_none') })]));
+ex.forEach(function (e) {
+body.appendChild(h('tr', {}, [h('td', { text: KH.fdate(e.spent_on) }), h('td', { text: String(e.item || '') }),
+h('td', { text: catLabel(e.category) }), h('td', { class: 'r', text: KH.money(e.amount_npr, 'NPR') })]));
+});
+var cats = {}; ex.forEach(function (e) { var k = catLabel(e.category) || KH.tx('cat_other'); cats[k] = (cats[k] || 0) + (num(e.amount_npr) || 0); });
+var keys = Object.keys(cats).sort(function (a, b) { return cats[b] - cats[a]; }), max = keys.length ? cats[keys[0]] : 0;
+keys.forEach(function (k) {
+var bar = h('span', { class: 'bar' }); bar.style.width = (max ? Math.max(2, Math.round(cats[k] / max * 100)) : 0) + '%';
+$('expCats').appendChild(h('div', { class: 'cat' }, [h('span', { class: 'lbl', text: k }), bar, h('span', { class: 'amt', text: KH.money(cats[k], 'NPR') })]));
+});
+show('expCatsBox', keys.length > 0);
+} else { show('expCatsBox', false); }
+setText('expSpent', spent === null ? DASH : KH.money(spent, 'NPR'));
+setText('expTotal', spent === null ? DASH : KH.money(spent, 'NPR'));
+setText('expRaised', stats ? KH.money(stats.total_npr, 'NPR') : DASH);
+stateBox($('expState'), st, 'exp_fail', function () { loadBlock('expenses').then(renderStats); });
+}
+var PAY_KEY = { esewa: 'esewa', khalti: 'khalti', bank: 'bank', international: 'intl' }, MLABEL = { esewa: 'm_esewa', khalti: 'm_khalti', bank: 'm_bank', international: 'm_intl' };
+var sayTimer = null;
+function say(msg) {
+setText('payState', msg); clearTimeout(sayTimer);
+sayTimer = setTimeout(function () { setText('payState', ''); }, 3500);
+}
+function copyText(txt, srcEl) {
+function fallback() {
+try { var r = document.createRange(); r.selectNodeContents(srcEl); var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r); } catch (e) {  }
+say(KH.tx('copy_fail'));
+}
+if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(function () { say(KH.tx('copied')); }, fallback);
+else fallback();
+}
+U.copyText = copyText; U.say = say;
+function currentMethod() { var c = document.querySelector('input[name="paym"]:checked'); return c ? c.value : 'esewa'; }
+function renderPay() {
+var body = $('payBody'); if (!body) return;
+clear(body);
+if (!hasSettings) { stateBox(body, S.status.settings === 'loading' ? 'loading' : 'failed', 'e_settings_fail', function () { loadBlock('settings').then(renderAll); }); return; }
+var m = currentMethod(), P = S.data.settings.payments && typeof S.data.settings.payments === 'object' ? S.data.settings.payments : {}, d = P[PAY_KEY[m]] || {};
+var fields = m === 'bank' ? [['p_bank', d.bank], ['p_name', d.account_name], ['p_acc', d.account_no], ['p_branch', d.branch]]
+: m === 'international' ? [] : [['p_id', d.id], ['p_name', d.name]];
+var shown = 0;
+fields.forEach(function (f) {
+var val = f[1] == null ? '' : String(f[1]).trim(); if (!val) return;
+shown++;
+var v = h('strong', { class: 'val', text: val }), label = KH.tx(f[0]);
+var btn = h('button', { type: 'button', class: 'btn ghost sm', 'aria-label': KH.tx('aria_copy_field', { label: label }), text: KH.tx('copy') });
+btn.addEventListener('click', function () { copyText(val, v); });
+body.appendChild(h('div', { class: 'payrow' }, [h('span', { class: 'lbl', text: label }), v, btn]));
+});
+if (m === 'international') {
+var tx = d.text ? String(d.text).trim() : '';
+if (tx) { shown++; body.appendChild(h('p', { class: 'pre', text: tx })); body.appendChild(h('p', { class: 'small', text: KH.tx('p_intl_note') })); }
+}
+var qr = U.rawUrl(d.qr_url);
+if (qr && m !== 'international') {
+shown++;
+var img = h('img', { src: qr, alt: KH.tx('qr_alt', { method: KH.tx(MLABEL[m]) }), width: '220', height: '220', loading: 'lazy', decoding: 'async' });
+var qb = h('button', { type: 'button', class: 'qrbtn', 'aria-label': KH.tx('qr_zoom') }, [img]);
+qb.addEventListener('click', function () {
+var dlg = $('qrDlg'), big = $('qrBig'); if (!dlg || !big) return;
+clear(big); big.appendChild(h('img', { src: qr, alt: img.getAttribute('alt') }));
+if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
+});
+body.appendChild(h('div', { class: 'qr' }, [qb, h('p', { class: 'small', text: KH.tx('p_qr') })]));
+}
+var nm = m === 'bank' ? d.account_name : d.name;
+if (nm && String(nm).trim() && m !== 'international') body.appendChild(h('p', { class: 'small', text: KH.tx('p_verify', { name: String(nm).trim() }) }));
+if (!shown) body.appendChild(h('p', { class: 'msg warn', text: KH.tx('p_soon') }));
+}
+function wirePay() {
+Array.prototype.forEach.call(document.querySelectorAll('input[name="paym"]'), function (r) {
+r.addEventListener('change', function () { var f = $('f_method'); if (f) { f.value = r.value; f.dispatchEvent(new Event('change', { bubbles: true })); } renderPay(); });
+});
+var f = $('f_method');
+if (f) f.addEventListener('change', function () {
+var r = document.querySelector('input[name="paym"][value="' + f.value + '"]');
+if (r && !r.checked) { r.checked = true; renderPay(); }
+});
+var c = $('qrClose'); if (c) c.addEventListener('click', function () { var d = $('qrDlg'); if (d && d.close) d.close(); else if (d) d.removeAttribute('open'); });
+}
+var ST_KEY = { pending: 'st_checking', received: 'st_received', verified: 'st_verified', rejected: 'st_nomatch' };
+function readRefs() { var r = KH.store.local.get('refs', []); return Array.isArray(r) ? r.filter(function (x) { return x && typeof x.code === 'string'; }).slice(0, 20) : []; }
+U.addRef = function (code) {
+var list = readRefs().filter(function (x) { return x.code !== code; });
+list.unshift({ code: code, t: new Date().toISOString(), s: 'received' });
+KH.store.local.set('refs', list.slice(0, 20)); renderRefs();
+};
+function setRefStatus(code, s) {
+var list = readRefs(); list.forEach(function (x) { if (x.code === code) x.s = s; }); KH.store.local.set('refs', list); renderRefs();
+}
+function renderRefs() {
+var list = readRefs(), ul = $('myRefsList'); if (!ul) return;
+clear(ul);
+list.forEach(function (x) {
+ul.appendChild(h('li', {}, [h('strong', { text: x.code }), ' · ' + KH.fdate(x.t) + ' · ' + KH.tx(ST_KEY[x.s] || 'st_received')]));
+});
+show('myRefs', list.length > 0);
+}
+function wireRefs() {
+var c = $('myRefsClear'); if (c) c.addEventListener('click', function () { KH.store.local.del('refs'); renderRefs(); });
+}
+function lookupStatus(hex) {
+return KH.api.lookup(hex).then(function (r) {
+if (!r.ok) return { err: true };
+return r.data ? { status: r.data.status } : { none: true };
+});
+}
+function wireLookup() {
+var f = $('lkForm'); if (!f || !KH.features.lookup) return;
+f.addEventListener('submit', function (e) {
+e.preventDefault();
+var out = $('lkResult'), hex = KH.parseRef($('lkCode').value);
+if (!hex) { out.textContent = KH.tx('lk_short'); return; }
+out.textContent = KH.tx('loading');
+lookupStatus(hex).then(function (r) {
+if (r.err) out.textContent = KH.tx('err_gen');
+else if (r.none) out.textContent = KH.tx('lk_none');
+else { out.textContent = KH.tx('lk_found', { status: KH.tx(ST_KEY[r.status] || 'st_checking') }); setRefStatus(KH.refCode(hex), r.status); }
+});
+});
+readRefs().filter(function (x) { return x.s !== 'verified' && x.s !== 'rejected'; }).slice(0, 5).forEach(function (x) {
+var hex = KH.parseRef(x.code); if (hex) lookupStatus(hex).then(function (r) { if (r.status) setRefStatus(x.code, r.status); });
+});
+}
+function pageUrl() { return location.href.split('#')[0]; }
+function shareText() {
+var url = pageUrl(), st = S.data.settings.share_text, s = typeof st === 'string' ? st : st && typeof st === 'object' ? (st[lg()] || st.en || '') : '';
+s = String(s || '').trim();
+if (!s) return KH.tx('share_text', { url: url });
+return s.indexOf('{url}') >= 0 ? s.replace(/\{url\}/g, url) : s + ' ' + url;
+}
+function renderShare() {
+var wa = $('shareWa'); if (wa) { wa.setAttribute('href', 'https://wa.me/?text=' + encodeURIComponent(shareText())); wa.setAttribute('target', '_blank'); wa.setAttribute('rel', 'noopener'); }
+show('shareBtn', typeof navigator.share === 'function');
+}
+function wireShare() {
+var b = $('shareBtn'), c = $('shareCopy');
+if (b) b.addEventListener('click', function () { try { navigator.share({ title: document.title, text: shareText(), url: pageUrl() }).catch(function () {  }); } catch (e) {  } });
+if (c) c.addEventListener('click', function () {
+var m = $('shareMsg');
+function ok() { if (m) { m.textContent = KH.tx('share_copied'); m.hidden = false; setTimeout(function () { m.hidden = true; }, 3000); } }
+function bad() { if (m) { m.textContent = pageUrl(); m.hidden = false; } }
+if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(pageUrl()).then(ok, bad); else bad();
+});
+}
+var kbOpen = false, ticking = false;
+function stickyUpdate() {
+ticking = false;
+var bar = $('stickyBar'); if (!bar) return;
+var vh = window.innerHeight || 700, narrow = window.matchMedia ? window.matchMedia('(max-width: 720px)').matches : false;
+function near(id) { var e = $(id); if (!e) return false; var r = e.getBoundingClientRect(); return r.top < vh * 0.7 && r.bottom > 0; }
+var on = narrow && !kbOpen && (window.pageYOffset || 0) > 420 && !near('donate') && !near('foot') && !/^#\/admin/.test(location.hash);
+bar.hidden = !on; document.body.classList.toggle('has-sticky', on);
+}
+function wireSticky() {
+function req() { if (!ticking) { ticking = true; (window.requestAnimationFrame || setTimeout)(stickyUpdate); } }
+window.addEventListener('scroll', req, { passive: true }); window.addEventListener('resize', req);
+function isField(t) { return t && /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName); }
+document.addEventListener('focusin', function (e) { if (isField(e.target)) { kbOpen = true; document.body.classList.add('kb-open'); req(); } });
+document.addEventListener('focusout', function () { setTimeout(function () { if (!isField(document.activeElement)) { kbOpen = false; document.body.classList.remove('kb-open'); req(); } }, 120); });
+if (window.visualViewport) window.visualViewport.addEventListener('resize', function () {
+var small = window.visualViewport.height < window.innerHeight * 0.75; if (small !== kbOpen && !isField(document.activeElement)) { kbOpen = small; document.body.classList.toggle('kb-open', small); req(); }
+});
+req();
+}
+function renderNet() {
+var b = $('netBanner'); if (!b) return;
+var off = navigator.onLine === false; b.hidden = !off; b.textContent = off ? KH.tx('offline') : '';
+}
+function syncLangButtons() {
+var np = lg() === 'np';
+var a = $('langNp'), b = $('langEn');
+if (a) a.setAttribute('aria-pressed', String(np)); if (b) b.setAttribute('aria-pressed', String(!np));
+}
+function wireLang() {
+var a = $('langNp'), b = $('langEn');
+if (a) a.addEventListener('click', function () { KH.setLang('np'); });
+if (b) b.addEventListener('click', function () { KH.setLang('en'); });
+document.addEventListener('kh:lang', function () { syncLangButtons(); renderAll(); });
+}
+function route() {
+var adm = /^#\/admin/.test(location.hash), site = $('site'), a = $('admin');
+if (site) site.hidden = adm; if (a) a.hidden = !adm;
+if (adm) { clearTimeout(timer); timer = null; if (KH.admin && KH.admin.open) KH.admin.open(); window.scrollTo(0, 0); }
+else if (booted && !timer && !S.stopped) schedule();
+stickyUpdate();
+}
+function loadBlock(block) {
+var call = block === 'settings' ? KH.api.settings() : block === 'stats' ? KH.api.stats() : KH.api.expenses();
+if (!hasData(block)) S.status[block] = 'loading';
+return call.then(function (r) {
+if (!r.ok) { S.status[block] = hasData(block) ? 'stale' : 'failed'; return false; }
+if (block === 'settings') { S.data.settings = r.data; hasSettings = true; } else if (block === 'stats') S.data.stats = r.data; else S.data.expenses = r.data;
+S.status[block] = 'ok'; S.asOf = r.asOf; return true;
+});
+}
+function saveCache() {
+if (!hasSettings || S.data.stats === null) return;
+KH.store.local.set('cache', { ts: Date.now(), settings: S.data.settings, stats: S.data.stats, rows: S.term ? [] : S.data.rows.slice(0, PAGE), total: S.term ? null : S.data.total });
+}
+function restoreCache() {
+var c = KH.store.local.get('cache', null);
+if (!c || typeof c !== 'object' || !c.settings || !c.stats || Date.now() - Number(c.ts) > CACHE_MS) return;
+S.data.settings = c.settings; hasSettings = true; S.data.stats = c.stats;
+if (Array.isArray(c.rows) && c.rows.length) { S.data.rows = c.rows; S.data.total = num(c.total); S.data.more = S.data.total !== null && c.rows.length < S.data.total; }
+S.status.settings = S.status.stats = 'stale'; if (S.data.rows.length) S.status.ledger = 'stale';
+S.asOf = new Date(Number(c.ts));
+}
+function renderAll() {
+renderNet(); renderSettings(); renderStats(); renderLedger(); renderPay(); renderRefs(); renderShare(); syncLangButtons();
+}
+function loadAll(poll) {
+var jobs = [loadBlock('settings'), loadBlock('stats'), loadBlock('expenses')];
+if (!poll || (!S.term && S.data.rows.length <= PAGE)) jobs.push(loadLedger(true));
+return Promise.all(jobs).then(function (res) {
+var ok = res.every(Boolean);
+if (ok) { S.fail = 0; S.stopped = false; saveCache(); } else S.fail++;
+renderAll(); return ok;
+});
+}
+var timer = null, booted = false, missed = false;
+function schedule() {
+clearTimeout(timer); timer = null;
+var d = U.nextPollDelay(S.fail);
+if (d === null) { S.stopped = true; renderStats(); return; }
+timer = setTimeout(tick, d);
+}
+function tick() {
+timer = null;
+if (document.hidden || /^#\/admin/.test(location.hash)) { missed = true; return; }
+loadAll(true).then(schedule);
+}
+function retryAll() { S.fail = 0; S.stopped = false; loadAll(false).then(schedule); }
+U.retryAll = retryAll;
+KH.admin = {
+open: function () {
+var box = $('admin'); if (!box || box.getAttribute('data-mounted') === '1') return;
+clear(box);
+box.appendChild(h('p', { class: 'small wrap', role: 'status', text: KH.tx('loading') }));
+KH.loadAdmin().then(function (impl) {
+clear(box); box.setAttribute('data-mounted', '1'); impl.mount(box);
+}, function () {
+clear(box);
+var retry = h('button', { type: 'button', class: 'btn', text: KH.tx('retry') });
+retry.addEventListener('click', function () { KH.admin.open(); });
+var back = h('a', { href: '#', text: KH.tx('brand') });
+back.addEventListener('click', function (e) { e.preventDefault(); location.hash = ''; });
+box.appendChild(h('div', { class: 'wrap' }, [h('p', { class: 'msg warn', role: 'alert', text: KH.tx(navigator.onLine === false ? 'offline' : 'load_fail') }), retry, ' ', back]));
+});
+}
+};
+KH.boot = function () {
+KH.setLang(S.lang);
+restoreCache();
+wireLang(); wirePay(); wireLedger(); wireRefs(); wireShare(); wireSticky(); wireLookup();
+var r = $('progRetry'); if (r) r.addEventListener('click', retryAll);
+window.addEventListener('online', function () { renderNet(); if (S.stopped || failedAny()) retryAll(); });
+window.addEventListener('offline', renderNet);
 window.addEventListener('hashchange', route);
-$('#backSite').addEventListener('click', e => { e.preventDefault(); location.hash = ''; });
-
-async function initAdmin(){
-  if (!configured) { $('#aLogin').innerHTML = '<p>Backend not connected yet.</p>'; return; }
-  const { data } = await sb.auth.getSession();
-  if (data.session && await checkAdmin()) showApp(); else { $('#aLogin').style.display=''; $('#aApp').style.display='none'; $('#logoutBtn').style.display='none'; }
+document.addEventListener('visibilitychange', function () { if (!document.hidden && missed) { missed = false; tick(); } });
+setInterval(renderCountdown, 60000);
+if (KH.donate) KH.donate.init();
+renderAll();
+booted = true;
+if (/^#\/admin/.test(location.hash)) { route(); return; }
+loadAll(false).then(schedule);
+};
+}());
+/*== part: src/70-donate.js ==*/
+(function () {
+'use strict';
+var KH = window.KH, U = KH.util, h = U.h, $ = U.$, clear = U.clear;
+var EXT = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp', 'application/pdf': 'pdf' };
+var MAX_BYTES = 5242880;
+U.sniffType = function (b) {
+if (!b || b.length < 4) return null;
+if (b[0] === 0xFF && b[1] === 0xD8 && b[2] === 0xFF) return 'image/jpeg';
+if (b[0] === 0x89 && b[1] === 0x50 && b[2] === 0x4E && b[3] === 0x47) return 'image/png';
+if (b[0] === 0x25 && b[1] === 0x50 && b[2] === 0x44 && b[3] === 0x46) return 'application/pdf';
+if (b.length >= 12 && b[0] === 0x52 && b[1] === 0x49 && b[2] === 0x46 && b[3] === 0x46 && b[8] === 0x57 && b[9] === 0x45 && b[10] === 0x42 && b[11] === 0x50) return 'image/webp';
+return null;
+};
+U.isHeic = function (b) {
+if (!b || b.length < 12 || !(b[4] === 0x66 && b[5] === 0x74 && b[6] === 0x79 && b[7] === 0x70)) return false;
+var brand = String.fromCharCode(b[8], b[9], b[10], b[11]);
+return /^(heic|heix|hevc|hevx|heim|heis|mif1|msf1)$/.test(brand);
+};
+U.buildRow = function (v, id, mime, rate) {
+var ext = EXT[mime];
+if (!ext) throw new Error('unsupported type');
+var npr = v.currency === 'NPR' ? v.amount : v.amount * rate;
+return {
+id: id,
+donor_name: v.donor_name, display_pref: v.display_pref, phone: v.phone || null, email: v.email || null, country: v.country || null,
+amount: v.amount, currency: v.currency, amount_npr: Math.round(npr * 100) / 100, method: v.method,
+txn_ref: v.txn_ref || null, message: v.message || null, proof_path: id + '.' + ext, status: 'pending', source: 'online'
+};
+};
+U.proofExt = function (mime) { return EXT[mime] || null; };
+U.validate = function (v) {
+var errs = [];
+if (!String(v.donor_name || '').trim()) errs.push({ field: 'name', key: 'e_name' });
+if (!(Number(v.amount) > 0) || !isFinite(Number(v.amount))) errs.push({ field: 'amount', key: 'e_amount' });
+if (v.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.email)) errs.push({ field: 'email', key: 'e_email' });
+if (v.phone && !(/^[0-9+()\-\s.]+$/.test(v.phone) && v.phone.replace(/\D/g, '').length >= 6)) errs.push({ field: 'phone', key: 'e_phone' });
+return errs;
+};
+U.shownName = function (name, pref, anon) {
+var n = String(name || '').trim();
+return pref === 'anonymous' ? anon : pref === 'first' ? n.split(' ')[0] : n;
+};
+function upload(id, ext, file, mime, onProgress) {
+return new Promise(function (resolve) {
+var x = new XMLHttpRequest();
+function fail(kind, status, body) {
+resolve({ ok: false, error: { kind: kind, status: status || 0, code: body && (body.statusCode || body.code) ? String(body.statusCode || body.code) : null, message: body && (body.message || body.error) || null } });
 }
-async function checkAdmin(){
-  const r = await sb.from('admins').select('user_id').maybeSingle();
-  return !!(r.data && r.data.user_id);
-}
-$('#loginForm').addEventListener('submit', async e => {
-  e.preventDefault();
-  const f = e.target, m = $('#loginMsg');
-  m.innerHTML = '';
-  const { error } = await sb.auth.signInWithPassword({ email: f.email.value.trim(), password: f.password.value });
-  if (error) { m.innerHTML = `<div class="msg err">${esc(error.message)}</div>`; return; }
-  if (!(await checkAdmin())) { await sb.auth.signOut(); m.innerHTML = '<div class="msg err">This account is not an organizer.</div>'; return; }
-  f.reset(); showApp();
+x.open('POST', KH.cfg.url + '/storage/v1/object/proofs/' + id + '.' + ext);
+x.setRequestHeader('apikey', KH.cfg.key);
+x.setRequestHeader('Content-Type', mime);
+x.setRequestHeader('x-upsert', 'false');
+x.timeout = 90000;
+if (x.upload) x.upload.onprogress = function (e) { if (e.lengthComputable && onProgress) onProgress(e.loaded / e.total); };
+x.onload = function () {
+var body = null; try { body = JSON.parse(x.responseText); } catch (e) { body = null; }
+if (x.status >= 200 && x.status < 300) resolve({ ok: true }); else fail('http', x.status, body);
+};
+x.onerror = function () { fail('network'); };
+x.ontimeout = function () { fail('timeout'); };
+x.send(file);
 });
-$('#logoutBtn').addEventListener('click', async () => { await sb.auth.signOut(); initAdmin(); });
-
-function showApp(){ $('#aLogin').style.display='none'; $('#aApp').style.display=''; $('#logoutBtn').style.display=''; renderAdmin(); }
-
-const TABS = [['pending','Pending'],['all','All donations'],['add','Add donation'],['expenses','Expenses'],['settings','Settings'],['export','Export']];
-async function renderAdmin(){
-  $('#aTabs').innerHTML = TABS.map(([k,l])=>`<button class="tab ${A.tab===k?'on':''}" data-t="${k}">${l}</button>`).join('');
-  $$('#aTabs .tab').forEach(b => b.onclick = () => { A.tab = b.dataset.t; renderAdmin(); });
-  const body = $('#aBody'); body.innerHTML = '<p class="small">Loading…</p>';
-  try { await ({pending:aPending, all:aAll, add:aAdd, expenses:aExpenses, settings:aSettings, export:aExport})[A.tab](body); }
-  catch(e){ console.error(e); body.innerHTML = `<div class="msg err">${esc(e.message||e)}</div>`; }
 }
-const flash = (el, cls, txt) => { el.innerHTML = `<div class="msg ${cls}">${esc(txt)}</div>`; };
-const methodLabel = m => ({esewa:'eSewa',khalti:'Khalti',bank:'Bank',international:'International',cash:'Cash'})[m] || m;
-
-async function aPending(body){
-  const { data, error } = await fetchAll(() => sb.from('donations').select('*').eq('status','pending').order('created_at'));
-  if (error) throw error;
-  if (!data.length) { body.innerHTML = '<div class="card">No pending contributions. 🙏</div>'; return; }
-  body.innerHTML = data.map(d => `
-    <div class="acard" data-id="${esc(d.id)}">
-      <div class="top"><div><strong>${esc(d.donor_name)}</strong> <span class="pill pending">pending</span><div class="small">#${esc(d.receipt_no)} · ${esc(fdate(d.created_at))} · ${esc(methodLabel(d.method))} · ${esc(d.country||'')}</div></div>
-      <div style="text-align:right"><strong>${esc(money(d.amount,d.currency))}</strong><div class="small">shows as: ${esc(d.display_pref)}</div></div></div>
-      <div class="small">${esc([d.phone,d.email].filter(Boolean).join(' · '))}${d.txn_ref?` · ref: ${esc(d.txn_ref)}`:''}</div>
-      ${d.message?`<div style="margin-top:6px">“${esc(d.message)}”</div>`:''}
-      <div class="acts">
-        <button class="btn sm ghost" data-act="proof" data-path="${esc(d.proof_path||'')}">View proof</button>
-        <label class="small" style="margin:0">NPR value</label><input type="number" step="any" value="${esc(d.amount_npr)}" data-npr>
-        <button class="btn sm ok" data-act="ok">Approve</button>
-        <button class="btn sm bad" data-act="no">Reject</button>
-      </div><div class="amsg"></div></div>`).join('');
-  $$('#aBody .acard').forEach(card => {
-    const id = card.dataset.id, msg = $('.amsg', card);
-    card.addEventListener('click', async e => {
-      const act = e.target.dataset.act; if (!act) return;
-      if (act === 'proof') {
-        const p = e.target.dataset.path; if (!p) return flash(msg,'err','No proof attached.');
-        const r = await sb.storage.from('proofs').createSignedUrl(p, 120);
-        return r.error ? flash(msg,'err',r.error.message) : window.open(r.data.signedUrl, '_blank', 'noopener');
-      }
-      const npr = Number($('[data-npr]', card).value);
-      if (act === 'ok' && !(npr > 0)) return flash(msg,'err','Enter a valid NPR value.');
-      if (act === 'no' && !confirm('Reject this contribution?')) return;
-      const upd = act === 'ok' ? { status:'verified', verified_at:new Date().toISOString(), amount_npr:npr } : { status:'rejected' };
-      const r = await sb.from('donations').update(upd).eq('id', id);
-      if (r.error) return flash(msg,'err',r.error.message);
-      card.remove(); if (!$('#aBody .acard')) renderAdmin();
-    });
-  });
+function insertRow(row) {
+return U.req('/rest/v1/donations', { method: 'POST', headers: { 'Content-Type': 'application/json', Prefer: 'return=minimal' }, body: JSON.stringify(row), timeout: 20000 });
 }
-
-async function aAll(body){
-  const { data, error } = await fetchAll(() => sb.from('donations').select('*').order('created_at',{ascending:false}));
-  if (error) throw error;
-  A.rows = data;
-  const draw = () => {
-    const rows = A.rows.filter(r => A.filter==='all' || r.status===A.filter);
-    const total = A.rows.filter(r=>r.status==='verified').reduce((a,r)=>a+Number(r.amount_npr),0);
-    $('#allBody').innerHTML = rows.map(r => `<tr data-id="${esc(r.id)}"><td>#${esc(r.receipt_no)}</td><td>${esc(fdate(r.created_at))}</td><td>${esc(r.donor_name)}<div class="small">${esc(r.country||'')}</div></td><td>${esc(money(r.amount,r.currency))}<div class="small">NPR ${esc(nf(r.amount_npr,2))}</div></td><td>${esc(methodLabel(r.method))}${r.source==='admin'?'<div class="small">manual</div>':''}</td>
-      <td><select data-st>${['pending','verified','rejected'].map(s=>`<option ${r.status===s?'selected':''}>${s}</option>`).join('')}</select></td></tr>`).join('') || '<tr><td colspan="6" class="small">Nothing here.</td></tr>';
-    $('#allTotal').textContent = `Verified total: NPR ${nf(total,2)}`;
-    $$('#allBody [data-st]').forEach(sel => sel.onchange = async () => {
-      const id = sel.closest('tr').dataset.id, st = sel.value;
-      const r = await sb.from('donations').update({ status:st, verified_at: st==='verified' ? new Date().toISOString() : null }).eq('id', id);
-      if (r.error) { alert(r.error.message); return renderAdmin(); }
-      A.rows.find(x=>x.id===id).status = st; draw();
-    });
-  };
-  body.innerHTML = `<div class="card"><div class="acts" style="margin:0 0 10px"><select id="stF" style="width:auto"><option value="all">All</option><option>pending</option><option>verified</option><option>rejected</option></select><strong id="allTotal"></strong></div>
-    <div class="scroll"><table><thead><tr><th>No.</th><th>Date</th><th>Donor</th><th>Amount</th><th>Method</th><th>Status</th></tr></thead><tbody id="allBody"></tbody></table></div>
-    <p class="small">Records are never deleted — set a wrong entry to “rejected” to keep a clean audit trail.</p></div>`;
-  $('#stF').value = A.filter; $('#stF').onchange = e => { A.filter = e.target.value; draw(); };
-  draw();
+function submitFlow(v, file, mime, rate, sub, onProgress) {
+var ext = EXT[mime];
+var step1 = sub.uploaded ? Promise.resolve({ ok: true }) : upload(sub.id, ext, file, mime, onProgress);
+return step1.then(function (up) {
+if (!up.ok && U.classify(up) !== 'dup') return { ok: false, key: failKey(up, 'up') };
+sub.uploaded = true;
+return insertRow(U.buildRow(v, sub.id, mime, rate)).then(function (ins) {
+if (ins.ok || U.classify(ins) === 'dup') return { ok: true, code: KH.refCode(sub.id) };
+return { ok: false, key: failKey(ins, 'ins') };
+});
+});
 }
-
-async function aAdd(body){
-  const rates = (await loadSettingsFresh()).rates || {NPR:1};
-  body.innerHTML = `<div class="card" style="max-width:640px"><h3>Add an offline / cash donation</h3>
-   <form id="addForm"><label>Full name *</label><input name="donor_name" required>
-   <div class="row"><div><label>Amount *</label><input name="amount" type="number" step="any" required></div>
-   <div><label>Currency</label><select name="currency">${Object.keys(CUR).map(c=>`<option>${c}</option>`).join('')}</select></div>
-   <div><label>NPR value *</label><input name="amount_npr" type="number" step="any" required></div></div>
-   <div class="row"><div><label>Method</label><select name="method"><option value="cash">Cash</option><option value="esewa">eSewa</option><option value="khalti">Khalti</option><option value="bank">Bank</option><option value="international">International</option></select></div>
-   <div><label>Country</label><input name="country" value="Nepal"></div>
-   <div><label>Public name</label><select name="display_pref"><option value="full">Full name</option><option value="first">First name</option><option value="anonymous">Anonymous</option></select></div></div>
-   <div class="row"><div><label>Phone</label><input name="phone"></div><div><label>Email</label><input name="email" type="email"></div></div>
-   <label>Reference / note</label><input name="txn_ref"><label>Message</label><textarea name="message" maxlength="500"></textarea>
-   <div style="margin-top:14px"><button class="btn" type="submit">Save as verified</button></div><div id="addMsg"></div></form></div>`;
-  const f = $('#addForm');
-  const sync = () => { const a = Number(f.amount.value), c = f.currency.value; if (a>0) f.amount_npr.value = Math.round(a*(Number(rates[c])||(c==='NPR'?1:0))*100)/100 || ''; };
-  f.amount.oninput = sync; f.currency.onchange = sync;
-  f.onsubmit = async e => {
-    e.preventDefault();
-    const row = { donor_name:f.donor_name.value.trim(), amount:Number(f.amount.value), currency:f.currency.value, amount_npr:Number(f.amount_npr.value),
-      method:f.method.value, country:f.country.value.trim()||null, display_pref:f.display_pref.value, phone:f.phone.value.trim()||null, email:f.email.value.trim()||null,
-      txn_ref:f.txn_ref.value.trim()||null, message:f.message.value.trim()||null, status:'verified', source:'admin', verified_at:new Date().toISOString() };
-    const r = await sb.from('donations').insert(row);
-    if (r.error) return flash($('#addMsg'),'err',r.error.message);
-    f.reset(); f.country.value='Nepal'; flash($('#addMsg'),'ok','Saved and published to the public ledger.');
-  };
+function failKey(res, step) {
+var c = U.classify(res);
+if (c === 'rate') return 'err_rate';
+if (c === 'amount') return 'err_amount';
+if (res.error && res.error.status === 413) return 'err_size';
+if (c === 'network') return navigator.onLine === false ? 'e_offline' : 'err_gen';
+return 'err_gen';
 }
-
-async function aExpenses(body){
-  const { data, error } = await fetchAll(() => sb.from('expenses').select('*').order('spent_on',{ascending:false}));
-  if (error) throw error;
-  body.innerHTML = `<div class="grid g2" style="align-items:start"><div class="card"><h3>Add expense</h3>
-   <form id="expForm"><label>Date</label><input name="spent_on" type="date" required value="${new Date().toISOString().slice(0,10)}">
-   <label>Item *</label><input name="item" required maxlength="200"><label>Category</label><input name="category" maxlength="80" placeholder="Samagri, Pandit dakshina, Venue…">
-   <label>Amount (NPR) *</label><input name="amount_npr" type="number" step="any" min="0" required><label>Note</label><input name="note" maxlength="500">
-   <div style="margin-top:14px"><button class="btn" type="submit">Add</button></div><div id="expMsg"></div></form></div>
-   <div class="card"><h3>Recorded expenses</h3><div class="scroll"><table><tbody>${data.map(e=>`<tr data-id="${esc(e.id)}"><td>${esc(fdate(e.spent_on))}</td><td>${esc(e.item)}<div class="small">${esc(e.category||'')}</div></td><td class="r">${esc(nf(e.amount_npr,2))}</td><td><button class="btn sm ghost" data-del>✕</button></td></tr>`).join('') || '<tr><td class="small">None yet.</td></tr>'}</tbody></table></div></div></div>`;
-  $('#expForm').onsubmit = async e => {
-    e.preventDefault(); const f = e.target;
-    const r = await sb.from('expenses').insert({ spent_on:f.spent_on.value, item:f.item.value.trim(), category:f.category.value.trim()||null, amount_npr:Number(f.amount_npr.value), note:f.note.value.trim()||null });
-    if (r.error) return flash($('#expMsg'),'err',r.error.message);
-    renderAdmin();
-  };
-  $$('#aBody [data-del]').forEach(b => b.onclick = async () => {
-    if (!confirm('Delete this expense? It will disappear from the public table.')) return;
-    const r = await sb.from('expenses').delete().eq('id', b.closest('tr').dataset.id);
-    if (r.error) alert(r.error.message); else renderAdmin();
-  });
+U.submitFlow = submitFlow;
+var sub = null, objUrl = null, busy = false, draftTimer = null;
+function F() { return $('donForm').elements; }
+function val(name) { var e = F()[name]; return e ? String(e.value || '').trim() : ''; }
+function readValues() {
+return { donor_name: val('donor_name'), country: val('country'), amount: Number(val('amount')), currency: val('currency') || 'NPR', method: val('method') || 'esewa',
+txn_ref: val('txn_ref'), display_pref: val('display_pref') || 'full', message: val('message'), phone: val('phone'), email: val('email') };
 }
-
-async function loadSettingsFresh(){
-  const r = await sb.from('settings').select('key,value');
-  if (r.error) throw r.error;
-  A.settings = Object.fromEntries(r.data.map(x=>[x.key,x.value])); return A.settings;
+function errEl(field) { return $('f_' + field + '_err'); }
+function clearErrors() {
+['name', 'amount', 'email', 'phone', 'proof'].forEach(function (f) {
+var e = errEl(f); if (e) { e.hidden = true; e.textContent = ''; }
+var i = $('f_' + f); if (i) i.removeAttribute('aria-invalid');
+});
+setText('donSummary', '');
 }
-async function uploadAsset(file){
-  const ext = ({'image/jpeg':'jpg','image/png':'png','image/webp':'webp'})[file.type];
-  if (!ext) throw new Error('QR must be JPG, PNG or WebP');
-  const path = `qr/${crypto.randomUUID()}.${ext}`;
-  const up = await sb.storage.from('assets').upload(path, file, { contentType:file.type });
-  if (up.error) throw up.error;
-  return sb.storage.from('assets').getPublicUrl(path).data.publicUrl;
+function setText(id, t) { var e = $(id); if (e) e.textContent = t; }
+function showErrors(errs) {
+errs.forEach(function (x) {
+var e = errEl(x.field), i = $('f_' + x.field);
+if (e) { e.textContent = KH.tx(x.key); e.hidden = false; }
+if (i) i.setAttribute('aria-invalid', 'true');
+});
+setText('donSummary', KH.tx('e_summary', { n: KH.nf(errs.length) }));
+var first = $('f_' + errs[0].field); if (first && first.focus) first.focus();
 }
-async function aSettings(body){
-  const s = await loadSettingsFresh();
-  const ev = s.event||{}, P = s.payments||{}, C = s.contact||{}, R = s.rates||{};
-  const inp = (n,l,v,ty='text') => `<label>${l}</label><input name="${n}" type="${ty}" value="${esc(v??'')}">`;
-  const qrf = (k,url) => `<label>${k} QR image</label><input type="hidden" name="${k}_qr" value="${esc(url||'')}">${url?`<img src="${esc(url)}" style="width:90px;display:block;margin-bottom:6px" alt="">`:''}<input type="file" data-qr="${k}" accept="image/*">`;
-  body.innerHTML = `<form id="setForm" class="grid g2" style="align-items:start">
-   <div class="card"><h3>Event</h3>${inp('title_en','Title (English)',ev.title_en)}${inp('title_np','शीर्षक (नेपाली)',ev.title_np)}${inp('date_en','Date text (English)',ev.date_en)}${inp('date_np','मिति (नेपाली)',ev.date_np)}${inp('venue_en','Venue (English)',ev.venue_en)}${inp('venue_np','स्थान (नेपाली)',ev.venue_np)}
-     ${inp('ahutis_done','Ahutis offered so far',s.ahutis_done??0,'number')}${inp('goal_ahutis','Goal (ahutis)',s.goal_ahutis??10000000,'number')}
-     <h3 style="margin-top:20px">Contact (shown in footer)</h3>${inp('c_phone','Phone',C.phone)}${inp('c_email','Email',C.email)}</div>
-   <div class="card"><h3>Payment details</h3>
-     ${inp('esewa_id','eSewa ID / number',P.esewa?.id)}${inp('esewa_name','eSewa account name',P.esewa?.name)}${qrf('esewa',P.esewa?.qr_url)}
-     ${inp('khalti_id','Khalti ID / number',P.khalti?.id)}${inp('khalti_name','Khalti account name',P.khalti?.name)}${qrf('khalti',P.khalti?.qr_url)}
-     ${inp('bank_bank','Bank',P.bank?.bank)}${inp('bank_name','Account name',P.bank?.account_name)}${inp('bank_acc','Account number',P.bank?.account_no)}${inp('bank_branch','Branch',P.bank?.branch)}${qrf('bank',P.bank?.qr_url)}
-     <label>International payment instructions</label><textarea name="intl_text" style="min-height:110px">${esc(P.intl?.text||'')}</textarea>
-     <h3 style="margin-top:20px">Exchange rates → NPR</h3><p class="small">Used for the donor’s estimate. You can still correct each NPR value when approving.</p>
-     <div class="row">${['USD','INR','EUR','GBP','AUD'].map(c=>inp('rate_'+c,c,R[c],'number')).join('')}</div></div>
-   <div style="grid-column:1/-1"><button class="btn" type="submit">Save settings</button><div id="setMsg"></div></div></form>`;
-  $('#setForm').onsubmit = async e => {
-    e.preventDefault(); const f = e.target, m = $('#setMsg');
-    try {
-      for (const inpEl of $$('[data-qr]', f)) { if (inpEl.files[0]) f[inpEl.dataset.qr+'_qr'].value = await uploadAsset(inpEl.files[0]); }
-      const v = n => f[n].value.trim();
-      const rates = { NPR:1 }; ['USD','INR','EUR','GBP','AUD'].forEach(c => { rates[c] = Number(f['rate_'+c].value) || Number((A.settings.rates||{})[c]) || 0; });
-      const rows = [
-        { key:'event', value:{ title_en:v('title_en'), title_np:v('title_np'), date_en:v('date_en'), date_np:v('date_np'), venue_en:v('venue_en'), venue_np:v('venue_np'), date_iso:(A.settings.event||{}).date_iso||null } },
-        { key:'ahutis_done', value:Number(f.ahutis_done.value)||0 },
-        { key:'goal_ahutis', value:Number(f.goal_ahutis.value)||10000000 },
-        { key:'contact', value:{ phone:v('c_phone'), email:v('c_email') } },
-        { key:'rates', value:rates },
-        { key:'payments', value:{ esewa:{id:v('esewa_id'),name:v('esewa_name'),qr_url:f.esewa_qr.value}, khalti:{id:v('khalti_id'),name:v('khalti_name'),qr_url:f.khalti_qr.value},
-            bank:{bank:v('bank_bank'),account_name:v('bank_name'),account_no:v('bank_acc'),branch:v('bank_branch'),qr_url:f.bank_qr.value}, intl:{text:f.intl_text.value.trim()} } }
-      ].map(r => ({ ...r, updated_at:new Date().toISOString() }));
-      const r = await sb.from('settings').upsert(rows);
-      if (r.error) throw r.error;
-      flash(m,'ok','Saved. The public site now shows these details.'); loadPublic().then(renderAll);
-    } catch(err){ flash(m,'err',err.message||String(err)); }
-  };
+function banner(kind, key) {
+var m = $('donMsg'); clear(m);
+if (key) m.appendChild(h('p', { class: 'msg ' + kind, text: KH.tx(key) }));
 }
-
-async function aExport(body){
-  body.innerHTML = '<div class="card"><p>Download every donation (including private contact details) as a CSV file. Keep this file secure.</p><button class="btn" id="csvBtn">Download CSV</button><div id="csvMsg"></div></div>';
-  $('#csvBtn').onclick = async () => {
-    const { data, error } = await fetchAll(() => sb.from('donations').select('*').order('receipt_no'));
-    if (error) return flash($('#csvMsg'),'err',error.message);
-    const cols = ['receipt_no','created_at','status','source','donor_name','display_pref','phone','email','country','amount','currency','amount_npr','method','txn_ref','message','verified_at','admin_note'];
-    const cell = v => { v = v==null ? '' : String(v); if (/^[=+\-@\t\r]/.test(v)) v = "'" + v; return '"' + v.replace(/"/g,'""') + '"'; };
-    const csv = '\ufeff' + [cols.join(',')].concat(data.map(r => cols.map(c => cell(r[c])).join(','))).join('\r\n');
-    const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([csv], {type:'text/csv;charset=utf-8'})); a.download = `kutihom-donations-${new Date().toISOString().slice(0,10)}.csv`; a.click();
-  };
+function setBusy(on, label) {
+busy = on; var b = $('donBtn'); if (!b) return;
+b.disabled = on; b.setAttribute('aria-busy', String(on));
+b.textContent = on ? label : KH.tx('f_submit');
 }
-
-/* ------------------------------------------------------------------
-   boot
------------------------------------------------------------------- */
-(async function(){
-  applyLang();
-  route();
-  try { await loadPublic(); } catch(e){ console.error(e); }
-  renderAll();
-})();
+function rateFor(cur) {
+if (cur === 'NPR') return 1;
+var r = KH.state.data.settings.rates, n = r && typeof r === 'object' ? Number(r[cur]) : NaN;
+return isFinite(n) && n > 0 ? n : null;
+}
+function paymentsPublished() {
+var P = KH.state.data.settings.payments;
+if (!P || typeof P !== 'object') return false;
+return Object.keys(P).some(function (k) {
+var d = P[k]; return d && typeof d === 'object' && Object.keys(d).some(function (f) { return String(d[f] == null ? '' : d[f]).trim(); });
+});
+}
+function readHead(file) {
+if (file.slice && file.slice(0, 12).arrayBuffer) return file.slice(0, 12).arrayBuffer().then(function (b) { return new Uint8Array(b); });
+return new Promise(function (resolve, reject) {
+var r = new FileReader(); r.onload = function () { resolve(new Uint8Array(r.result)); }; r.onerror = reject; r.readAsArrayBuffer(file.slice(0, 12));
+});
+}
+function checkFile(file) {
+if (!file) return Promise.resolve({ ok: false, key: 'e_proof' });
+if (file.size > MAX_BYTES) return Promise.resolve({ ok: false, key: 'err_size' });
+if (file.size < 12) return Promise.resolve({ ok: false, key: 'err_type' });
+return readHead(file).then(function (b) {
+var m = U.sniffType(b);
+if (m) return { ok: true, mime: m };
+return { ok: false, key: U.isHeic(b) ? 'err_heic' : 'err_sniff' };
+}, function () { return { ok: false, key: 'err_type' }; });
+}
+function onSubmit(e) {
+e.preventDefault();
+if (busy) { banner('warn', 'e_submit_busy'); return; }
+clearErrors(); banner('', null);
+var v = readValues();
+if (val('website')) { showSlip(KH.refCode(U.newId()), v, true); return; }
+var errs = U.validate(v), file = F().proof.files && F().proof.files[0];
+if (!file) errs.push({ field: 'proof', key: 'e_proof' });
+if (errs.length) { showErrors(errs); return; }
+if (navigator.onLine === false) { banner('err', 'e_offline'); return; }
+var settingsOk = ['settings'].every(function (b) { return KH.state.status[b] === 'ok' || KH.state.status[b] === 'stale'; });
+var rate = rateFor(v.currency);
+if (!settingsOk || rate === null) { banner('err', 'e_settings_fail'); return; }
+if (!paymentsPublished()) { banner('err', 'e_no_pay'); return; }
+setBusy(true, KH.tx('sending'));
+checkFile(file).then(function (c) {
+if (!c.ok) { setBusy(false); showErrors([{ field: 'proof', key: c.key }]); return null; }
+var fileKey = file.name + '|' + file.size + '|' + file.lastModified;
+if (!sub || sub.fileKey !== fileKey) sub = { id: U.newId(), fileKey: fileKey, uploaded: false };
+return submitFlow(v, file, c.mime, rate, sub, function (p) { var b = $('donBtn'); if (b) b.textContent = KH.tx('f_uploading') + ' ' + KH.pct(p * 100) + '%'; }).then(function (r) {
+setBusy(false);
+if (!r.ok) { banner('err', r.key); return; }
+U.addRef(r.code); showSlip(r.code, v, false);
+});
+});
+}
+function showSlip(code, v, fake) {
+var slip = $('slip'), form = $('donForm');
+setText('slipCode', code);
+setText('slipShown', U.shownName(v.donor_name, v.display_pref, KH.tx('anon')) + (v.country && v.display_pref !== 'anonymous' ? ' · ' + v.country : '') + ' · ' + KH.money(v.amount, v.currency));
+var st = $('slipStepper'); clear(st);
+['st_received', 'st_checking', 'st_verified'].forEach(function (k, i) { st.appendChild(h('li', { 'aria-current': i === 0 ? 'step' : null, class: i === 0 ? 'on' : null, text: KH.tx(k) })); });
+var c = KH.state.data.settings.contact, link = $('slipMsg');
+if (link) {
+var href = c && c.email ? 'mailto:' + String(c.email).trim() + '?subject=' + encodeURIComponent(code) : c && c.phone ? 'tel:' + String(c.phone).replace(/[^\d+]/g, '') : '';
+if (href) { link.setAttribute('href', U.rawUrl(href) || '#'); link.hidden = false; } else link.hidden = true;
+}
+KH.store.session.del('draft'); sub = null;
+form.reset(); F().country.value = 'Nepal'; updatePreview(); clearProofPreview();
+form.hidden = true; slip.hidden = false; banner('', null);
+slip.focus();
+setText('donMsg', KH.tx('ok_sent'));
+slip.setAttribute('data-fake', fake ? '1' : '0');
+}
+function backToForm() {
+$('slip').hidden = true; $('donForm').hidden = false; setText('donMsg', '');
+var n = $('f_name'); if (n) n.focus();
+}
+function updatePreview() {
+var v = readValues(), el = $('prevLine'); if (!el) return;
+el.textContent = v.donor_name ? KH.tx('f_preview', { name: U.shownName(v.donor_name, v.display_pref, KH.tx('anon')), country: v.display_pref === 'anonymous' ? '' : v.country, amount: v.amount > 0 ? KH.money(v.amount, v.currency) : '' }).replace(/(\s·\s)+$/, '').replace(/\s·\s·\s/, ' · ') : '';
+var r = rateFor(v.currency), est = $('nprEst');
+if (est) est.textContent = v.amount > 0 && v.currency !== 'NPR' && r ? KH.tx('est') + ' ' + KH.nf(v.amount * r, 0) : '';
+var m = F().message; setText('msgCount', KH.tx('f_msg_count', { n: KH.nf(Math.max(0, 500 - m.value.length)) }));
+var d = $('msgDetect'); if (d) d.hidden = !(/@/.test(m.value) || /\d[\d\s\-().]{6,}\d/.test(m.value));
+}
+function clearProofPreview() {
+if (objUrl) { URL.revokeObjectURL(objUrl); objUrl = null; }
+clear($('proofPreview'));
+}
+function onProof() {
+var f = F().proof.files && F().proof.files[0]; clearProofPreview();
+var e = errEl('proof'); if (e) { e.hidden = true; e.textContent = ''; }
+if (!f) return;
+checkFile(f).then(function (c) {
+if (!c.ok) { showErrors([{ field: 'proof', key: c.key }]); return; }
+var box = $('proofPreview');
+if (c.mime === 'application/pdf') box.appendChild(h('p', { class: 'small', text: f.name }));
+else { objUrl = URL.createObjectURL(f); box.appendChild(h('img', { src: objUrl, alt: f.name, class: 'proofimg' })); }
+});
+}
+function saveDraft() {
+clearTimeout(draftTimer);
+draftTimer = setTimeout(function () {
+var v = readValues(); delete v.amount; v.amount = val('amount');
+KH.store.session.set('draft', v);
+}, 400);
+}
+function restoreDraft() {
+var d = KH.store.session.get('draft', null); if (!d || typeof d !== 'object') return;
+['donor_name', 'country', 'amount', 'currency', 'method', 'txn_ref', 'message', 'phone', 'email'].forEach(function (k) {
+if (typeof d[k] === 'string' && F()[k]) F()[k].value = d[k];
+});
+if (d.display_pref && F().display_pref) F().display_pref.value = d.display_pref;
+}
+var inited = false;
+U.donate = KH.donate = {
+init: function () {
+if (inited || !$('donForm')) return; inited = true;
+var f = $('donForm');
+restoreDraft(); updatePreview();
+f.addEventListener('submit', onSubmit);
+f.addEventListener('input', function () { updatePreview(); saveDraft(); });
+f.addEventListener('change', function () { updatePreview(); saveDraft(); });
+F().proof.addEventListener('change', onProof);
+var sc = $('slipCopy'); if (sc) sc.addEventListener('click', function () { U.copyText($('slipCode').textContent, $('slipCode')); });
+var sa = $('slipAgain'); if (sa) sa.addEventListener('click', backToForm);
+document.addEventListener('kh:lang', updatePreview);
+},
+submitFlow: submitFlow
+};
+}());
+KH.boot();
 </script>
 </body>
 </html>
