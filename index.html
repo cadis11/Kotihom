@@ -1,0 +1,690 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kutihom Mahayagya — 1 Crore Ahuti for Nepal</title>
+<meta name="description" content="A one crore (10,000,000) ahuti Kutihom Hawan for the peace and prosperity of Nepal. Join, donate, and follow every contribution transparently.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Mukta:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>
+:root{--maroon:#5e1616;--maroon2:#7d2020;--saffron:#e8731a;--gold:#c9a24b;--cream:#fbf4e6;--paper:#fffaf0;--ink:#2a1a14;--muted:#7a6a5f;--line:#e9dcc3;--ok:#2e7d4f;--bad:#b3261e;--r:14px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Mukta',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;font-size:17px}
+h1,h2,h3{font-family:'Cormorant Garamond','Mukta',serif;line-height:1.15;margin:0 0 .5em}
+h2{font-size:2.1rem;color:var(--maroon)}
+a{color:var(--maroon2)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 18px}
+section{padding:56px 0}
+header.top{position:sticky;top:0;z-index:20;background:rgba(94,22,22,.96);backdrop-filter:blur(6px);color:#fff}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:58px}
+.brand{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:1.25rem;letter-spacing:.02em}
+.brand span{color:var(--gold)}
+nav a{color:#f3e6c9;text-decoration:none;margin-left:16px;font-size:.95rem}
+nav a:hover{color:#fff}
+.lang{border:1px solid var(--gold);background:transparent;color:var(--gold);border-radius:999px;padding:4px 12px;cursor:pointer;font:inherit;font-size:.9rem;margin-left:16px}
+@media(max-width:700px){nav a.hide-m{display:none}}
+.hero{background:radial-gradient(circle at 50% 0,#8a2a1f 0,var(--maroon) 55%,#3d0d0d 100%);color:#fff;text-align:center;padding:72px 0 64px;position:relative;overflow:hidden}
+.hero .om{font-size:7rem;line-height:1;color:var(--gold);opacity:.9;font-family:'Mukta',serif}
+.hero h1{font-size:clamp(2.4rem,7vw,4.2rem);margin:.1em 0 .15em}
+.hero .sub{color:#f0dcb0;max-width:640px;margin:0 auto 22px;font-size:1.1rem}
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:18px 0 28px}
+.chip{border:1px solid rgba(201,162,75,.6);border-radius:999px;padding:6px 16px;background:rgba(255,255,255,.06);font-size:.98rem}
+.btn{display:inline-block;background:var(--saffron);color:#fff;border:0;border-radius:999px;padding:12px 28px;font:inherit;font-weight:600;cursor:pointer;text-decoration:none}
+.btn:hover{filter:brightness(1.07)}
+.btn.alt{background:transparent;border:1px solid var(--gold);color:var(--gold)}
+.btn.sm{padding:6px 16px;font-size:.92rem}
+.btn.ok{background:var(--ok)} .btn.bad{background:var(--bad)} .btn.ghost{background:#fff;color:var(--maroon);border:1px solid var(--line)}
+.btn:disabled{opacity:.55;cursor:not-allowed}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:0 2px 10px rgba(94,22,22,.05)}
+.grid{display:grid;gap:18px}
+.g3{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.stat .n{font-family:'Cormorant Garamond',serif;font-size:2.3rem;font-weight:700;color:var(--maroon);line-height:1.1}
+.stat .l{color:var(--muted);font-size:.95rem}
+.bar{height:16px;background:#efe3c8;border-radius:999px;overflow:hidden;margin:10px 0 4px}
+.bar>i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--saffron),var(--gold));transition:width 1s}
+.small{font-size:.9rem;color:var(--muted)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.tab{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 16px;cursor:pointer;font:inherit}
+.tab.on{background:var(--maroon);color:#fff;border-color:var(--maroon)}
+.pay{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start}
+.pay img{width:190px;height:190px;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:10px}
+.qrph{width:190px;height:190px;border:1px dashed var(--line);border-radius:10px;display:grid;place-items:center;color:var(--muted);text-align:center;padding:10px;font-size:.9rem}
+@media(max-width:560px){.pay{grid-template-columns:1fr}.pay img,.qrph{margin:auto}}
+dl.kv{margin:0}dl.kv dt{font-size:.82rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-top:8px}dl.kv dd{margin:0;font-weight:600;word-break:break-word}
+form .row{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+label{display:block;font-size:.92rem;font-weight:600;margin:12px 0 4px}
+input,select,textarea{width:100%;padding:10px 12px;border:1px solid #d9c9a6;border-radius:10px;font:inherit;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--saffron);outline-offset:1px}
+textarea{min-height:76px;resize:vertical}
+.hp{position:absolute;left:-9999px;height:0;overflow:hidden}
+.msg{padding:12px 16px;border-radius:10px;margin-top:14px}
+.msg.ok{background:#e4f3ea;color:#1d5a37}.msg.err{background:#fbe6e4;color:#8a1c15}.msg.info{background:#fdf1d6;color:#6a4b0b}
+.ledger .it{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.ledger .it:last-child{border:0}
+.ledger .nm{font-weight:600;overflow-wrap:anywhere}
+.ledger .it>*{min-width:0}
+.ledger .nm .small{display:block}
+.ledger .am{font-weight:700;color:var(--maroon);text-align:right}
+.ledger .mt{grid-column:1/-1;color:var(--muted);font-size:.93rem;overflow-wrap:anywhere}
+table{width:100%;border-collapse:collapse;font-size:.95rem}
+td{overflow-wrap:anywhere}
+th,td{padding:9px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+td.r,th.r{text-align:right}
+.scroll{overflow-x:auto}
+footer{background:#2f0b0b;color:#e8d8b4;padding:36px 0;text-align:center}
+footer a{color:var(--gold)}
+/* admin */
+#admin{display:none;min-height:100vh;background:var(--cream)}
+#admin .bar2{background:var(--maroon);color:#fff;padding:12px 0}
+#admin .bar2 .wrap{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.pill{display:inline-block;padding:2px 10px;border-radius:999px;font-size:.8rem;font-weight:600}
+.pill.pending{background:#fdf1d6;color:#8a5a00}.pill.verified{background:#e4f3ea;color:#1d5a37}.pill.rejected{background:#fbe6e4;color:#8a1c15}
+.acard{border:1px solid var(--line);border-radius:12px;padding:16px;background:#fff;margin-bottom:12px}
+.acard .top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.acts{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:10px}
+.acts input{width:150px}
+</style>
+</head>
+<body>
+
+<!-- ============ PUBLIC SITE ============ -->
+<div id="site">
+<header class="top"><div class="wrap">
+  <div class="brand">ॐ <span data-i18n="brand">Kutihom Mahayagya</span></div>
+  <div style="display:flex;align-items:center">
+    <nav><a class="hide-m" href="#about" data-i18n="nav_about">About</a><a class="hide-m" href="#donate" data-i18n="nav_donate">Donate</a><a class="hide-m" href="#donors" data-i18n="nav_donors">Donors</a><a class="hide-m" href="#expenses" data-i18n="nav_exp">Expenses</a></nav>
+    <button class="lang" id="langBtn" type="button">नेपाली</button>
+  </div>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="om">ॐ</div>
+  <h1 id="heroTitle">Kutihom Mahayagya</h1>
+  <p class="sub" data-i18n="hero_sub">A one crore (10,000,000) ahuti Hawan, offered with devotion for the peace, harmony and prosperity of Nepal.</p>
+  <div class="chips">
+    <span class="chip" id="heroDate">📅 …</span>
+    <span class="chip" id="heroVenue">📍 …</span>
+    <span class="chip" data-i18n="chip_goal">🔥 1 Crore Ahutis</span>
+  </div>
+  <a class="btn" href="#donate" data-i18n="cta_donate">Contribute to the Yagya</a>
+  <a class="btn alt" href="#donors" style="margin-left:8px" data-i18n="cta_donors">See Contributions</a>
+</div></div>
+
+<section id="progress"><div class="wrap">
+  <h2 data-i18n="prog_h">Yagya Progress</h2>
+  <div class="grid g3">
+    <div class="card stat"><div class="n" id="stAhuti">0</div><div class="l" data-i18n="st_ahuti">Ahutis offered</div>
+      <div class="bar"><i id="barAhuti"></i></div><div class="small" id="ahutiOf">of 1 crore</div></div>
+    <div class="card stat"><div class="n" id="stFunds">NPR 0</div><div class="l" data-i18n="st_funds">Verified contributions</div></div>
+    <div class="card stat"><div class="n" id="stDonors">0</div><div class="l" data-i18n="st_donors">Contributors</div></div>
+  </div>
+  <div class="msg info" id="cfgWarn" style="display:none">Backend not connected yet — showing the page without live data.</div>
+</div></section>
+
+<section id="about" style="background:var(--paper)"><div class="wrap">
+  <h2 data-i18n="about_h">About the Yagya</h2>
+  <div class="grid g2">
+    <div class="card"><h3 data-i18n="about1_h">What is Kutihom?</h3><p data-i18n="about1_p"></p></div>
+    <div class="card"><h3 data-i18n="about2_h">Why one crore ahutis?</h3><p data-i18n="about2_p"></p></div>
+  </div>
+  <p class="small" style="margin-top:16px" data-i18n="about_note"></p>
+</div></section>
+
+<section id="donate"><div class="wrap">
+  <h2 data-i18n="don_h">Contribute</h2>
+  <p data-i18n="don_p"></p>
+  <div class="grid g2" style="align-items:start">
+    <div class="card">
+      <h3 data-i18n="pay_h">How to pay</h3>
+      <div class="tabs" id="payTabs"></div>
+      <div id="payBody"></div>
+    </div>
+    <div class="card">
+      <h3 data-i18n="form_h">Tell us about your contribution</h3>
+      <form id="donForm" novalidate>
+        <div class="hp"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+        <label data-i18n="f_name">Full name *</label><input name="donor_name" required maxlength="120">
+        <div class="row">
+          <div><label data-i18n="f_phone">Phone</label><input name="phone" maxlength="40" inputmode="tel"></div>
+          <div><label data-i18n="f_email">Email</label><input name="email" type="email" maxlength="160"></div>
+        </div>
+        <label data-i18n="f_country">Country</label><input name="country" maxlength="80" value="Nepal">
+        <div class="row">
+          <div><label data-i18n="f_amount">Amount *</label><input name="amount" type="number" min="1" step="any" required inputmode="decimal"></div>
+          <div><label data-i18n="f_cur">Currency</label><select name="currency"><option>NPR</option><option>USD</option><option>INR</option><option>EUR</option><option>GBP</option><option>AUD</option></select></div>
+        </div>
+        <div class="small" id="npr_est"></div>
+        <label data-i18n="f_method">Paid via *</label>
+        <select name="method"><option value="esewa">eSewa</option><option value="khalti">Khalti</option><option value="bank">Bank transfer</option><option value="international">International</option></select>
+        <label data-i18n="f_txn">Transaction / reference no.</label><input name="txn_ref" maxlength="120">
+        <label data-i18n="f_proof">Payment screenshot or receipt *</label><input name="proof" type="file" accept="image/jpeg,image/png,image/webp,application/pdf">
+        <div class="small" data-i18n="f_proof_h">JPG, PNG, WebP or PDF, up to 5 MB.</div>
+        <label data-i18n="f_show">How should your name appear publicly?</label>
+        <select name="display_pref"><option value="full" data-i18n="show_full">Full name</option><option value="first" data-i18n="show_first">First name only</option><option value="anonymous" data-i18n="show_anon">Anonymous</option></select>
+        <label data-i18n="f_msg">Prayer or message (optional, shown publicly after review)</label><textarea name="message" maxlength="500"></textarea>
+        <p class="small" data-i18n="f_priv">Your phone, email and receipt stay private. Only name preference, amount, country and message are public, and only after our team verifies the payment.</p>
+        <button class="btn" type="submit" id="donBtn" data-i18n="f_submit">Submit contribution</button>
+        <div id="donMsg"></div>
+      </form>
+    </div>
+  </div>
+</div></section>
+
+<section id="donors" style="background:var(--paper)"><div class="wrap">
+  <h2 data-i18n="led_h">Contribution Ledger</h2>
+  <p class="small" data-i18n="led_p">Every verified contribution is listed here.</p>
+  <input id="ledSearch" type="search" data-i18n-ph="led_search" placeholder="Search by name or country" style="max-width:340px;margin-bottom:10px">
+  <div class="card ledger" id="ledger"></div>
+  <div style="text-align:center;margin-top:14px"><button class="btn ghost" id="moreBtn" type="button" style="display:none" data-i18n="more">Load more</button></div>
+</div></section>
+
+<section id="expenses"><div class="wrap">
+  <h2 data-i18n="exp_h">Where the funds go</h2>
+  <p class="small" data-i18n="exp_p">Expenses for the Yagya are published openly.</p>
+  <div class="card"><div class="scroll"><table>
+    <thead><tr><th data-i18n="x_date">Date</th><th data-i18n="x_item">Item</th><th data-i18n="x_cat">Category</th><th class="r" data-i18n="x_amt">Amount (NPR)</th></tr></thead>
+    <tbody id="expBody"></tbody>
+    <tfoot><tr><th colspan="3" data-i18n="x_total">Total spent</th><th class="r" id="expTotal">0</th></tr></tfoot>
+  </table></div></div>
+</div></section>
+
+<footer><div class="wrap">
+  <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem">ॐ</div>
+  <p data-i18n="foot_p">May Nepal prosper in peace. Thank you for being part of this offering.</p>
+  <p class="small" id="contactLine" style="color:#cdb98e"></p>
+  <p class="small" style="color:#a99468"><a href="#/admin" data-i18n="admin_link">Organizer login</a></p>
+</div></footer>
+</div>
+
+<!-- ============ ADMIN ============ -->
+<div id="admin">
+  <div class="bar2"><div class="wrap">
+    <strong>ॐ Kutihom — Organizer panel</strong>
+    <span><a href="#" style="color:#f3e6c9;margin-right:14px" id="backSite">← Public site</a><button class="btn sm alt" id="logoutBtn" style="display:none">Sign out</button></span>
+  </div></div>
+  <div class="wrap" style="padding:26px 18px">
+    <div id="aLogin" class="card" style="max-width:420px;margin:30px auto">
+      <h3>Organizer sign in</h3>
+      <form id="loginForm"><label>Email</label><input name="email" type="email" required autocomplete="username"><label>Password</label><input name="password" type="password" required autocomplete="current-password"><div style="margin-top:14px"><button class="btn" type="submit">Sign in</button></div><div id="loginMsg"></div></form>
+    </div>
+    <div id="aApp" style="display:none">
+      <div class="tabs" id="aTabs"></div>
+      <div id="aBody"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ------------------------------------------------------------------
+   CONFIG — filled in when the Supabase project exists
+------------------------------------------------------------------ */
+const CFG = { url: 'https://magxxpvdqgpugglqekxo.supabase.co', key: 'sb_publishable_WxrDNR_Hj_H4ZtgmlZSwUg_dKRil9pv' };
+const configured = !CFG.url.startsWith('__');
+const sb = configured ? supabase.createClient(CFG.url, CFG.key) : null;
+
+/* ------------------------------------------------------------------
+   i18n
+------------------------------------------------------------------ */
+const T = {
+en:{brand:'Kutihom Mahayagya',nav_about:'About',nav_donate:'Donate',nav_donors:'Donors',nav_exp:'Expenses',
+hero_sub:'A one crore (10,000,000) ahuti Hawan, offered with devotion for the peace, harmony and prosperity of Nepal.',
+chip_goal:'🔥 1 Crore Ahutis',cta_donate:'Contribute to the Yagya',cta_donors:'See Contributions',
+prog_h:'Yagya Progress',st_ahuti:'Ahutis offered',st_funds:'Verified contributions',st_donors:'Contributors',of:'of',crore:'crore',
+about_h:'About the Yagya',about1_h:'What is Kutihom?',
+about1_p:'Kutihom is a sacred Hawan, a Vedic fire offering in which oblations are made into the consecrated fire (Agni) with mantras, carried out by learned priests.',
+about2_h:'Why one crore ahutis?',
+about2_p:'This Yagya resolves to complete one crore (10,000,000) offerings, praying together for the peace, harmony and lasting prosperity of Nepal and all its people.',
+about_note:'Date, venue and ritual details are announced here as they are confirmed.',
+don_h:'Contribute',don_p:'Every contribution, large or small, helps carry this offering to completion. Pay using any method below, then submit the form so we can record it.',
+pay_h:'How to pay',form_h:'Tell us about your contribution',f_name:'Full name *',f_phone:'Phone',f_email:'Email',f_country:'Country',f_amount:'Amount *',f_cur:'Currency',
+f_method:'Paid via *',f_txn:'Transaction / reference no.',f_proof:'Payment screenshot or receipt *',f_proof_h:'JPG, PNG, WebP or PDF, up to 5 MB.',
+f_show:'How should your name appear publicly?',show_full:'Full name',show_first:'First name only',show_anon:'Anonymous',
+f_msg:'Prayer or message (optional, shown publicly after review)',
+f_priv:'Your phone, email and receipt stay private. Only name preference, amount, country and message are public, and only after our team verifies the payment.',
+f_submit:'Submit contribution',sending:'Submitting…',
+ok_sent:'Thank you! Your contribution was received and will appear in the ledger once our team verifies it.',
+err_req:'Please fill in your name, amount and attach your payment proof.',err_size:'The file is too large (max 5 MB).',err_type:'Please attach a JPG, PNG, WebP or PDF file.',err_gen:'Something went wrong. Please try again or contact us.',
+est:'Estimated value: NPR',est_n:'(final value is set when verified)',
+led_h:'Contribution Ledger',led_p:'Every verified contribution is listed here.',led_search:'Search by name or country',more:'Load more',anon:'Anonymous',none:'No contributions listed yet.',
+exp_h:'Where the funds go',exp_p:'Expenses for the Yagya are published openly.',x_date:'Date',x_item:'Item',x_cat:'Category',x_amt:'Amount (NPR)',x_total:'Total spent',x_none:'No expenses recorded yet.',
+foot_p:'May Nepal prosper in peace. Thank you for being part of this offering.',admin_link:'Organizer login',
+m_esewa:'eSewa',m_khalti:'Khalti',m_bank:'Bank transfer',m_intl:'International',
+p_id:'ID / Number',p_name:'Account name',p_bank:'Bank',p_acc:'Account no.',p_branch:'Branch',p_soon:'Payment details will be added soon.',p_qr:'QR coming soon',tbd_date:'Date to be announced',tbd_venue:'Venue to be announced'},
+np:{brand:'कुटिहोम महायज्ञ',nav_about:'बारेमा',nav_donate:'सहयोग',nav_donors:'दाताहरू',nav_exp:'खर्च',
+hero_sub:'नेपालको शान्ति, सद्भाव र समृद्धिका लागि भक्तिपूर्वक सम्पन्न हुने एक करोड आहुतिको हवन।',
+chip_goal:'🔥 १ करोड आहुति',cta_donate:'यज्ञमा सहयोग गर्नुहोस्',cta_donors:'सहयोगहरू हेर्नुहोस्',
+prog_h:'यज्ञको प्रगति',st_ahuti:'सम्पन्न आहुति',st_funds:'पुष्टि भएको सहयोग',st_donors:'सहयोगीहरू',of:'मध्ये',crore:'करोड',
+about_h:'यज्ञको बारेमा',about1_h:'कुटिहोम भनेको के हो?',
+about1_p:'कुटिहोम एक पवित्र हवन हो, जहाँ विद्वान् पुरोहितहरूद्वारा मन्त्रोच्चारणसहित पवित्र अग्नि (अग्निदेव) मा आहुति अर्पण गरिन्छ।',
+about2_h:'किन एक करोड आहुति?',
+about2_p:'यस यज्ञमा एक करोड (१,००,००,०००) आहुति पूरा गर्ने सङ्कल्प गरिएको छ, जसमार्फत नेपाल र नेपालीको शान्ति, सद्भाव र दिगो समृद्धिको कामना गरिन्छ।',
+about_note:'मिति, स्थान र विधिसम्बन्धी विवरण निश्चित भएसँगै यहीँ जानकारी गराइनेछ।',
+don_h:'सहयोग गर्नुहोस्',don_p:'सानो वा ठूलो, हरेक सहयोगले यो अनुष्ठान पूरा गर्न मद्दत गर्छ। तलका कुनै पनि माध्यमबाट भुक्तानी गरी फारम भर्नुहोस्, ताकि हामी अभिलेख राख्न सकौँ।',
+pay_h:'भुक्तानी कसरी गर्ने',form_h:'तपाईँको सहयोगको विवरण',f_name:'पूरा नाम *',f_phone:'फोन',f_email:'इमेल',f_country:'देश',f_amount:'रकम *',f_cur:'मुद्रा',
+f_method:'भुक्तानी माध्यम *',f_txn:'कारोबार / सन्दर्भ नम्बर',f_proof:'भुक्तानीको स्क्रिनसट वा रसिद *',f_proof_h:'JPG, PNG, WebP वा PDF, ५ MB सम्म।',
+f_show:'सार्वजनिक रूपमा तपाईँको नाम कसरी देखिओस्?',show_full:'पूरा नाम',show_first:'पहिलो नाम मात्र',show_anon:'अज्ञात (नाम नदेखाउने)',
+f_msg:'प्रार्थना वा सन्देश (ऐच्छिक, समीक्षापछि सार्वजनिक हुन्छ)',
+f_priv:'तपाईँको फोन, इमेल र रसिद गोप्य रहन्छन्। नामको रोजाइ, रकम, देश र सन्देश मात्र सार्वजनिक हुन्छ, त्यो पनि हाम्रो टोलीले भुक्तानी पुष्टि गरेपछि मात्र।',
+f_submit:'सहयोग पठाउनुहोस्',sending:'पठाउँदै…',
+ok_sent:'धन्यवाद! तपाईँको सहयोग प्राप्त भयो। हाम्रो टोलीले पुष्टि गरेपछि यो सूचीमा देखिनेछ।',
+err_req:'कृपया आफ्नो नाम, रकम भर्नुहोस् र भुक्तानीको प्रमाण संलग्न गर्नुहोस्।',err_size:'फाइल धेरै ठूलो छ (अधिकतम ५ MB)।',err_type:'कृपया JPG, PNG, WebP वा PDF फाइल संलग्न गर्नुहोस्।',err_gen:'केही समस्या भयो। कृपया फेरि प्रयास गर्नुहोस् वा हामीलाई सम्पर्क गर्नुहोस्।',
+est:'अनुमानित मूल्य: रु.',est_n:'(अन्तिम मूल्य पुष्टि हुँदा तय हुन्छ)',
+led_h:'सहयोग सूची',led_p:'पुष्टि भएका सबै सहयोगहरू यहाँ देखाइएका छन्।',led_search:'नाम वा देशबाट खोज्नुहोस्',more:'थप हेर्नुहोस्',anon:'अज्ञात',none:'अहिलेसम्म कुनै सहयोग सूचीकृत छैन।',
+exp_h:'रकम कहाँ खर्च हुन्छ',exp_p:'यज्ञको खर्च खुला रूपमा प्रकाशित गरिन्छ।',x_date:'मिति',x_item:'विवरण',x_cat:'वर्ग',x_amt:'रकम (रु.)',x_total:'जम्मा खर्च',x_none:'अहिलेसम्म कुनै खर्च दर्ता भएको छैन।',
+foot_p:'नेपालमा शान्ति र समृद्धि कायम रहोस्। यस अनुष्ठानमा सहभागी हुनुभएकोमा हार्दिक धन्यवाद।',admin_link:'आयोजक लगइन',
+m_esewa:'eSewa',m_khalti:'Khalti',m_bank:'बैङ्क ट्रान्सफर',m_intl:'अन्तर्राष्ट्रिय',
+p_id:'आईडी / नम्बर',p_name:'खाताधनीको नाम',p_bank:'बैङ्क',p_acc:'खाता नम्बर',p_branch:'शाखा',p_soon:'भुक्तानी विवरण छिट्टै थपिनेछ।',p_qr:'QR छिट्टै आउँछ',tbd_date:'मिति तोकिनेछ',tbd_venue:'स्थान तोकिनेछ'}
+};
+let lang = 'en';
+try { const s = localStorage.getItem('lang'); lang = s || ((navigator.language||'').startsWith('ne') ? 'np' : 'en'); } catch(e){}
+const t = k => (T[lang] && T[lang][k]) || T.en[k] || k;
+
+/* ------------------------------------------------------------------
+   helpers
+------------------------------------------------------------------ */
+const $ = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => [...r.querySelectorAll(s)];
+const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const dev = x => String(x).replace(/\d/g, c => '०१२३४५६७८९'[c]);
+const nf = (n, d=0) => { const r = Number(n||0).toLocaleString('en-IN', {maximumFractionDigits:d}); return lang==='np' ? dev(r) : r; };
+const MON_NP = ['जनवरी','फेब्रुअरी','मार्च','अप्रिल','मे','जुन','जुलाई','अगस्ट','सेप्टेम्बर','अक्टोबर','नोभेम्बर','डिसेम्बर'];
+const fdate = d => { if (!d) return ''; const x = new Date(/^\d{4}-\d{2}-\d{2}$/.test(d) ? d+'T00:00:00' : d); if (isNaN(x)) return '';
+  return lang==='np' ? `${dev(x.getDate())} ${MON_NP[x.getMonth()]} ${dev(x.getFullYear())}` : x.toLocaleDateString('en-GB', {day:'numeric',month:'short',year:'numeric'}); };
+const CUR = {NPR:'NPR',USD:'USD',INR:'INR',EUR:'EUR',GBP:'GBP',AUD:'AUD'};
+const money = (a, c) => `${c==='NPR'?(lang==='np'?'रु.':'NPR'):c} ${nf(a,2).replace(/\.00$/,'')}`;
+const S = { settings:{}, stats:{total_npr:0,donor_count:0}, led:[], ledAll:0, exp:[], payTab:'esewa' };
+const LED_PAGE = 30;
+// PostgREST returns at most 1000 rows per request; page through so admin lists / CSV are never silently truncated.
+async function fetchAll(make){
+  let all = [], from = 0;
+  for(;;){
+    const { data, error } = await make().range(from, from+999);
+    if (error) return { data:null, error };
+    all = all.concat(data); if (data.length < 1000) break; from += 1000;
+  }
+  return { data:all, error:null };
+}
+const setting = (k, d) => (S.settings[k] !== undefined ? S.settings[k] : d);
+
+function applyLang(){
+  document.documentElement.lang = lang==='np' ? 'ne' : 'en';
+  document.title = lang==='np' ? 'कुटिहोम महायज्ञ — नेपालका लागि १ करोड आहुति' : 'Kutihom Mahayagya — 1 Crore Ahuti for Nepal';
+  $$('[data-i18n]').forEach(e => { e.textContent = t(e.dataset.i18n); });
+  $$('[data-i18n-ph]').forEach(e => { e.placeholder = t(e.dataset.i18nPh); });
+  $('#langBtn').textContent = lang==='np' ? 'English' : 'नेपाली';
+  const sel = $('#donForm [name=method]');
+  if (sel) { const v = sel.value; sel.innerHTML = ['esewa','khalti','bank','international'].map(m=>`<option value="${m}">${esc(t({esewa:'m_esewa',khalti:'m_khalti',bank:'m_bank',international:'m_intl'}[m]))}</option>`).join(''); sel.value = v||'esewa'; }
+  renderAll();
+}
+
+/* ------------------------------------------------------------------
+   data
+------------------------------------------------------------------ */
+async function loadPublic(){
+  if (!configured) { $('#cfgWarn').style.display='block'; return; }
+  const [s, st, led, ex] = await Promise.all([
+    sb.from('settings').select('key,value'),
+    sb.from('donation_stats').select('*').maybeSingle(),
+    sb.from('donations_public').select('*',{count:'exact'}).order('created_at',{ascending:false}).range(0,LED_PAGE-1),
+    fetchAll(() => sb.from('expenses').select('*').order('spent_on',{ascending:false}))
+  ]);
+  if (s.data) S.settings = Object.fromEntries(s.data.map(r=>[r.key,r.value]));
+  if (st.data) S.stats = st.data;
+  if (led.data) { S.led = led.data; S.ledAll = led.count ?? led.data.length; }
+  if (ex.data) S.exp = ex.data;
+}
+async function loadMoreLedger(){
+  const from = S.led.length;
+  const r = await sb.from('donations_public').select('*').order('created_at',{ascending:false}).range(from, from+LED_PAGE-1);
+  if (r.data) { S.led = S.led.concat(r.data); renderLedger(); }
+}
+
+/* ------------------------------------------------------------------
+   render (public)
+------------------------------------------------------------------ */
+function renderAll(){ renderHero(); renderProgress(); renderPay(); renderLedger(); renderExpenses(); renderFooter(); updateEst(); }
+
+function renderHero(){
+  const ev = setting('event', {});
+  $('#heroTitle').textContent = (lang==='np' ? ev.title_np : ev.title_en) || t('brand');
+  $('#heroDate').textContent = '📅 ' + ((lang==='np' ? ev.date_np : ev.date_en) || t('tbd_date'));
+  $('#heroVenue').textContent = '📍 ' + ((lang==='np' ? ev.venue_np : ev.venue_en) || t('tbd_venue'));
+}
+function renderProgress(){
+  const done = Number(setting('ahutis_done', 0)), goal = Number(setting('goal_ahutis', 10000000)) || 10000000;
+  $('#stAhuti').textContent = nf(done);
+  $('#barAhuti').style.width = Math.min(100, done/goal*100) + '%';
+  $('#ahutiOf').textContent = `${t('of')} ${nf(goal)} (${lang==='np'?'१':'1'} ${t('crore')})`;
+  $('#stFunds').textContent = money(S.stats.total_npr, 'NPR');
+  $('#stDonors').textContent = nf(S.stats.donor_count);
+}
+function renderPay(){
+  const P = setting('payments', {});
+  const tabs = [['esewa','m_esewa'],['khalti','m_khalti'],['bank','m_bank'],['intl','m_intl']];
+  $('#payTabs').innerHTML = tabs.map(([k,l])=>`<button type="button" class="tab ${S.payTab===k?'on':''}" data-tab="${k}">${esc(t(l))}</button>`).join('');
+  $$('#payTabs .tab').forEach(b => b.onclick = () => { S.payTab = b.dataset.tab; renderPay(); });
+  const k = S.payTab, d = P[k] || {};
+  const kv = (lbl, val) => val ? `<dt>${esc(t(lbl))}</dt><dd>${esc(val)}</dd>` : '';
+  let rows = '';
+  if (k==='esewa' || k==='khalti') rows = kv('p_id', d.id) + kv('p_name', d.name);
+  if (k==='bank') rows = kv('p_bank', d.bank) + kv('p_name', d.account_name) + kv('p_acc', d.account_no) + kv('p_branch', d.branch);
+  if (k==='intl') rows = d.text ? `<dd style="white-space:pre-wrap;font-weight:500">${esc(d.text)}</dd>` : '';
+  const qr = d.qr_url ? `<img src="${esc(d.qr_url)}" alt="QR" loading="lazy">` : (k==='intl' ? '' : `<div class="qrph">${esc(t('p_qr'))}</div>`);
+  $('#payBody').innerHTML = `<div class="pay">${qr}<dl class="kv">${rows || `<dd class="small">${esc(t('p_soon'))}</dd>`}</dl></div>`;
+}
+function renderLedger(){
+  const q = ($('#ledSearch').value||'').trim().toLowerCase();
+  const rows = S.led.filter(r => !q || (r.display_name||'').toLowerCase().includes(q) || (r.country||'').toLowerCase().includes(q));
+  $('#ledger').innerHTML = rows.length ? rows.map(r => `
+    <div class="it"><div class="nm">${esc(r.display_name || t('anon'))}<span class="small"> · ${esc(r.country||'')} · ${esc(fdate(r.created_at))}</span></div>
+    <div class="am">${esc(money(r.amount, r.currency))}</div>${r.message ? `<div class="mt">“${esc(r.message)}”</div>` : ''}</div>`).join('')
+    : `<p class="small" style="margin:0">${esc(t('none'))}</p>`;
+  $('#moreBtn').style.display = (S.led.length < S.ledAll && !q) ? '' : 'none';
+}
+function renderExpenses(){
+  $('#expBody').innerHTML = S.exp.length ? S.exp.map(e => `<tr><td>${esc(fdate(e.spent_on))}</td><td>${esc(e.item)}${e.note?`<div class="small">${esc(e.note)}</div>`:''}</td><td>${esc(e.category||'')}</td><td class="r">${esc(nf(e.amount_npr,2).replace(/\.00$/,''))}</td></tr>`).join('')
+    : `<tr><td colspan="4" class="small">${esc(t('x_none'))}</td></tr>`;
+  $('#expTotal').textContent = nf(S.exp.reduce((a,e)=>a+Number(e.amount_npr||0),0), 2).replace(/\.00$/,'');
+}
+function renderFooter(){
+  const c = setting('contact', {});
+  $('#contactLine').textContent = [c.phone, c.email].filter(Boolean).join('  ·  ');
+}
+
+/* ------------------------------------------------------------------
+   donation form
+------------------------------------------------------------------ */
+function rateFor(cur){ const r = setting('rates', {NPR:1,USD:135,INR:1.6,EUR:150,GBP:175,AUD:88}); return Number(r[cur]) || (cur==='NPR'?1:0); }
+function updateEst(){
+  const f = $('#donForm'); if(!f) return;
+  const a = Number(f.amount.value), c = f.currency.value;
+  $('#npr_est').textContent = (a>0 && c!=='NPR' && rateFor(c)) ? `${t('est')} ${nf(a*rateFor(c))} ${t('est_n')}` : '';
+}
+$('#donForm').addEventListener('input', updateEst);
+$('#donForm').addEventListener('submit', async ev => {
+  ev.preventDefault();
+  const f = ev.target, box = $('#donMsg'), btn = $('#donBtn');
+  const show = (cls, txt) => { box.innerHTML = `<div class="msg ${cls}">${esc(txt)}</div>`; };
+  if (f.website.value) return;                           // honeypot
+  const name = f.donor_name.value.trim(), amount = Number(f.amount.value), file = f.proof.files[0];
+  if (!name || !(amount > 0) || !file) return show('err', t('err_req'));
+  if (file.size > 5*1024*1024) return show('err', t('err_size'));
+  const ext = ({'image/jpeg':'jpg','image/png':'png','image/webp':'webp','application/pdf':'pdf'})[file.type];
+  if (!ext) return show('err', t('err_type'));
+  if (!configured) return show('err', t('err_gen'));
+  btn.disabled = true; btn.textContent = t('sending'); box.innerHTML = '';
+  try {
+    const cur = f.currency.value, npr = cur==='NPR' ? amount : amount * rateFor(cur);
+    if (!(npr > 0)) throw new Error('rate');
+    const path = `${crypto.randomUUID()}.${ext}`;
+    const up = await sb.storage.from('proofs').upload(path, file, { contentType: file.type, upsert:false });
+    if (up.error) throw up.error;
+    const row = {
+      donor_name: name, display_pref: f.display_pref.value, phone: f.phone.value.trim()||null, email: f.email.value.trim()||null,
+      country: f.country.value.trim()||null, amount, currency: cur, amount_npr: Math.round(npr*100)/100, method: f.method.value,
+      txn_ref: f.txn_ref.value.trim()||null, message: f.message.value.trim()||null, proof_path: path, status:'pending', source:'online'
+    };
+    const ins = await sb.from('donations').insert(row);
+    if (ins.error) throw ins.error;
+    f.reset(); f.country.value = 'Nepal'; updateEst();
+    show('ok', t('ok_sent'));
+  } catch(e) { console.error(e); show('err', t('err_gen')); }
+  btn.disabled = false; btn.textContent = t('f_submit');
+});
+
+let ledLoading = null;
+async function loadAllLedger(){
+  if (ledLoading || !configured) return ledLoading;
+  ledLoading = (async () => {
+    while (S.led.length < S.ledAll) {
+      const r = await sb.from('donations_public').select('*').order('created_at',{ascending:false}).range(S.led.length, S.led.length+999);
+      if (r.error || !r.data.length) break;
+      S.led = S.led.concat(r.data);
+    }
+  })().catch(console.error).finally(() => { ledLoading = null; });
+  await ledLoading; renderLedger();
+}
+$('#ledSearch').addEventListener('input', () => { renderLedger(); if (($('#ledSearch').value||'').trim() && S.led.length < S.ledAll) loadAllLedger(); });
+$('#moreBtn').addEventListener('click', loadMoreLedger);
+$('#langBtn').addEventListener('click', () => { lang = lang==='np' ? 'en' : 'np'; try{localStorage.setItem('lang',lang)}catch(e){} applyLang(); if(isAdminRoute()) renderAdmin(); });
+
+/* ------------------------------------------------------------------
+   ADMIN
+------------------------------------------------------------------ */
+const A = { tab:'pending', user:null, rows:[], filter:'all', settings:{} };
+const isAdminRoute = () => location.hash === '#/admin';
+let wasAdmin = false;
+function route(){
+  const admin = isAdminRoute();
+  const leaving = wasAdmin && !admin; wasAdmin = admin;
+  $('#site').style.display = admin ? 'none' : '';
+  $('#admin').style.display = admin ? 'block' : 'none';
+  if (admin) { initAdmin(); window.scrollTo(0,0); } else if (leaving) window.scrollTo(0,0);
+}
+window.addEventListener('hashchange', route);
+$('#backSite').addEventListener('click', e => { e.preventDefault(); location.hash = ''; });
+
+async function initAdmin(){
+  if (!configured) { $('#aLogin').innerHTML = '<p>Backend not connected yet.</p>'; return; }
+  const { data } = await sb.auth.getSession();
+  if (data.session && await checkAdmin()) showApp(); else { $('#aLogin').style.display=''; $('#aApp').style.display='none'; $('#logoutBtn').style.display='none'; }
+}
+async function checkAdmin(){
+  const r = await sb.from('admins').select('user_id').maybeSingle();
+  return !!(r.data && r.data.user_id);
+}
+$('#loginForm').addEventListener('submit', async e => {
+  e.preventDefault();
+  const f = e.target, m = $('#loginMsg');
+  m.innerHTML = '';
+  const { error } = await sb.auth.signInWithPassword({ email: f.email.value.trim(), password: f.password.value });
+  if (error) { m.innerHTML = `<div class="msg err">${esc(error.message)}</div>`; return; }
+  if (!(await checkAdmin())) { await sb.auth.signOut(); m.innerHTML = '<div class="msg err">This account is not an organizer.</div>'; return; }
+  f.reset(); showApp();
+});
+$('#logoutBtn').addEventListener('click', async () => { await sb.auth.signOut(); initAdmin(); });
+
+function showApp(){ $('#aLogin').style.display='none'; $('#aApp').style.display=''; $('#logoutBtn').style.display=''; renderAdmin(); }
+
+const TABS = [['pending','Pending'],['all','All donations'],['add','Add donation'],['expenses','Expenses'],['settings','Settings'],['export','Export']];
+async function renderAdmin(){
+  $('#aTabs').innerHTML = TABS.map(([k,l])=>`<button class="tab ${A.tab===k?'on':''}" data-t="${k}">${l}</button>`).join('');
+  $$('#aTabs .tab').forEach(b => b.onclick = () => { A.tab = b.dataset.t; renderAdmin(); });
+  const body = $('#aBody'); body.innerHTML = '<p class="small">Loading…</p>';
+  try { await ({pending:aPending, all:aAll, add:aAdd, expenses:aExpenses, settings:aSettings, export:aExport})[A.tab](body); }
+  catch(e){ console.error(e); body.innerHTML = `<div class="msg err">${esc(e.message||e)}</div>`; }
+}
+const flash = (el, cls, txt) => { el.innerHTML = `<div class="msg ${cls}">${esc(txt)}</div>`; };
+const methodLabel = m => ({esewa:'eSewa',khalti:'Khalti',bank:'Bank',international:'International',cash:'Cash'})[m] || m;
+
+async function aPending(body){
+  const { data, error } = await fetchAll(() => sb.from('donations').select('*').eq('status','pending').order('created_at'));
+  if (error) throw error;
+  if (!data.length) { body.innerHTML = '<div class="card">No pending contributions. 🙏</div>'; return; }
+  body.innerHTML = data.map(d => `
+    <div class="acard" data-id="${esc(d.id)}">
+      <div class="top"><div><strong>${esc(d.donor_name)}</strong> <span class="pill pending">pending</span><div class="small">#${esc(d.receipt_no)} · ${esc(fdate(d.created_at))} · ${esc(methodLabel(d.method))} · ${esc(d.country||'')}</div></div>
+      <div style="text-align:right"><strong>${esc(money(d.amount,d.currency))}</strong><div class="small">shows as: ${esc(d.display_pref)}</div></div></div>
+      <div class="small">${esc([d.phone,d.email].filter(Boolean).join(' · '))}${d.txn_ref?` · ref: ${esc(d.txn_ref)}`:''}</div>
+      ${d.message?`<div style="margin-top:6px">“${esc(d.message)}”</div>`:''}
+      <div class="acts">
+        <button class="btn sm ghost" data-act="proof" data-path="${esc(d.proof_path||'')}">View proof</button>
+        <label class="small" style="margin:0">NPR value</label><input type="number" step="any" value="${esc(d.amount_npr)}" data-npr>
+        <button class="btn sm ok" data-act="ok">Approve</button>
+        <button class="btn sm bad" data-act="no">Reject</button>
+      </div><div class="amsg"></div></div>`).join('');
+  $$('#aBody .acard').forEach(card => {
+    const id = card.dataset.id, msg = $('.amsg', card);
+    card.addEventListener('click', async e => {
+      const act = e.target.dataset.act; if (!act) return;
+      if (act === 'proof') {
+        const p = e.target.dataset.path; if (!p) return flash(msg,'err','No proof attached.');
+        const r = await sb.storage.from('proofs').createSignedUrl(p, 120);
+        return r.error ? flash(msg,'err',r.error.message) : window.open(r.data.signedUrl, '_blank', 'noopener');
+      }
+      const npr = Number($('[data-npr]', card).value);
+      if (act === 'ok' && !(npr > 0)) return flash(msg,'err','Enter a valid NPR value.');
+      if (act === 'no' && !confirm('Reject this contribution?')) return;
+      const upd = act === 'ok' ? { status:'verified', verified_at:new Date().toISOString(), amount_npr:npr } : { status:'rejected' };
+      const r = await sb.from('donations').update(upd).eq('id', id);
+      if (r.error) return flash(msg,'err',r.error.message);
+      card.remove(); if (!$('#aBody .acard')) renderAdmin();
+    });
+  });
+}
+
+async function aAll(body){
+  const { data, error } = await fetchAll(() => sb.from('donations').select('*').order('created_at',{ascending:false}));
+  if (error) throw error;
+  A.rows = data;
+  const draw = () => {
+    const rows = A.rows.filter(r => A.filter==='all' || r.status===A.filter);
+    const total = A.rows.filter(r=>r.status==='verified').reduce((a,r)=>a+Number(r.amount_npr),0);
+    $('#allBody').innerHTML = rows.map(r => `<tr data-id="${esc(r.id)}"><td>#${esc(r.receipt_no)}</td><td>${esc(fdate(r.created_at))}</td><td>${esc(r.donor_name)}<div class="small">${esc(r.country||'')}</div></td><td>${esc(money(r.amount,r.currency))}<div class="small">NPR ${esc(nf(r.amount_npr,2))}</div></td><td>${esc(methodLabel(r.method))}${r.source==='admin'?'<div class="small">manual</div>':''}</td>
+      <td><select data-st>${['pending','verified','rejected'].map(s=>`<option ${r.status===s?'selected':''}>${s}</option>`).join('')}</select></td></tr>`).join('') || '<tr><td colspan="6" class="small">Nothing here.</td></tr>';
+    $('#allTotal').textContent = `Verified total: NPR ${nf(total,2)}`;
+    $$('#allBody [data-st]').forEach(sel => sel.onchange = async () => {
+      const id = sel.closest('tr').dataset.id, st = sel.value;
+      const r = await sb.from('donations').update({ status:st, verified_at: st==='verified' ? new Date().toISOString() : null }).eq('id', id);
+      if (r.error) { alert(r.error.message); return renderAdmin(); }
+      A.rows.find(x=>x.id===id).status = st; draw();
+    });
+  };
+  body.innerHTML = `<div class="card"><div class="acts" style="margin:0 0 10px"><select id="stF" style="width:auto"><option value="all">All</option><option>pending</option><option>verified</option><option>rejected</option></select><strong id="allTotal"></strong></div>
+    <div class="scroll"><table><thead><tr><th>No.</th><th>Date</th><th>Donor</th><th>Amount</th><th>Method</th><th>Status</th></tr></thead><tbody id="allBody"></tbody></table></div>
+    <p class="small">Records are never deleted — set a wrong entry to “rejected” to keep a clean audit trail.</p></div>`;
+  $('#stF').value = A.filter; $('#stF').onchange = e => { A.filter = e.target.value; draw(); };
+  draw();
+}
+
+async function aAdd(body){
+  const rates = (await loadSettingsFresh()).rates || {NPR:1};
+  body.innerHTML = `<div class="card" style="max-width:640px"><h3>Add an offline / cash donation</h3>
+   <form id="addForm"><label>Full name *</label><input name="donor_name" required>
+   <div class="row"><div><label>Amount *</label><input name="amount" type="number" step="any" required></div>
+   <div><label>Currency</label><select name="currency">${Object.keys(CUR).map(c=>`<option>${c}</option>`).join('')}</select></div>
+   <div><label>NPR value *</label><input name="amount_npr" type="number" step="any" required></div></div>
+   <div class="row"><div><label>Method</label><select name="method"><option value="cash">Cash</option><option value="esewa">eSewa</option><option value="khalti">Khalti</option><option value="bank">Bank</option><option value="international">International</option></select></div>
+   <div><label>Country</label><input name="country" value="Nepal"></div>
+   <div><label>Public name</label><select name="display_pref"><option value="full">Full name</option><option value="first">First name</option><option value="anonymous">Anonymous</option></select></div></div>
+   <div class="row"><div><label>Phone</label><input name="phone"></div><div><label>Email</label><input name="email" type="email"></div></div>
+   <label>Reference / note</label><input name="txn_ref"><label>Message</label><textarea name="message" maxlength="500"></textarea>
+   <div style="margin-top:14px"><button class="btn" type="submit">Save as verified</button></div><div id="addMsg"></div></form></div>`;
+  const f = $('#addForm');
+  const sync = () => { const a = Number(f.amount.value), c = f.currency.value; if (a>0) f.amount_npr.value = Math.round(a*(Number(rates[c])||(c==='NPR'?1:0))*100)/100 || ''; };
+  f.amount.oninput = sync; f.currency.onchange = sync;
+  f.onsubmit = async e => {
+    e.preventDefault();
+    const row = { donor_name:f.donor_name.value.trim(), amount:Number(f.amount.value), currency:f.currency.value, amount_npr:Number(f.amount_npr.value),
+      method:f.method.value, country:f.country.value.trim()||null, display_pref:f.display_pref.value, phone:f.phone.value.trim()||null, email:f.email.value.trim()||null,
+      txn_ref:f.txn_ref.value.trim()||null, message:f.message.value.trim()||null, status:'verified', source:'admin', verified_at:new Date().toISOString() };
+    const r = await sb.from('donations').insert(row);
+    if (r.error) return flash($('#addMsg'),'err',r.error.message);
+    f.reset(); f.country.value='Nepal'; flash($('#addMsg'),'ok','Saved and published to the public ledger.');
+  };
+}
+
+async function aExpenses(body){
+  const { data, error } = await fetchAll(() => sb.from('expenses').select('*').order('spent_on',{ascending:false}));
+  if (error) throw error;
+  body.innerHTML = `<div class="grid g2" style="align-items:start"><div class="card"><h3>Add expense</h3>
+   <form id="expForm"><label>Date</label><input name="spent_on" type="date" required value="${new Date().toISOString().slice(0,10)}">
+   <label>Item *</label><input name="item" required maxlength="200"><label>Category</label><input name="category" maxlength="80" placeholder="Samagri, Pandit dakshina, Venue…">
+   <label>Amount (NPR) *</label><input name="amount_npr" type="number" step="any" min="0" required><label>Note</label><input name="note" maxlength="500">
+   <div style="margin-top:14px"><button class="btn" type="submit">Add</button></div><div id="expMsg"></div></form></div>
+   <div class="card"><h3>Recorded expenses</h3><div class="scroll"><table><tbody>${data.map(e=>`<tr data-id="${esc(e.id)}"><td>${esc(fdate(e.spent_on))}</td><td>${esc(e.item)}<div class="small">${esc(e.category||'')}</div></td><td class="r">${esc(nf(e.amount_npr,2))}</td><td><button class="btn sm ghost" data-del>✕</button></td></tr>`).join('') || '<tr><td class="small">None yet.</td></tr>'}</tbody></table></div></div></div>`;
+  $('#expForm').onsubmit = async e => {
+    e.preventDefault(); const f = e.target;
+    const r = await sb.from('expenses').insert({ spent_on:f.spent_on.value, item:f.item.value.trim(), category:f.category.value.trim()||null, amount_npr:Number(f.amount_npr.value), note:f.note.value.trim()||null });
+    if (r.error) return flash($('#expMsg'),'err',r.error.message);
+    renderAdmin();
+  };
+  $$('#aBody [data-del]').forEach(b => b.onclick = async () => {
+    if (!confirm('Delete this expense? It will disappear from the public table.')) return;
+    const r = await sb.from('expenses').delete().eq('id', b.closest('tr').dataset.id);
+    if (r.error) alert(r.error.message); else renderAdmin();
+  });
+}
+
+async function loadSettingsFresh(){
+  const r = await sb.from('settings').select('key,value');
+  if (r.error) throw r.error;
+  A.settings = Object.fromEntries(r.data.map(x=>[x.key,x.value])); return A.settings;
+}
+async function uploadAsset(file){
+  const ext = ({'image/jpeg':'jpg','image/png':'png','image/webp':'webp'})[file.type];
+  if (!ext) throw new Error('QR must be JPG, PNG or WebP');
+  const path = `qr/${crypto.randomUUID()}.${ext}`;
+  const up = await sb.storage.from('assets').upload(path, file, { contentType:file.type });
+  if (up.error) throw up.error;
+  return sb.storage.from('assets').getPublicUrl(path).data.publicUrl;
+}
+async function aSettings(body){
+  const s = await loadSettingsFresh();
+  const ev = s.event||{}, P = s.payments||{}, C = s.contact||{}, R = s.rates||{};
+  const inp = (n,l,v,ty='text') => `<label>${l}</label><input name="${n}" type="${ty}" value="${esc(v??'')}">`;
+  const qrf = (k,url) => `<label>${k} QR image</label><input type="hidden" name="${k}_qr" value="${esc(url||'')}">${url?`<img src="${esc(url)}" style="width:90px;display:block;margin-bottom:6px" alt="">`:''}<input type="file" data-qr="${k}" accept="image/*">`;
+  body.innerHTML = `<form id="setForm" class="grid g2" style="align-items:start">
+   <div class="card"><h3>Event</h3>${inp('title_en','Title (English)',ev.title_en)}${inp('title_np','शीर्षक (नेपाली)',ev.title_np)}${inp('date_en','Date text (English)',ev.date_en)}${inp('date_np','मिति (नेपाली)',ev.date_np)}${inp('venue_en','Venue (English)',ev.venue_en)}${inp('venue_np','स्थान (नेपाली)',ev.venue_np)}
+     ${inp('ahutis_done','Ahutis offered so far',s.ahutis_done??0,'number')}${inp('goal_ahutis','Goal (ahutis)',s.goal_ahutis??10000000,'number')}
+     <h3 style="margin-top:20px">Contact (shown in footer)</h3>${inp('c_phone','Phone',C.phone)}${inp('c_email','Email',C.email)}</div>
+   <div class="card"><h3>Payment details</h3>
+     ${inp('esewa_id','eSewa ID / number',P.esewa?.id)}${inp('esewa_name','eSewa account name',P.esewa?.name)}${qrf('esewa',P.esewa?.qr_url)}
+     ${inp('khalti_id','Khalti ID / number',P.khalti?.id)}${inp('khalti_name','Khalti account name',P.khalti?.name)}${qrf('khalti',P.khalti?.qr_url)}
+     ${inp('bank_bank','Bank',P.bank?.bank)}${inp('bank_name','Account name',P.bank?.account_name)}${inp('bank_acc','Account number',P.bank?.account_no)}${inp('bank_branch','Branch',P.bank?.branch)}${qrf('bank',P.bank?.qr_url)}
+     <label>International payment instructions</label><textarea name="intl_text" style="min-height:110px">${esc(P.intl?.text||'')}</textarea>
+     <h3 style="margin-top:20px">Exchange rates → NPR</h3><p class="small">Used for the donor’s estimate. You can still correct each NPR value when approving.</p>
+     <div class="row">${['USD','INR','EUR','GBP','AUD'].map(c=>inp('rate_'+c,c,R[c],'number')).join('')}</div></div>
+   <div style="grid-column:1/-1"><button class="btn" type="submit">Save settings</button><div id="setMsg"></div></div></form>`;
+  $('#setForm').onsubmit = async e => {
+    e.preventDefault(); const f = e.target, m = $('#setMsg');
+    try {
+      for (const inpEl of $$('[data-qr]', f)) { if (inpEl.files[0]) f[inpEl.dataset.qr+'_qr'].value = await uploadAsset(inpEl.files[0]); }
+      const v = n => f[n].value.trim();
+      const rates = { NPR:1 }; ['USD','INR','EUR','GBP','AUD'].forEach(c => { rates[c] = Number(f['rate_'+c].value) || Number((A.settings.rates||{})[c]) || 0; });
+      const rows = [
+        { key:'event', value:{ title_en:v('title_en'), title_np:v('title_np'), date_en:v('date_en'), date_np:v('date_np'), venue_en:v('venue_en'), venue_np:v('venue_np'), date_iso:(A.settings.event||{}).date_iso||null } },
+        { key:'ahutis_done', value:Number(f.ahutis_done.value)||0 },
+        { key:'goal_ahutis', value:Number(f.goal_ahutis.value)||10000000 },
+        { key:'contact', value:{ phone:v('c_phone'), email:v('c_email') } },
+        { key:'rates', value:rates },
+        { key:'payments', value:{ esewa:{id:v('esewa_id'),name:v('esewa_name'),qr_url:f.esewa_qr.value}, khalti:{id:v('khalti_id'),name:v('khalti_name'),qr_url:f.khalti_qr.value},
+            bank:{bank:v('bank_bank'),account_name:v('bank_name'),account_no:v('bank_acc'),branch:v('bank_branch'),qr_url:f.bank_qr.value}, intl:{text:f.intl_text.value.trim()} } }
+      ].map(r => ({ ...r, updated_at:new Date().toISOString() }));
+      const r = await sb.from('settings').upsert(rows);
+      if (r.error) throw r.error;
+      flash(m,'ok','Saved. The public site now shows these details.'); loadPublic().then(renderAll);
+    } catch(err){ flash(m,'err',err.message||String(err)); }
+  };
+}
+
+async function aExport(body){
+  body.innerHTML = '<div class="card"><p>Download every donation (including private contact details) as a CSV file. Keep this file secure.</p><button class="btn" id="csvBtn">Download CSV</button><div id="csvMsg"></div></div>';
+  $('#csvBtn').onclick = async () => {
+    const { data, error } = await fetchAll(() => sb.from('donations').select('*').order('receipt_no'));
+    if (error) return flash($('#csvMsg'),'err',error.message);
+    const cols = ['receipt_no','created_at','status','source','donor_name','display_pref','phone','email','country','amount','currency','amount_npr','method','txn_ref','message','verified_at','admin_note'];
+    const cell = v => { v = v==null ? '' : String(v); if (/^[=+\-@\t\r]/.test(v)) v = "'" + v; return '"' + v.replace(/"/g,'""') + '"'; };
+    const csv = '\ufeff' + [cols.join(',')].concat(data.map(r => cols.map(c => cell(r[c])).join(','))).join('\r\n');
+    const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([csv], {type:'text/csv;charset=utf-8'})); a.download = `kutihom-donations-${new Date().toISOString().slice(0,10)}.csv`; a.click();
+  };
+}
+
+/* ------------------------------------------------------------------
+   boot
+------------------------------------------------------------------ */
+(async function(){
+  applyLang();
+  route();
+  try { await loadPublic(); } catch(e){ console.error(e); }
+  renderAll();
+})();
+</script>
+</body>
+</html>
