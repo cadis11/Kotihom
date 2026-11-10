@@ -1,5 +1,5 @@
 /*== Kotihom organizer panel: loaded only for #/admin ==*/
-window.KH && (window.KH.build.sdk = {"url":"https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.118.0/dist/umd/supabase.js","version":"2.118.0","global":"supabase","sri":""});
+window.KH && (window.KH.build.sdk = {"url":"/vendor/supabase-js-2.118.0.umd.js","version":"2.118.0","global":"supabase","sri":"sha384-TcHRA3zBbn+Lexh5n+Oil4guNPOS3rjNDpGRAN46u/s/mB2IZ50ceC6TYDU2yvgK"});
 (function () {
 var T = window.KH_T = window.KH_T || { en: {}, np: {} }, X = {"en":{"tpl_confirm":"Namaste {name}. Thank you for your contribution to the Kotihom Mahayagya (reference {code}). We have verified your payment, and it now appears in the public list as you chose. May Nepal prosper in peace."},"np":{"tpl_confirm":"नमस्ते {name}। कोटिहोम महायज्ञमा तपाईंले गर्नुभएको सहयोग (सन्दर्भ {code}) का लागि हार्दिक धन्यवाद। तपाईंको भुक्तानी पुष्टि भएको छ र तपाईंले रोजेबमोजिम अब यो सार्वजनिक सूचीमा देखिन्छ। नेपालमा शान्ति र समृद्धि कायम रहोस्।"}};
 ['en', 'np'].forEach(function (l) { T[l] = T[l] || {}; Object.keys(X[l]).forEach(function (k) { T[l][k] = X[l][k]; }); });
